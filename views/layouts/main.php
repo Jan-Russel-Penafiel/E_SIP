@@ -26,6 +26,9 @@
     </script>
 
     <!-- Custom styles -->
+    <!-- Debug: echo baseUrl for diagnosing asset 404s -->
+    <!-- BASE_URL=<?= $baseUrl ?> -->
+    <script>console.log('E-SIP BASE_URL: "<?= $baseUrl ?>"');</script>
     <link rel="stylesheet" href="<?= $baseUrl ?>/assets/css/app.css">
 
     <!-- Prism.js Syntax Highlighting (Okaidia dark theme) -->
