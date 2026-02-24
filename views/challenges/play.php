@@ -51,6 +51,11 @@ $prismLang = $prismLangMap[$challenge['language']] ?? 'clike';
                 </span>
                 <?php endif; ?>
             </div>
+            <?php if ($isCompleted): ?>
+            <div class="mt-3 px-4 py-2 border-4 border-yellow-500 bg-yellow-600 text-black font-bold rounded-none" style="box-shadow: inset 2px 2px 0px #facc15, inset -2px -2px 0px #92400e;">
+                You have already completed this challenge. Re-submission is disabled.
+            </div>
+            <?php endif; ?>
 
             <p class="text-gray-300 mb-4 font-bold" style="text-shadow: 1px 1px 0px #333333;"><?= htmlspecialchars($challenge['description']) ?></p>
 
@@ -138,12 +143,12 @@ $prismLang = $prismLangMap[$challenge['language']] ?? 'clike';
             <div class="flex items-center justify-between px-4 py-3 border-t-4 border-gray-600 bg-surface" style="box-shadow: inset 2px 2px 0px #555, inset -2px -2px 0px #333333;">
                 <span class="text-xs text-gray-400 font-bold" id="charCount" style="text-shadow: 1px 1px 0px #333333;">0 chars</span>
                 <div class="flex gap-2">
-                    <button onclick="runCode()"
+                        <button <?php if (!$isCompleted): ?>onclick="runCode()"<?php else: ?>disabled<?php endif; ?>
                             class="px-4 py-2 text-sm bg-gray-800 text-white border-4 border-gray-600 rounded-none hover:bg-gray-700 transition flex items-center gap-2 font-bold" style="box-shadow: inset 2px 2px 0px #aaa, inset -2px -2px 0px #444; text-shadow: 1px 1px 0px #333333;">
                         <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" style="filter: drop-shadow(1px 1px 0px #333333);"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z"></path></svg>
                         Run
                     </button>
-                    <button onclick="submitCode()"
+                        <button <?php if (!$isCompleted): ?>onclick="submitCode()"<?php else: ?>disabled<?php endif; ?>
                             id="submitBtn"
                             class="px-4 py-2 text-sm bg-white text-black border-4 border-gray-600 font-bold rounded-none hover:bg-gray-200 transition flex items-center gap-2" style="box-shadow: inset 2px 2px 0px #fff, inset -2px -2px 0px #ccc, 2px 2px 0px #333333;">
                         Submit
@@ -170,8 +175,8 @@ $prismLang = $prismLangMap[$challenge['language']] ?? 'clike';
 
             <div class="space-y-3" id="mcOptions">
                 <?php foreach ($challenge['options'] as $i => $option): ?>
-                <button onclick="selectOption(this, '<?= htmlspecialchars(addslashes($option)) ?>')"
-                        class="mc-option w-full text-left px-4 py-3 bg-surface border-4 border-gray-600 rounded-none text-sm hover:bg-gray-800 transition flex items-center gap-3 font-bold text-white" style="box-shadow: inset 2px 2px 0px #555, inset -2px -2px 0px #333333; text-shadow: 1px 1px 0px #333333;">
+                <button <?php if (!$isCompleted): ?>onclick="selectOption(this, '<?= htmlspecialchars(addslashes($option)) ?>')"<?php else: ?>disabled<?php endif; ?>
+                        class="mc-option w-full text-left px-4 py-3 bg-surface border-4 border-gray-600 rounded-none text-sm <?php if (!$isCompleted): ?>hover:bg-gray-800 transition<?php else: ?>opacity-60 cursor-not-allowed<?php endif; ?> flex items-center gap-3 font-bold text-white" style="box-shadow: inset 2px 2px 0px #555, inset -2px -2px 0px #333333; text-shadow: 1px 1px 0px #333333;">
                     <span class="w-6 h-6 rounded-none border-2 border-gray-600 flex items-center justify-center text-xs flex-shrink-0 bg-gray-900" style="box-shadow: inset 2px 2px 0px #333333, inset -2px -2px 0px #333;">
                         <?= chr(65 + $i) ?>
                     </span>
@@ -180,9 +185,8 @@ $prismLang = $prismLangMap[$challenge['language']] ?? 'clike';
                 <?php endforeach; ?>
             </div>
 
-            <button onclick="submitMC()"
+                <button <?php if ($isCompleted): ?>disabled<?php endif; ?> onclick="submitMC()"
                     id="submitMCBtn"
-                    disabled
                     class="mt-6 w-full py-3 bg-white text-black border-4 border-gray-600 font-bold rounded-none hover:bg-gray-200 transition disabled:opacity-50 disabled:cursor-not-allowed" style="box-shadow: inset 4px 4px 0px #fff, inset -4px -4px 0px #ccc, 4px 4px 0px #333333;">
                 Submit Answer
             </button>

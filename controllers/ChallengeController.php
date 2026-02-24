@@ -92,6 +92,17 @@ class ChallengeController extends BaseController
         $user   = $this->auth->user();
         $userId = $user['id'];
 
+        // If the user already completed this challenge, do not allow re-submission.
+        $alreadyCompleted = in_array($id, $user['completed_challenges'] ?? []);
+        if ($alreadyCompleted) {
+            $this->json([
+                'success' => true,
+                'message' => 'Challenge already completed — you cannot retry this challenge.',
+                'xp'      => 0,
+            ]);
+            return;
+        }
+
         // Validate submission
         $result = $this->challengeModel->validateSubmission($id, $userCode, $userOutput);
 
