@@ -8,7 +8,10 @@ return [
     'name'    => 'E-SIP',
     'version' => '1.0.0',
     'tagline' => 'Learn Programming Through Play',
-    'base_url' => '/e_sip',
+    // Base URL for the application. Set this to the subdirectory where the app is served
+    // (e.g. '/e_sip'). In production you can override using the APP_BASE_URL environment
+    // variable (set to '' for domain root or '/yourpath').
+    'base_url' => getenv('APP_BASE_URL') !== false ? getenv('APP_BASE_URL') : '/e_sip',
 
     // Data directory for JSON storage
     'data_dir' => __DIR__ . '/../data',

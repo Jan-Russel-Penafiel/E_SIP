@@ -41,7 +41,31 @@ class BaseController
         }
 
         // Normalize provided base_url: remove trailing slash if present
-        return rtrim($cfg, '/');
+        $normalized = rtrim($cfg, '/');
+
+        // If a full URL was provided (http...), return as-is
+        if (str_starts_with($normalized, 'http://') || str_starts_with($normalized, 'https://') || str_starts_with($normalized, '//')) {
+            return $normalized;
+        }
+
+        // Determine project root on disk. Prefer defined BASE_PATH, otherwise infer.
+        $projectRoot = defined('BASE_PATH') ? BASE_PATH : realpath(__DIR__ . '/..');
+
+        // Path where assets should exist if base_url is correct
+        $cfgPath = '/' . trim($normalized, '/');
+        $assetCandidate1 = $projectRoot . $cfgPath . '/assets/css/app.css';
+        $assetCandidate2 = $projectRoot . '/assets/css/app.css';
+
+        // If assets exist under configured base, keep it. Otherwise fallback to root if assets exist there.
+        if (file_exists($assetCandidate1)) {
+            return $normalized;
+        }
+        if (file_exists($assetCandidate2)) {
+            return '';
+        }
+
+        // If neither exists, return normalized config anyway (best-effort)
+        return $normalized;
     }
 
     /**
