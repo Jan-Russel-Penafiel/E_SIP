@@ -44,7 +44,34 @@
         <p class="text-gray-300 font-bold" style="text-shadow: 1px 1px 0px #333333;">No rankings yet. Complete challenges to get on the leaderboard!</p>
     </div>
     <?php else: ?>
-    <div class="overflow-x-auto">
+    <!-- Mobile stacked list (hidden on md+) -->
+    <div class="md:hidden space-y-3">
+        <?php foreach ($topPlayers as $player):
+            $isCurrentUser = ($player['user_id'] ?? '') === $user['id'];
+            $rankIcon = match($player['rank']) {
+                1 => '🥇',
+                2 => '🥈',
+                3 => '🥉',
+                default => '#' . $player['rank'],
+            };
+        ?>
+        <div class="bg-surface border-4 border-gray-600 rounded-none p-4 flex items-center justify-between" style="box-shadow: inset 4px 4px 0px #c6c6c6, inset -4px -4px 0px #555555;">
+            <div>
+                <div class="font-bold pixel-font <?= $isCurrentUser ? 'text-white' : 'text-gray-300' ?>" style="text-shadow: 1px 1px 0px #333333;">
+                    <?= htmlspecialchars($player['username']) ?><?= $isCurrentUser ? ' (You)' : '' ?>
+                </div>
+                <div class="text-xs text-gray-300 font-bold" style="text-shadow: 1px 1px 0px #333333;">Level <?= $player['level'] ?> • <?= number_format($player['xp']) ?> XP • <?= $player['challenges_completed'] ?> challenges</div>
+            </div>
+            <div class="text-right">
+                <div class="text-lg font-bold text-white" style="text-shadow: 2px 2px 0px #333333;"><?= $rankIcon ?></div>
+                <div class="text-sm text-gray-300 font-bold" style="text-shadow: 1px 1px 0px #333333;">Score: <?= number_format($player['score'] ?? 0) ?></div>
+            </div>
+        </div>
+        <?php endforeach; ?>
+    </div>
+
+    <!-- Desktop/table view (hidden on small screens) -->
+    <div class="hidden md:block overflow-x-auto">
         <table class="w-full">
             <thead>
                 <tr class="border-b-4 border-gray-600 text-xs text-gray-300 uppercase tracking-wider font-bold bg-surface" style="text-shadow: 1px 1px 0px #333333;">

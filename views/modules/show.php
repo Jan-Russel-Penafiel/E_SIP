@@ -25,6 +25,9 @@ $prismLangMap = [
 $prismLang = $prismLangMap[$module['language']] ?? 'clike';
 ?>
 
+<!-- Page container for responsive padding -->
+<div class="px-4 sm:px-6 md:px-8 lg:px-12">
+
 <!-- Breadcrumb -->
 <nav class="flex items-center gap-2 text-sm text-gray-500 mb-6">
     <a href="<?= $baseUrl ?>/modules" class="hover:text-white transition">Modules</a>
