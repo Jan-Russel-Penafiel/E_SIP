@@ -38,7 +38,7 @@
 
         <!-- Login Form -->
         <div class="bg-gray-800 border-4 border-black rounded-none p-8" style="box-shadow: inset 4px 4px 0px #9ca3af, inset -4px -4px 0px #374151, 8px 8px 0px #000;">
-            <h2 class="text-2xl font-bold mb-6 text-white" style="text-shadow: 2px 2px 0px #000;">Sign In</h2>
+            <h2 class="text-2xl font-bold mb-6 text-white text-center" style="text-shadow: 2px 2px 0px #000;">Sign In</h2>
 
             <form method="POST" action="<?= $baseUrl ?>/login" class="space-y-5">
                 <?php if (!empty($_GET['redirect'])): ?>
