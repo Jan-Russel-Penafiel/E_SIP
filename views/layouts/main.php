@@ -264,22 +264,52 @@
             <div class="flex-1"></div>
 
             <?php if ($isLoggedIn && $currentUser): ?>
-            <!-- XP Bar in header -->
-            <div class="hidden md:flex items-center gap-4">
-                <div class="flex items-center gap-2 text-sm bg-surface border-4 border-gray-600 rounded-none px-3 py-1" style="box-shadow: inset 2px 2px 0px #333333;">
-                    <span class="text-yellow-400" style="text-shadow: 1px 1px 0px #000;">⚡</span>
-                    <span class="text-gray-300 font-bold" style="text-shadow: 1px 1px 0px #000;">XP:</span>
-                    <span class="font-bold text-white" style="text-shadow: 1px 1px 0px #000;"><?= $currentUser['xp'] ?></span>
+            <!-- Header stats: full on md+, compact dropdown on small screens -->
+            <div class="relative">
+                <!-- Full stats (desktop/tablet) -->
+                <div id="statsFull" class="hidden md:flex items-center gap-4">
+                    <div class="flex items-center gap-2 text-sm bg-surface border-4 border-gray-600 rounded-none px-3 py-1" style="box-shadow: inset 2px 2px 0px #333333;">
+                        <span class="text-yellow-400" style="text-shadow: 1px 1px 0px #000;">⚡</span>
+                        <span class="text-gray-300 font-bold" style="text-shadow: 1px 1px 0px #000;">XP:</span>
+                        <span class="font-bold text-white" style="text-shadow: 1px 1px 0px #000;"><?= $currentUser['xp'] ?></span>
+                    </div>
+                    <div class="flex items-center gap-2 text-sm bg-surface border-4 border-gray-600 rounded-none px-3 py-1" style="box-shadow: inset 2px 2px 0px #333333;">
+                        <span style="text-shadow: 1px 1px 0px #000;">🔥</span>
+                        <span class="text-gray-300 font-bold" style="text-shadow: 1px 1px 0px #000;">Streak:</span>
+                        <span class="font-bold text-white" style="text-shadow: 1px 1px 0px #000;"><?= $currentUser['streak'] ?? 0 ?></span>
+                    </div>
+                    <div class="flex items-center gap-2 text-sm bg-surface border-4 border-gray-600 rounded-none px-3 py-1" style="box-shadow: inset 2px 2px 0px #333333;">
+                        <span style="text-shadow: 1px 1px 0px #000;">🎯</span>
+                        <span class="text-gray-300 font-bold" style="text-shadow: 1px 1px 0px #000;">Level:</span>
+                        <span class="font-bold text-white" style="text-shadow: 1px 1px 0px #000;"><?= $currentUser['level'] ?></span>
+                    </div>
                 </div>
-                <div class="flex items-center gap-2 text-sm bg-surface border-4 border-gray-600 rounded-none px-3 py-1" style="box-shadow: inset 2px 2px 0px #333333;">
-                    <span style="text-shadow: 1px 1px 0px #000;">🔥</span>
-                    <span class="text-gray-300 font-bold" style="text-shadow: 1px 1px 0px #000;">Streak:</span>
-                    <span class="font-bold text-white" style="text-shadow: 1px 1px 0px #000;"><?= $currentUser['streak'] ?? 0 ?></span>
-                </div>
-                <div class="flex items-center gap-2 text-sm bg-surface border-4 border-gray-600 rounded-none px-3 py-1" style="box-shadow: inset 2px 2px 0px #333333;">
-                    <span style="text-shadow: 1px 1px 0px #000;">🎯</span>
-                    <span class="text-gray-300 font-bold" style="text-shadow: 1px 1px 0px #000;">Level:</span>
-                    <span class="font-bold text-white" style="text-shadow: 1px 1px 0px #000;"><?= $currentUser['level'] ?></span>
+
+                <!-- Compact mobile stats: single button that toggles a dropdown -->
+                <div id="statsMobile" class="flex md:hidden items-center">
+                    <button id="statsToggle" class="flex items-center gap-2 text-sm bg-surface border-4 border-gray-600 rounded-none px-3 py-1 font-bold" style="box-shadow: inset 2px 2px 0px #333333;">
+                        <span class="text-yellow-400">⚡</span>
+                        <span><?= $currentUser['xp'] ?></span>
+                        <svg class="w-3 h-3 ml-1" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 10.94l3.71-3.71a.75.75 0 111.06 1.06l-4.24 4.24a.75.75 0 01-1.06 0L5.21 8.27a.75.75 0 01.02-1.06z" clip-rule="evenodd"/></svg>
+                    </button>
+
+                    <div id="statsDropdown" class="hidden absolute right-6 top-14 w-48 bg-surface border-4 border-gray-600 rounded-none p-2 z-50" style="box-shadow: 0 6px 18px rgba(0,0,0,0.5);">
+                        <div class="flex items-center gap-2 text-sm px-2 py-2">
+                            <span class="text-yellow-400">⚡</span>
+                            <span class="text-gray-300 font-bold">XP:</span>
+                            <span class="font-bold text-white"><?= $currentUser['xp'] ?></span>
+                        </div>
+                        <div class="flex items-center gap-2 text-sm px-2 py-2 border-t border-gray-700">
+                            <span>🔥</span>
+                            <span class="text-gray-300 font-bold">Streak:</span>
+                            <span class="font-bold text-white"><?= $currentUser['streak'] ?? 0 ?></span>
+                        </div>
+                        <div class="flex items-center gap-2 text-sm px-2 py-2 border-t border-gray-700">
+                            <span>🎯</span>
+                            <span class="text-gray-300 font-bold">Level:</span>
+                            <span class="font-bold text-white"><?= $currentUser['level'] ?></span>
+                        </div>
+                    </div>
                 </div>
             </div>
             <?php endif; ?>
@@ -351,6 +381,32 @@
                 window.location.href = '<?= $baseUrl ?>/admin';
             }
         });
+        // Header stats dropdown (mobile)
+        (function(){
+            const toggle = document.getElementById('statsToggle');
+            const dropdown = document.getElementById('statsDropdown');
+            if (!toggle || !dropdown) return;
+
+            toggle.addEventListener('click', function(e){
+                e.stopPropagation();
+                dropdown.classList.toggle('hidden');
+            });
+
+            // Close when clicking outside
+            document.addEventListener('click', function(e){
+                if (!dropdown.classList.contains('hidden')) {
+                    // if click occurred outside dropdown and toggle
+                    if (!dropdown.contains(e.target) && !toggle.contains(e.target)) {
+                        dropdown.classList.add('hidden');
+                    }
+                }
+            });
+
+            // Close on escape
+            document.addEventListener('keydown', function(e){
+                if (e.key === 'Escape') dropdown.classList.add('hidden');
+            });
+        })();
     </script>
 </body>
 </html>
