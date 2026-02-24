@@ -12,12 +12,12 @@
             theme: {
                 extend: {
                     colors: {
-                        primary: '#2b2b2b',
+                        primary: '#333333',
                         secondary: '#ffffff',
                         accent: '#333333',
                         muted: '#9ca3af',
-                        surface: '#2b2b2b',
-                        'surface-light': '#3a3a3a',
+                        surface: '#111111',
+                        'surface-light': '#1a1a1a',
                         border: '#2a2a2a',
                     }
                 }
@@ -47,7 +47,7 @@
         /* Code editor overlay */
         .prism-editor-wrap {
             position: relative;
-            background: #2b2b2b;
+            background: #333333;
         }
         .prism-editor-wrap pre {
             position: absolute !important;
@@ -131,7 +131,7 @@
         
         /* Keep code editor dark and its original colors */
         .prism-editor-wrap {
-            background-color: #2b2b2b !important;
+            background-color: #333333 !important;
         }
         .prism-editor-wrap textarea, .prism-editor-wrap pre, .prism-editor-wrap code {
             background-color: transparent !important;
@@ -149,12 +149,12 @@
         }
     </style>
 </head>
-<body class="bg-surface text-white min-h-screen flex">
+<body class="text-white min-h-screen flex">
 
     <!-- Sidebar Navigation -->
-    <aside id="sidebar" class="fixed inset-y-0 left-0 z-50 w-64 bg-surface border-r-4 border-black transform -translate-x-full lg:translate-x-0 transition-transform duration-300 flex flex-col" style="box-shadow: inset -4px 0px 0px #555555;">
+    <aside id="sidebar" class="fixed inset-y-0 left-0 z-50 w-64 bg-surface border-r-4 border-gray-600 transform -translate-x-full lg:translate-x-0 transition-transform duration-300 flex flex-col" style="box-shadow: inset -4px 0px 0px #555555;">
         <!-- Logo -->
-        <div class="h-16 flex items-center px-6 border-b-4 border-black" style="box-shadow: inset 0px -4px 0px #555555;">
+        <div class="h-16 flex items-center px-6 border-b-4 border-gray-600" style="box-shadow: inset 0px -4px 0px #555555;">
             <a href="<?= $baseUrl ?>/dashboard" class="flex items-center gap-3 w-full justify-center">
                 <span class="text-xl font-bold tracking-tight text-white" style="text-shadow: 2px 2px 0px #000;">E-SIP!</span>
             </a>
@@ -181,8 +181,8 @@
                 foreach ($navItems as $item):
                     $isActive = str_starts_with($currentPath, $item['path']);
                     $activeClass = $isActive
-                        ? 'bg-white text-black border-4 border-black rounded-none'
-                        : 'text-gray-300 hover:text-white hover:bg-surface-light border-4 border-transparent hover:border-black rounded-none';
+                        ? 'bg-white text-black border-4 border-gray-600 rounded-none'
+                        : 'text-gray-300 hover:text-white hover:bg-surface border-4 border-transparent hover:border-gray-600 rounded-none';
                     $activeStyle = $isActive
                         ? 'box-shadow: inset 2px 2px 0px #fff, inset -2px -2px 0px #ccc; text-shadow: 1px 1px 0px #fff;'
                         : 'text-shadow: 1px 1px 0px #000;';
@@ -200,7 +200,7 @@
             
                 <?php
                 $adminActive = str_starts_with($currentPath, '/admin');
-                $adminClass = $adminActive ? 'bg-white text-black border-4 border-black rounded-none' : 'text-gray-300 hover:text-white hover:bg-surface-light border-4 border-transparent hover:border-black rounded-none';
+                $adminClass = $adminActive ? 'bg-white text-black border-4 border-gray-600 rounded-none' : 'text-gray-300 hover:text-white hover:bg-surface border-4 border-transparent hover:border-gray-600 rounded-none';
                 $adminStyle = $adminActive ? 'box-shadow: inset 2px 2px 0px #fff, inset -2px -2px 0px #ccc; text-shadow: 1px 1px 0px #fff;' : 'text-shadow: 1px 1px 0px #000;';
                 ?>
                 <a href="<?= $baseUrl ?>/admin"
@@ -209,15 +209,15 @@
                     <span class="font-bold text-sm">Admin Panel</span>
                 </a>
                 <div class="mt-3 space-y-2 px-1">
-                    <a href="<?= $baseUrl ?>/admin/users" class="flex items-center gap-3 px-3 py-2.5 transition-all duration-200 text-gray-300 hover:text-white hover:bg-surface-light border-4 border-transparent hover:border-black rounded-none font-bold" style="text-shadow: 1px 1px 0px #000;">
+                    <a href="<?= $baseUrl ?>/admin/users" class="flex items-center gap-3 px-3 py-2.5 transition-all duration-200 text-gray-300 hover:text-white hover:bg-surface border-4 border-transparent hover:border-gray-600 rounded-none font-bold" style="text-shadow: 1px 1px 0px #333333;">
                         <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM2 20c0-3.314 2.686-6 6-6h8c3.314 0 6 2.686 6 6"></path></svg>
                         <span class="text-sm font-bold">Manage Users</span>
                     </a>
-                    <a href="<?= $baseUrl ?>/admin/modules" class="flex items-center gap-3 px-3 py-2.5 transition-all duration-200 text-gray-300 hover:text-white hover:bg-surface-light border-4 border-transparent hover:border-black rounded-none font-bold" style="text-shadow: 1px 1px 0px #000;">
+                    <a href="<?= $baseUrl ?>/admin/modules" class="flex items-center gap-3 px-3 py-2.5 transition-all duration-200 text-gray-300 hover:text-white hover:bg-surface border-4 border-transparent hover:border-gray-600 rounded-none font-bold" style="text-shadow: 1px 1px 0px #333333;">
                         <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 7h18M3 12h18M3 17h18"></path></svg>
                         <span class="text-sm font-bold">Manage Modules</span>
                     </a>
-                    <a href="<?= $baseUrl ?>/admin/challenges" class="flex items-center gap-3 px-3 py-2.5 transition-all duration-200 text-gray-300 hover:text-white hover:bg-surface-light border-4 border-transparent hover:border-black rounded-none font-bold" style="text-shadow: 1px 1px 0px #000;">
+                    <a href="<?= $baseUrl ?>/admin/challenges" class="flex items-center gap-3 px-3 py-2.5 transition-all duration-200 text-gray-300 hover:text-white hover:bg-surface border-4 border-transparent hover:border-gray-600 rounded-none font-bold" style="text-shadow: 1px 1px 0px #333333;">
                         <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3"></path></svg>
                         <span class="text-sm font-bold">Manage Challenges</span>
                     </a>
@@ -229,7 +229,7 @@
 
         <!-- User Info -->
         <?php if ($isLoggedIn && $currentUser): ?>
-        <div class="p-4 border-t-4 border-black" style="box-shadow: inset 0px 4px 0px #555555;">
+        <div class="p-4 border-t-4 border-gray-600" style="box-shadow: inset 0px 4px 0px #555555;">
             <div class="mb-3 text-center">
                 <div class="min-w-0">
                     <p class="text-sm font-bold truncate text-white" style="text-shadow: 1px 1px 0px #000;"><?= htmlspecialchars($currentUser['username']) ?></p>
@@ -237,7 +237,7 @@
                 </div>
             </div>
                 <a href="<?= $baseUrl ?>/logout"
-                    class="flex items-center gap-2 px-3 py-2 text-sm text-white bg-surface border-4 border-black rounded-none hover:bg-gray-800 transition-all font-bold" style="box-shadow: inset 2px 2px 0px #555, inset -2px -2px 0px #000; text-shadow: 1px 1px 0px #000;">
+                    class="flex items-center gap-2 px-3 py-2 text-sm text-white bg-surface border-4 border-gray-600 rounded-none hover:bg-gray-800 transition-all font-bold" style="box-shadow: inset 2px 2px 0px #555, inset -2px -2px 0px #333333; text-shadow: 1px 1px 0px #333333;">
                 <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1"></path>
                 </svg>
@@ -250,9 +250,9 @@
     <!-- Main Content -->
     <div class="flex-1 lg:ml-64">
         <!-- Top Bar -->
-        <header class="h-16 border-b-4 border-black bg-surface flex items-center justify-between px-6 sticky top-0 z-40" style="box-shadow: inset 0px -4px 0px #555555;">
+        <header class="h-16 border-b-4 border-gray-600 bg-surface flex items-center justify-between px-6 sticky top-0 z-40" style="box-shadow: inset 0px -4px 0px #555555;">
             <!-- Mobile menu toggle -->
-            <button id="menuToggle" class="lg:hidden p-2 text-white bg-surface border-4 border-black rounded-none hover:bg-gray-800" style="box-shadow: inset 2px 2px 0px #555, inset -2px -2px 0px #000;">
+            <button id="menuToggle" class="lg:hidden p-2 text-white bg-surface border-4 border-gray-600 rounded-none hover:bg-gray-800" style="box-shadow: inset 2px 2px 0px #555, inset -2px -2px 0px #333333;">
                 <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
                 </svg>
@@ -263,17 +263,17 @@
             <?php if ($isLoggedIn && $currentUser): ?>
             <!-- XP Bar in header -->
             <div class="hidden md:flex items-center gap-4">
-                <div class="flex items-center gap-2 text-sm bg-surface border-4 border-black rounded-none px-3 py-1" style="box-shadow: inset 2px 2px 0px #000;">
+                <div class="flex items-center gap-2 text-sm bg-surface border-4 border-gray-600 rounded-none px-3 py-1" style="box-shadow: inset 2px 2px 0px #333333;">
                     <span class="text-yellow-400" style="text-shadow: 1px 1px 0px #000;">⚡</span>
                     <span class="text-gray-300 font-bold" style="text-shadow: 1px 1px 0px #000;">XP:</span>
                     <span class="font-bold text-white" style="text-shadow: 1px 1px 0px #000;"><?= $currentUser['xp'] ?></span>
                 </div>
-                <div class="flex items-center gap-2 text-sm bg-surface border-4 border-black rounded-none px-3 py-1" style="box-shadow: inset 2px 2px 0px #000;">
+                <div class="flex items-center gap-2 text-sm bg-surface border-4 border-gray-600 rounded-none px-3 py-1" style="box-shadow: inset 2px 2px 0px #333333;">
                     <span style="text-shadow: 1px 1px 0px #000;">🔥</span>
                     <span class="text-gray-300 font-bold" style="text-shadow: 1px 1px 0px #000;">Streak:</span>
                     <span class="font-bold text-white" style="text-shadow: 1px 1px 0px #000;"><?= $currentUser['streak'] ?? 0 ?></span>
                 </div>
-                <div class="flex items-center gap-2 text-sm bg-surface border-4 border-black rounded-none px-3 py-1" style="box-shadow: inset 2px 2px 0px #000;">
+                <div class="flex items-center gap-2 text-sm bg-surface border-4 border-gray-600 rounded-none px-3 py-1" style="box-shadow: inset 2px 2px 0px #333333;">
                     <span style="text-shadow: 1px 1px 0px #000;">🎯</span>
                     <span class="text-gray-300 font-bold" style="text-shadow: 1px 1px 0px #000;">Level:</span>
                     <span class="font-bold text-white" style="text-shadow: 1px 1px 0px #000;"><?= $currentUser['level'] ?></span>
@@ -285,7 +285,7 @@
         <!-- Flash Messages -->
         <?php if ($flash): ?>
         <div id="flashMessage" class="mx-6 mt-4">
-            <div class="px-4 py-3 border-4 border-black rounded-none <?= $flashType === 'error'
+            <div class="px-4 py-3 border-4 border-gray-600 rounded-none <?= $flashType === 'error'
                 ? 'bg-red-900 text-red-100'
                 : 'bg-green-900 text-green-100' ?> flex items-center justify-between font-bold" style="box-shadow: inset 4px 4px 0px <?= $flashType === 'error' ? '#f87171' : '#86efac' ?>, inset -4px -4px 0px <?= $flashType === 'error' ? '#7f1d1d' : '#14532d' ?>; text-shadow: 1px 1px 0px #000;">
                 <span><?= htmlspecialchars($flash) ?></span>
@@ -304,13 +304,13 @@
         </main>
 
         <!-- Footer -->
-        <footer class="border-t-4 border-black px-6 py-4 text-center text-xs text-gray-400 font-bold" style="box-shadow: inset 0px 4px 0px #555555; text-shadow: 1px 1px 0px #000;">
+        <footer class="border-t-4 border-gray-600 px-6 py-4 text-center text-xs text-gray-400 font-bold" style="box-shadow: inset 0px 4px 0px #555555; text-shadow: 1px 1px 0px #333333;">
             &copy; <?= date('Y') ?> E-SIP &mdash; Educational System for Interactive Programming. All rights reserved.
         </footer>
     </div>
 
     <!-- Mobile overlay -->
-    <div id="sidebarOverlay" class="fixed inset-0 bg-surface/50 z-40 hidden lg:hidden" onclick="toggleSidebar()"></div>
+    <div id="sidebarOverlay" class="fixed inset-0 z-40 hidden lg:hidden" style="background: rgba(51,51,51,0.5)" onclick="toggleSidebar()"></div>
 
     <!-- Prism.js core + autoloader (loads language grammars on demand) -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>

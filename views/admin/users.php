@@ -4,7 +4,7 @@
         <h1 class="text-3xl font-bold text-white" style="text-shadow: 2px 2px 0px #000;">Manage Users</h1>
         <p class="text-gray-300 text-sm mt-1 font-bold" style="text-shadow: 1px 1px 0px #000;"><?= count($users) ?> registered users</p>
     </div>
-    <a href="<?= $baseUrl ?>/admin" class="px-4 py-2 text-sm bg-surface text-white border-4 border-black rounded-none hover:bg-gray-800 transition font-bold" style="box-shadow: inset 2px 2px 0px #555, inset -2px -2px 0px #000; text-shadow: 1px 1px 0px #000;">
+    <a href="<?= $baseUrl ?>/admin" class="px-4 py-2 text-sm bg-black text-white border-4 border-black rounded-none hover:bg-gray-800 transition font-bold" style="box-shadow: inset 2px 2px 0px #555, inset -2px -2px 0px #000; text-shadow: 1px 1px 0px #000;">
         ← Back to Admin
     </a>
 </div>
@@ -13,7 +13,7 @@
     <div class="overflow-x-auto">
         <table class="w-full text-sm">
             <thead>
-                <tr class="text-left text-gray-300 bg-surface border-b-4 border-black font-bold" style="text-shadow: 1px 1px 0px #000;">
+                <tr class="text-left text-gray-300 bg-black border-b-4 border-black font-bold" style="text-shadow: 1px 1px 0px #000;">
                     <th class="px-4 py-3">Username</th>
                     <th class="px-4 py-3">Email</th>
                     <th class="px-4 py-3">Role</th>

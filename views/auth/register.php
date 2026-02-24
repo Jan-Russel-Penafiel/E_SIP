@@ -18,7 +18,7 @@
         }
     </style>
 </head>
-<body class="bg-surface text-white min-h-screen flex items-center justify-center">
+<body class="bg-black text-white min-h-screen flex items-center justify-center">
     <div class="w-full max-w-md px-6">
         <!-- Logo -->
         <div class="text-center mb-10">
@@ -44,7 +44,7 @@
                 <div>
                     <label for="username" class="block text-sm font-bold text-white mb-1.5" style="text-shadow: 1px 1px 0px #000;">Username</label>
                     <input type="text" id="username" name="username" required minlength="3"
-                              class="w-full px-4 py-3 bg-surface border-4 border-black rounded-none text-white placeholder-gray-500
+                           class="w-full px-4 py-3 bg-black border-4 border-black rounded-none text-white placeholder-gray-500
                                   focus:border-white focus:outline-none transition font-bold"
                            style="box-shadow: inset 4px 4px 0px #000, inset -4px -4px 0px #333;"
                            placeholder="codeninja">
@@ -53,7 +53,7 @@
                 <div>
                     <label for="email" class="block text-sm font-bold text-white mb-1.5" style="text-shadow: 1px 1px 0px #000;">Email</label>
                     <input type="email" id="email" name="email" required
-                              class="w-full px-4 py-3 bg-surface border-4 border-black rounded-none text-white placeholder-gray-500
+                           class="w-full px-4 py-3 bg-black border-4 border-black rounded-none text-white placeholder-gray-500
                                   focus:border-white focus:outline-none transition font-bold"
                            style="box-shadow: inset 4px 4px 0px #000, inset -4px -4px 0px #333;"
                            placeholder="you@example.com">
@@ -62,7 +62,7 @@
                 <div>
                     <label for="password" class="block text-sm font-bold text-white mb-1.5" style="text-shadow: 1px 1px 0px #000;">Password</label>
                     <input type="password" id="password" name="password" required minlength="6"
-                              class="w-full px-4 py-3 bg-surface border-4 border-black rounded-none text-white placeholder-gray-500
+                           class="w-full px-4 py-3 bg-black border-4 border-black rounded-none text-white placeholder-gray-500
                                   focus:border-white focus:outline-none transition font-bold"
                            style="box-shadow: inset 4px 4px 0px #000, inset -4px -4px 0px #333;"
                            placeholder="••••••••">
@@ -71,7 +71,7 @@
                 <div>
                     <label for="confirm_password" class="block text-sm font-bold text-white mb-1.5" style="text-shadow: 1px 1px 0px #000;">Confirm Password</label>
                     <input type="password" id="confirm_password" name="confirm_password" required minlength="6"
-                              class="w-full px-4 py-3 bg-surface border-4 border-black rounded-none text-white placeholder-gray-500
+                           class="w-full px-4 py-3 bg-black border-4 border-black rounded-none text-white placeholder-gray-500
                                   focus:border-white focus:outline-none transition font-bold"
                            style="box-shadow: inset 4px 4px 0px #000, inset -4px -4px 0px #333;"
                            placeholder="••••••••">

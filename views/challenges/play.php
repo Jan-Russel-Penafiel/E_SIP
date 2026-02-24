@@ -26,62 +26,62 @@ $prismLang = $prismLangMap[$challenge['language']] ?? 'clike';
 ?>
 
 <!-- Breadcrumb -->
-<nav class="flex items-center gap-2 text-sm text-gray-400 mb-6 font-bold" style="text-shadow: 1px 1px 0px #000;">
+<nav class="flex items-center gap-2 text-sm text-gray-400 mb-6 font-bold" style="text-shadow: 1px 1px 0px #333333;">
     <a href="<?= $baseUrl ?>/challenges" class="hover:text-white transition">Challenges</a>
-    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" style="filter: drop-shadow(1px 1px 0px #000);"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" style="filter: drop-shadow(1px 1px 0px #333333);"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
     <span class="text-white"><?= htmlspecialchars($challenge['title']) ?></span>
 </nav>
 
 <div class="grid lg:grid-cols-2 gap-6">
     <!-- Left Panel: Challenge Info -->
     <div>
-        <div class="bg-surface border-4 border-black rounded-none p-6 mb-4" style="box-shadow: inset 4px 4px 0px #c6c6c6, inset -4px -4px 0px #555555;">
+        <div class="bg-surface border-4 border-gray-600 rounded-none p-6 mb-4" style="box-shadow: inset 4px 4px 0px #c6c6c6, inset -4px -4px 0px #555555;">
             <div class="flex items-center justify-between mb-4">
                 <div class="flex items-center gap-2">
-                    <span class="text-xl" style="filter: drop-shadow(2px 2px 0px #000);"><?= $langInfo['icon'] ?></span>
-                    <h1 class="text-xl font-bold text-white" style="text-shadow: 2px 2px 0px #000;"><?= htmlspecialchars($challenge['title']) ?></h1>
+                    <span class="text-xl" style="filter: drop-shadow(2px 2px 0px #333333);"><?= $langInfo['icon'] ?></span>
+                    <h1 class="text-xl font-bold text-white" style="text-shadow: 2px 2px 0px #333333;"><?= htmlspecialchars($challenge['title']) ?></h1>
                 </div>
                 <?php if ($isCompleted): ?>
-                <span class="px-2 py-1 text-xs font-bold rounded-none bg-green-500 text-black border-2 border-black" style="box-shadow: 2px 2px 0px #000;">
+                <span class="px-2 py-1 text-xs font-bold rounded-none bg-green-500 text-black border-2 border-gray-600" style="box-shadow: 2px 2px 0px #333333;">
                     ✓ Completed
                 </span>
                 <?php else: ?>
-                <span class="px-2 py-1 text-xs font-bold rounded-none bg-white text-black border-2 border-black" style="box-shadow: 2px 2px 0px #000;">
+                <span class="px-2 py-1 text-xs font-bold rounded-none bg-white text-black border-2 border-gray-600" style="box-shadow: 2px 2px 0px #333333;">
                     +<?= $challenge['xp_reward'] ?> XP
                 </span>
                 <?php endif; ?>
             </div>
 
-            <p class="text-gray-300 mb-4 font-bold" style="text-shadow: 1px 1px 0px #000;"><?= htmlspecialchars($challenge['description']) ?></p>
+            <p class="text-gray-300 mb-4 font-bold" style="text-shadow: 1px 1px 0px #333333;"><?= htmlspecialchars($challenge['description']) ?></p>
 
-            <div class="flex items-center gap-3 mb-4 text-xs font-bold" style="text-shadow: 1px 1px 0px #000;">
-                <span class="px-2 py-1 rounded-none bg-surface text-white border-2 border-gray-600" style="box-shadow: inset 2px 2px 0px #000, inset -2px -2px 0px #555;"><?= ucfirst($challenge['difficulty']) ?></span>
-                <span class="px-2 py-1 rounded-none bg-surface text-white border-2 border-gray-600 lang-label" style="box-shadow: inset 2px 2px 0px #000, inset -2px -2px 0px #555;"><?= $langInfo['name'] ?></span>
+            <div class="flex items-center gap-3 mb-4 text-xs font-bold" style="text-shadow: 1px 1px 0px #333333;">
+                <span class="px-2 py-1 rounded-none bg-surface text-white border-2 border-gray-600" style="box-shadow: inset 2px 2px 0px #333333, inset -2px -2px 0px #555;"><?= ucfirst($challenge['difficulty']) ?></span>
+                <span class="px-2 py-1 rounded-none bg-surface text-white border-2 border-gray-600 lang-label" style="box-shadow: inset 2px 2px 0px #333333, inset -2px -2px 0px #555;"><?= $langInfo['name'] ?></span>
                 <?php if (!empty($challenge['time_limit'])): ?>
-                <span class="px-2 py-1 rounded-none bg-surface text-white border-2 border-gray-600" id="timer" style="box-shadow: inset 2px 2px 0px #000, inset -2px -2px 0px #555;">
+                <span class="px-2 py-1 rounded-none bg-surface text-white border-2 border-gray-600" id="timer" style="box-shadow: inset 2px 2px 0px #333333, inset -2px -2px 0px #555;">
                     ⏱ <?= gmdate('i:s', $challenge['time_limit']) ?>
                 </span>
                 <?php endif; ?>
             </div>
 
             <!-- Instructions -->
-            <div class="bg-surface border-4 border-black rounded-none p-4" style="box-shadow: inset 2px 2px 0px #555, inset -2px -2px 0px #000;">
-                <h3 class="text-xs font-bold uppercase tracking-wider text-gray-400 mb-2" style="text-shadow: 1px 1px 0px #000;">Instructions</h3>
-                <p class="text-sm text-white font-bold" style="text-shadow: 1px 1px 0px #000;"><?= htmlspecialchars($challenge['instructions']) ?></p>
+            <div class="bg-surface border-4 border-gray-600 rounded-none p-4" style="box-shadow: inset 2px 2px 0px #555, inset -2px -2px 0px #333333;">
+                <h3 class="text-xs font-bold uppercase tracking-wider text-gray-400 mb-2" style="text-shadow: 1px 1px 0px #333333;">Instructions</h3>
+                <p class="text-sm text-white font-bold" style="text-shadow: 1px 1px 0px #333333;"><?= htmlspecialchars($challenge['instructions']) ?></p>
             </div>
         </div>
 
         <!-- Hints (collapsible) -->
         <?php if (!empty($challenge['hints'])): ?>
-        <div class="bg-surface border-4 border-black rounded-none p-4 mb-4" style="box-shadow: inset 4px 4px 0px #c6c6c6, inset -4px -4px 0px #555555;">
+        <div class="bg-surface border-4 border-gray-600 rounded-none p-4 mb-4" style="box-shadow: inset 4px 4px 0px #c6c6c6, inset -4px -4px 0px #555555;">
             <button onclick="document.getElementById('hints').classList.toggle('hidden')"
-                    class="flex items-center justify-between w-full text-sm font-bold text-gray-300 hover:text-white transition" style="text-shadow: 1px 1px 0px #000;">
+                    class="flex items-center justify-between w-full text-sm font-bold text-gray-300 hover:text-white transition" style="text-shadow: 1px 1px 0px #333333;">
                 <span>💡 Hints (<?= count($challenge['hints']) ?>)</span>
-                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" style="filter: drop-shadow(1px 1px 0px #000);"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" style="filter: drop-shadow(1px 1px 0px #333333);"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
             </button>
             <div id="hints" class="hidden mt-3 space-y-2">
                 <?php foreach ($challenge['hints'] as $i => $hint): ?>
-                <p class="text-sm text-gray-300 pl-4 border-l-4 border-black font-bold" style="text-shadow: 1px 1px 0px #000;"><?= htmlspecialchars($hint) ?></p>
+                <p class="text-sm text-gray-300 pl-4 border-l-4 border-gray-600 font-bold" style="text-shadow: 1px 1px 0px #333333;"><?= htmlspecialchars($hint) ?></p>
                 <?php endforeach; ?>
             </div>
         </div>
@@ -89,11 +89,11 @@ $prismLang = $prismLangMap[$challenge['language']] ?? 'clike';
 
         <!-- Previous Attempts -->
         <?php if (!empty($attempts)): ?>
-        <div class="bg-surface border-4 border-black rounded-none p-4" style="box-shadow: inset 4px 4px 0px #c6c6c6, inset -4px -4px 0px #555555;">
-            <h3 class="text-sm font-bold text-gray-300 mb-3" style="text-shadow: 1px 1px 0px #000;">Previous Attempts (<?= count($attempts) ?>)</h3>
+        <div class="bg-surface border-4 border-gray-600 rounded-none p-4" style="box-shadow: inset 4px 4px 0px #c6c6c6, inset -4px -4px 0px #555555;">
+            <h3 class="text-sm font-bold text-gray-300 mb-3" style="text-shadow: 1px 1px 0px #333333;">Previous Attempts (<?= count($attempts) ?>)</h3>
             <div class="space-y-2 max-h-40 overflow-y-auto">
                 <?php foreach (array_reverse(array_slice($attempts, -5)) as $attempt): ?>
-                <div class="flex items-center justify-between text-xs py-2 border-b-4 border-black last:border-0 font-bold" style="text-shadow: 1px 1px 0px #000;">
+                <div class="flex items-center justify-between text-xs py-2 border-b-4 border-gray-600 last:border-0 font-bold" style="text-shadow: 1px 1px 0px #333333;">
                     <span class="<?= $attempt['success'] ? 'text-green-400' : 'text-red-400' ?>">
                         <?= $attempt['success'] ? '✓ Passed' : '✗ Failed' ?>
                     </span>
@@ -109,20 +109,20 @@ $prismLang = $prismLangMap[$challenge['language']] ?? 'clike';
     <div>
         <?php if ($isCodeChallenge): ?>
         <!-- Code Editor -->
-        <div class="bg-surface border-4 border-black rounded-none overflow-hidden" style="box-shadow: inset 4px 4px 0px #c6c6c6, inset -4px -4px 0px #555555;">
+        <div class="bg-surface border-4 border-gray-600 rounded-none overflow-hidden" style="box-shadow: inset 4px 4px 0px #c6c6c6, inset -4px -4px 0px #555555;">
             <!-- Editor Header -->
-            <div class="flex items-center justify-between px-4 py-3 border-b-4 border-black bg-surface" style="box-shadow: inset 2px 2px 0px #555, inset -2px -2px 0px #000;">
+            <div class="flex items-center justify-between px-4 py-3 border-b-4 border-gray-600 bg-surface" style="box-shadow: inset 2px 2px 0px #555, inset -2px -2px 0px #333333;">
                 <div class="flex items-center gap-2">
                     <div class="w-3 h-3 rounded-none bg-red-500 border-2 border-black"></div>
                     <div class="w-3 h-3 rounded-none bg-yellow-500 border-2 border-black"></div>
                     <div class="w-3 h-3 rounded-none bg-green-500 border-2 border-black"></div>
-                    <span class="ml-3 text-xs text-white font-mono font-bold lang-label" style="text-shadow: 1px 1px 0px #000;"><?= $langInfo['name'] ?></span>
+                    <span class="ml-3 text-xs text-white font-mono font-bold lang-label" style="text-shadow: 1px 1px 0px #333333;"><?= $langInfo['name'] ?></span>
                 </div>
-                <button onclick="resetCode()" class="text-xs text-gray-300 hover:text-white transition font-bold" style="text-shadow: 1px 1px 0px #000;">Reset</button>
+                <button onclick="resetCode()" class="text-xs text-gray-300 hover:text-white transition font-bold" style="text-shadow: 1px 1px 0px #333333;">Reset</button>
             </div>
 
             <!-- Prism.js Overlay Code Editor -->
-            <div class="prism-editor-wrap bg-gray-900" style="height:16rem; box-shadow: inset 2px 2px 0px #000, inset -2px -2px 0px #333;">
+            <div class="prism-editor-wrap bg-gray-900" style="height:16rem; box-shadow: inset 2px 2px 0px #333333, inset -2px -2px 0px #333;">
                 <pre id="editorPre" aria-hidden="true" style="height:16rem;overflow:auto;padding:1rem;"><code id="editorCode" class="language-<?= $prismLang ?>"></code></pre>
                 <textarea id="codeEditor"
                           class="bg-transparent text-white font-mono"
@@ -135,17 +135,17 @@ $prismLang = $prismLangMap[$challenge['language']] ?? 'clike';
             </div>
 
             <!-- Editor Footer -->
-            <div class="flex items-center justify-between px-4 py-3 border-t-4 border-black bg-surface" style="box-shadow: inset 2px 2px 0px #555, inset -2px -2px 0px #000;">
-                <span class="text-xs text-gray-400 font-bold" id="charCount" style="text-shadow: 1px 1px 0px #000;">0 chars</span>
+            <div class="flex items-center justify-between px-4 py-3 border-t-4 border-gray-600 bg-surface" style="box-shadow: inset 2px 2px 0px #555, inset -2px -2px 0px #333333;">
+                <span class="text-xs text-gray-400 font-bold" id="charCount" style="text-shadow: 1px 1px 0px #333333;">0 chars</span>
                 <div class="flex gap-2">
                     <button onclick="runCode()"
-                            class="px-4 py-2 text-sm bg-gray-800 text-white border-4 border-black rounded-none hover:bg-gray-700 transition flex items-center gap-2 font-bold" style="box-shadow: inset 2px 2px 0px #aaa, inset -2px -2px 0px #444; text-shadow: 1px 1px 0px #000;">
-                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" style="filter: drop-shadow(1px 1px 0px #000);"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z"></path></svg>
+                            class="px-4 py-2 text-sm bg-gray-800 text-white border-4 border-gray-600 rounded-none hover:bg-gray-700 transition flex items-center gap-2 font-bold" style="box-shadow: inset 2px 2px 0px #aaa, inset -2px -2px 0px #444; text-shadow: 1px 1px 0px #333333;">
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" style="filter: drop-shadow(1px 1px 0px #333333);"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z"></path></svg>
                         Run
                     </button>
                     <button onclick="submitCode()"
                             id="submitBtn"
-                            class="px-4 py-2 text-sm bg-white text-black border-4 border-black font-bold rounded-none hover:bg-gray-200 transition flex items-center gap-2" style="box-shadow: inset 2px 2px 0px #fff, inset -2px -2px 0px #ccc, 2px 2px 0px #000;">
+                            class="px-4 py-2 text-sm bg-white text-black border-4 border-gray-600 font-bold rounded-none hover:bg-gray-200 transition flex items-center gap-2" style="box-shadow: inset 2px 2px 0px #fff, inset -2px -2px 0px #ccc, 2px 2px 0px #333333;">
                         Submit
                         <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
                     </button>
@@ -154,25 +154,25 @@ $prismLang = $prismLangMap[$challenge['language']] ?? 'clike';
         </div>
 
         <!-- Output Console -->
-        <div class="mt-4 bg-surface border-4 border-black rounded-none overflow-hidden" style="box-shadow: inset 4px 4px 0px #c6c6c6, inset -4px -4px 0px #555555;">
-            <div class="px-4 py-2 border-b-4 border-black bg-surface" style="box-shadow: inset 2px 2px 0px #555, inset -2px -2px 0px #000;">
-                <span class="text-xs text-white font-mono font-bold" style="text-shadow: 1px 1px 0px #000;">Output</span>
+        <div class="mt-4 bg-surface border-4 border-gray-600 rounded-none overflow-hidden" style="box-shadow: inset 4px 4px 0px #c6c6c6, inset -4px -4px 0px #555555;">
+            <div class="px-4 py-2 border-b-4 border-gray-600 bg-surface" style="box-shadow: inset 2px 2px 0px #555, inset -2px -2px 0px #333333;">
+                <span class="text-xs text-white font-mono font-bold" style="text-shadow: 1px 1px 0px #333333;">Output</span>
             </div>
-            <div id="outputConsole" class="h-32 p-4 font-mono text-sm overflow-y-auto text-gray-300 bg-gray-900 font-bold" style="box-shadow: inset 2px 2px 0px #000, inset -2px -2px 0px #333; text-shadow: 1px 1px 0px #000;">
+            <div id="outputConsole" class="h-32 p-4 font-mono text-sm overflow-y-auto text-gray-300 bg-gray-900 font-bold" style="box-shadow: inset 2px 2px 0px #333333, inset -2px -2px 0px #333; text-shadow: 1px 1px 0px #333333;">
                 <span class="text-gray-500">// Output will appear here...</span>
             </div>
         </div>
 
         <?php else: ?>
         <!-- Multiple Choice -->
-        <div class="bg-surface border-4 border-black rounded-none p-6" style="box-shadow: inset 4px 4px 0px #c6c6c6, inset -4px -4px 0px #555555;">
-            <h3 class="text-sm font-bold uppercase tracking-wider text-gray-300 mb-4" style="text-shadow: 1px 1px 0px #000;">Select Your Answer</h3>
+        <div class="bg-surface border-4 border-gray-600 rounded-none p-6" style="box-shadow: inset 4px 4px 0px #c6c6c6, inset -4px -4px 0px #555555;">
+            <h3 class="text-sm font-bold uppercase tracking-wider text-gray-300 mb-4" style="text-shadow: 1px 1px 0px #333333;">Select Your Answer</h3>
 
             <div class="space-y-3" id="mcOptions">
                 <?php foreach ($challenge['options'] as $i => $option): ?>
                 <button onclick="selectOption(this, '<?= htmlspecialchars(addslashes($option)) ?>')"
-                    class="mc-option w-full text-left px-4 py-3 bg-surface border-4 border-black rounded-none text-sm hover:bg-gray-800 transition flex items-center gap-3 font-bold text-white" style="box-shadow: inset 2px 2px 0px #555, inset -2px -2px 0px #000; text-shadow: 1px 1px 0px #000;">
-                    <span class="w-6 h-6 rounded-none border-2 border-gray-600 flex items-center justify-center text-xs flex-shrink-0 bg-gray-900" style="box-shadow: inset 2px 2px 0px #000, inset -2px -2px 0px #333;">
+                        class="mc-option w-full text-left px-4 py-3 bg-surface border-4 border-gray-600 rounded-none text-sm hover:bg-gray-800 transition flex items-center gap-3 font-bold text-white" style="box-shadow: inset 2px 2px 0px #555, inset -2px -2px 0px #333333; text-shadow: 1px 1px 0px #333333;">
+                    <span class="w-6 h-6 rounded-none border-2 border-gray-600 flex items-center justify-center text-xs flex-shrink-0 bg-gray-900" style="box-shadow: inset 2px 2px 0px #333333, inset -2px -2px 0px #333;">
                         <?= chr(65 + $i) ?>
                     </span>
                     <span><?= htmlspecialchars($option) ?></span>
@@ -183,26 +183,26 @@ $prismLang = $prismLangMap[$challenge['language']] ?? 'clike';
             <button onclick="submitMC()"
                     id="submitMCBtn"
                     disabled
-                    class="mt-6 w-full py-3 bg-white text-black border-4 border-black font-bold rounded-none hover:bg-gray-200 transition disabled:opacity-50 disabled:cursor-not-allowed" style="box-shadow: inset 4px 4px 0px #fff, inset -4px -4px 0px #ccc, 4px 4px 0px #000;">
+                    class="mt-6 w-full py-3 bg-white text-black border-4 border-gray-600 font-bold rounded-none hover:bg-gray-200 transition disabled:opacity-50 disabled:cursor-not-allowed" style="box-shadow: inset 4px 4px 0px #fff, inset -4px -4px 0px #ccc, 4px 4px 0px #333333;">
                 Submit Answer
             </button>
         </div>
         <?php endif; ?>
 
         <!-- Result Modal -->
-        <div id="resultModal" class="hidden mt-4 bg-surface border-4 border-black rounded-none p-6 text-center" style="box-shadow: inset 4px 4px 0px #c6c6c6, inset -4px -4px 0px #555555;">
-            <div id="resultIcon" class="text-4xl mb-3" style="filter: drop-shadow(2px 2px 0px #000);"></div>
-            <h3 id="resultTitle" class="text-lg font-bold mb-2 text-white" style="text-shadow: 2px 2px 0px #000;"></h3>
-            <p id="resultMessage" class="text-sm text-gray-300 mb-4 font-bold" style="text-shadow: 1px 1px 0px #000;"></p>
+        <div id="resultModal" class="hidden mt-4 bg-surface border-4 border-gray-600 rounded-none p-6 text-center" style="box-shadow: inset 4px 4px 0px #c6c6c6, inset -4px -4px 0px #555555;">
+            <div id="resultIcon" class="text-4xl mb-3" style="filter: drop-shadow(2px 2px 0px #333333);"></div>
+            <h3 id="resultTitle" class="text-lg font-bold mb-2 text-white" style="text-shadow: 2px 2px 0px #333333;"></h3>
+            <p id="resultMessage" class="text-sm text-gray-300 mb-4 font-bold" style="text-shadow: 1px 1px 0px #333333;"></p>
             <div id="resultXP" class="hidden mb-4">
-                <span class="inline-flex items-center gap-1 px-3 py-1.5 bg-white text-black border-4 border-black text-sm font-bold rounded-none" style="box-shadow: inset 2px 2px 0px #fff, inset -2px -2px 0px #ccc, 2px 2px 0px #000;">
+                <span class="inline-flex items-center gap-1 px-3 py-1.5 bg-white text-black border-4 border-gray-600 text-sm font-bold rounded-none" style="box-shadow: inset 2px 2px 0px #fff, inset -2px -2px 0px #ccc, 2px 2px 0px #333333;">
                     ⚡ +<span id="xpAmount">0</span> XP
                 </span>
             </div>
-            <div id="levelUpBanner" class="hidden mb-4 px-4 py-3 bg-yellow-500 border-4 border-black text-black font-bold rounded-none" style="box-shadow: inset 4px 4px 0px #fde047, inset -4px -4px 0px #a16207;">
-                <span style="filter: drop-shadow(2px 2px 0px #000);">🎉</span> Level Up! You reached Level <span id="newLevelNum"></span>!
+            <div id="levelUpBanner" class="hidden mb-4 px-4 py-3 bg-yellow-500 border-4 border-gray-600 text-black font-bold rounded-none" style="box-shadow: inset 4px 4px 0px #fde047, inset -4px -4px 0px #a16207;">
+                <span style="filter: drop-shadow(2px 2px 0px #333333);">🎉</span> Level Up! You reached Level <span id="newLevelNum"></span>!
             </div>
-            <a href="<?= $baseUrl ?>/challenges" class="text-sm text-gray-300 hover:text-white transition font-bold" style="text-shadow: 1px 1px 0px #000;">
+            <a href="<?= $baseUrl ?>/challenges" class="text-sm text-gray-300 hover:text-white transition font-bold" style="text-shadow: 1px 1px 0px #333333;">
                 ← Back to Challenges
             </a>
         </div>

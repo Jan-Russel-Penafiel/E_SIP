@@ -33,27 +33,27 @@ $prismLang = $prismLangMap[$module['language']] ?? 'clike';
 </nav>
 
 <!-- Module Header -->
-<div class="bg-surface border-4 border-black rounded-none p-8 mb-8" style="box-shadow: inset 4px 4px 0px #c6c6c6, inset -4px -4px 0px #555555;">
+<div class="bg-surface border-4 border-gray-600 rounded-none p-8 mb-8" style="box-shadow: inset 4px 4px 0px #c6c6c6, inset -4px -4px 0px #555555;">
     <div class="flex flex-col md:flex-row md:items-start gap-6">
             <div class="flex-shrink-0">
-            <div class="w-16 h-16 bg-surface border-4 border-black rounded-none flex items-center justify-center text-3xl" style="box-shadow: inset 2px 2px 0px #555, inset -2px -2px 0px #000;">
-                <span style="filter: drop-shadow(2px 2px 0px #000);"><?= $module['icon'] ?></span>
+            <div class="w-16 h-16 bg-surface border-4 border-gray-600 rounded-none flex items-center justify-center text-3xl" style="box-shadow: inset 2px 2px 0px #555, inset -2px -2px 0px #333333;">
+                <span style="filter: drop-shadow(2px 2px 0px #333333);"><?= $module['icon'] ?></span>
             </div>
         </div>
         <div class="flex-1">
             <div class="flex items-center gap-3 mb-2">
-                <h1 class="text-2xl font-bold text-white" style="text-shadow: 2px 2px 0px #000;"><?= htmlspecialchars($module['title']) ?></h1>
+                <h1 class="text-2xl font-bold text-white" style="text-shadow: 2px 2px 0px #333333;"><?= htmlspecialchars($module['title']) ?></h1>
                 <?php if ($isModuleCompleted): ?>
-                <span class="px-2 py-1 text-xs font-bold rounded-none bg-green-500 text-black border-2 border-black" style="box-shadow: 2px 2px 0px #000;">✓ Completed</span>
+                <span class="px-2 py-1 text-xs font-bold rounded-none bg-green-500 text-black border-2 border-gray-600" style="box-shadow: 2px 2px 0px #333333;">✓ Completed</span>
                 <?php endif; ?>
             </div>
-            <p class="text-gray-300 mb-4 font-bold" style="text-shadow: 1px 1px 0px #000;"><?= htmlspecialchars($module['description']) ?></p>
+            <p class="text-gray-300 mb-4 font-bold" style="text-shadow: 1px 1px 0px #333333;"><?= htmlspecialchars($module['description']) ?></p>
 
-            <div class="flex flex-wrap items-center gap-4 text-sm font-bold" style="text-shadow: 1px 1px 0px #000;">
+            <div class="flex flex-wrap items-center gap-4 text-sm font-bold" style="text-shadow: 1px 1px 0px #333333;">
                 <span class="flex items-center gap-1.5 text-white lang-label">
-                    <span style="filter: drop-shadow(1px 1px 0px #000);"><?= $langInfo['icon'] ?></span> <?= $langInfo['name'] ?>
+                    <span style="filter: drop-shadow(1px 1px 0px #333333);"><?= $langInfo['icon'] ?></span> <?= $langInfo['name'] ?>
                 </span>
-                <span class="px-2 py-0.5 text-xs rounded-none bg-surface text-white border-2 border-gray-600" style="box-shadow: inset 2px 2px 0px #000, inset -2px -2px 0px #555;">
+                <span class="px-2 py-0.5 text-xs rounded-none bg-surface text-white border-2 border-gray-600" style="box-shadow: inset 2px 2px 0px #333333, inset -2px -2px 0px #555;">
                     <?= ucfirst($module['difficulty']) ?>
                 </span>
                 <span class="text-gray-300"><?= count($module['lessons'] ?? []) ?> lessons</span>
@@ -61,7 +61,7 @@ $prismLang = $prismLangMap[$module['language']] ?? 'clike';
             </div>
 
             <!-- Progress -->
-                <div class="mt-4 max-w-md">
+            <div class="mt-4 max-w-md">
                 <div class="flex justify-between text-xs text-white font-bold mb-1" style="text-shadow: 1px 1px 0px #000;">
                     <span>Progress</span>
                     <span id="progressText"><?= round($progress) ?>%</span>
@@ -107,7 +107,7 @@ $prismLang = $prismLangMap[$module['language']] ?? 'clike';
                 <div id="lessonBody-<?= $index ?>" class="hidden border-t-4 border-black">
                     <!-- Phase 1: Lesson Information -->
                     <div id="lessonInfo-<?= $index ?>" class="p-5">
-                            <div class="bg-surface border-4 border-black rounded-none p-6 mb-4" style="box-shadow: inset 2px 2px 0px #555, inset -2px -2px 0px #000;">
+                        <div class="bg-surface border-4 border-black rounded-none p-6 mb-4" style="box-shadow: inset 2px 2px 0px #555, inset -2px -2px 0px #000;">
                             <div class="flex items-center gap-2 mb-3">
                                 <span class="text-lg" style="filter: drop-shadow(2px 2px 0px #000);">📖</span>
                                 <h4 class="font-bold text-white" style="text-shadow: 1px 1px 0px #000;">Lesson Content</h4>
@@ -124,7 +124,7 @@ $prismLang = $prismLangMap[$module['language']] ?? 'clike';
                             <?php if (!empty($lesson['example_code'])): ?>
                             <div class="mt-4">
                                 <p class="text-xs font-bold text-gray-400 uppercase tracking-wider mb-2" style="text-shadow: 1px 1px 0px #000;">Example</p>
-                                <pre class="bg-surface p-3 border-4 border-black rounded-none text-sm overflow-x-auto" style="box-shadow: inset 2px 2px 0px #000, inset -2px -2px 0px #333; background-color: #2b2b2b;"><code class="language-<?= $prismLang ?>"><?= htmlspecialchars($lesson['example_code']) ?></code></pre>
+                                <pre class="bg-surface p-3 border-4 border-black rounded-none text-sm overflow-x-auto" style="box-shadow: inset 2px 2px 0px #000, inset -2px -2px 0px #333; background-color: #333333;"><code class="language-<?= $prismLang ?>"><?= htmlspecialchars($lesson['example_code']) ?></code></pre>
                             </div>
                             <?php endif; ?>
                             <?php if (!empty($lesson['key_points'])): ?>
@@ -290,30 +290,30 @@ $prismLang = $prismLangMap[$module['language']] ?? 'clike';
 
     <!-- Challenges Sidebar -->
     <div>
-        <h2 class="text-lg font-bold mb-4 text-white" style="text-shadow: 2px 2px 0px #000;">Challenges</h2>
+        <h2 class="text-lg font-bold mb-4 text-white" style="text-shadow: 2px 2px 0px #333333;">Challenges</h2>
         <?php if (empty($challenges)): ?>
-        <div class="bg-surface border-4 border-black rounded-none p-6 text-center" style="box-shadow: inset 4px 4px 0px #c6c6c6, inset -4px -4px 0px #555555;">
-            <span class="text-3xl block mb-2" style="filter: drop-shadow(2px 2px 0px #000);">🎮</span>
-            <p class="text-gray-300 text-sm font-bold" style="text-shadow: 1px 1px 0px #000;">No challenges available for this module yet.</p>
-        </div>
+            <div class="bg-surface border-4 border-gray-600 rounded-none p-6 text-center" style="box-shadow: inset 4px 4px 0px #c6c6c6, inset -4px -4px 0px #555555;">
+                <span class="text-3xl block mb-2" style="filter: drop-shadow(2px 2px 0px #333333);">🎮</span>
+                <p class="text-gray-300 text-sm font-bold" style="text-shadow: 1px 1px 0px #333333;">No challenges available for this module yet.</p>
+            </div>
         <?php else: ?>
         <div class="space-y-3">
             <?php foreach ($challenges as $challenge):
                 $isCompleted = in_array($challenge['id'], $user['completed_challenges'] ?? []);
             ?>
-            <a href="<?= $baseUrl ?>/challenges/<?= $challenge['id'] ?>"
-               class="block bg-surface border-4 border-black rounded-none p-4 hover:bg-gray-800 transition group" style="box-shadow: inset 4px 4px 0px #c6c6c6, inset -4px -4px 0px #555555;">
+                <a href="<?= $baseUrl ?>/challenges/<?= $challenge['id'] ?>"
+                   class="block bg-surface border-4 border-gray-600 rounded-none p-4 hover:bg-gray-800 transition group" style="box-shadow: inset 4px 4px 0px #c6c6c6, inset -4px -4px 0px #555555;">
                 <div class="flex items-center justify-between mb-2">
-                    <h4 class="font-bold text-sm text-white group-hover:text-yellow-400 transition" style="text-shadow: 1px 1px 0px #000;"><?= htmlspecialchars($challenge['title']) ?></h4>
+                        <h4 class="font-bold text-sm text-white group-hover:text-yellow-400 transition" style="text-shadow: 1px 1px 0px #333333;"><?= htmlspecialchars($challenge['title']) ?></h4>
                     <?php if ($isCompleted): ?>
-                    <span class="text-green-400 text-xs font-bold" style="text-shadow: 1px 1px 0px #000;">✓</span>
+                        <span class="text-green-400 text-xs font-bold" style="text-shadow: 1px 1px 0px #333333;">✓</span>
                     <?php endif; ?>
                 </div>
-                <div class="flex items-center gap-2 text-xs text-white font-bold" style="text-shadow: 1px 1px 0px #000;">
-                    <span class="px-1.5 py-0.5 rounded-none bg-surface border-2 border-gray-600 text-black" style="box-shadow: inset 2px 2px 0px #000, inset -2px -2px 0px #555;"><?= ucfirst($challenge['difficulty']) ?></span>
-                    <span class="px-1.5 py-0.5 rounded-none bg-surface border-2 border-gray-600 text-black" style="box-shadow: inset 2px 2px 0px #000, inset -2px -2px 0px #555;"><?= ucfirst($challenge['type']) ?></span>
-                    <span class="text-yellow-400">+<?= $challenge['xp_reward'] ?> XP</span>
-                </div>
+                    <div class="flex items-center gap-2 text-xs text-white font-bold" style="text-shadow: 1px 1px 0px #333333;">
+                        <span class="px-1.5 py-0.5 rounded-none bg-surface text-gray-300 border-2 border-gray-600" style="box-shadow: inset 2px 2px 0px #333333, inset -2px -2px 0px #fff;"><?= ucfirst($challenge['difficulty']) ?></span>
+                        <span class="px-1.5 py-0.5 rounded-none bg-surface text-gray-300 border-2 border-gray-600" style="box-shadow: inset 2px 2px 0px #333333, inset -2px -2px 0px #fff;"><?= ucfirst($challenge['type']) ?></span>
+                        <span class="text-yellow-400">+<?= $challenge['xp_reward'] ?> XP</span>
+                    </div>
             </a>
             <?php endforeach; ?>
         </div>
@@ -785,8 +785,8 @@ function escapeHtml(text) {
 .lesson-card.border-green-800\/50 { border-color: rgba(22, 101, 52, 0.5); }
 
 /* Ensure example code blocks on module pages use a dark grey background */
-pre.bg-surface, pre.bg-surface code, pre[class*="language-"] {
-    background-color: #2b2b2b !important;
+pre.bg-black, pre.bg-black code, pre[class*="language-"] {
+    background-color: #333333 !important;
     color: #fff !important;
 }
 

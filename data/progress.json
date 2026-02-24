@@ -94,5 +94,65 @@
         "id": "5f806780a0ba97a5",
         "created_at": "2026-02-23 18:25:41",
         "updated_at": "2026-02-23 18:25:41"
+    },
+    {
+        "user_id": "b2f73ae7e70515dc",
+        "challenge_id": "html-c1",
+        "success": false,
+        "xp_earned": 0,
+        "time_taken": 14,
+        "code": "<!-- Write your HTML hesre -->\nsadad\n",
+        "attempted_at": "2026-02-24 07:34:34",
+        "id": "7daad97bdff7412a",
+        "created_at": "2026-02-24 07:34:34",
+        "updated_at": "2026-02-24 07:34:34"
+    },
+    {
+        "user_id": "b2f73ae7e70515dc",
+        "challenge_id": "php-c1",
+        "success": false,
+        "xp_earned": 0,
+        "time_taken": 38,
+        "code": "<?php\necho \"Hello, PHP!\";\n?>",
+        "attempted_at": "2026-02-24 08:55:16",
+        "id": "b003ea44ec4557ae",
+        "created_at": "2026-02-24 08:55:16",
+        "updated_at": "2026-02-24 08:55:16"
+    },
+    {
+        "user_id": "b2f73ae7e70515dc",
+        "challenge_id": "php-c1",
+        "success": false,
+        "xp_earned": 0,
+        "time_taken": 56,
+        "code": "<?php\necho \"Hello,PHP!\";\n?>",
+        "attempted_at": "2026-02-24 08:55:33",
+        "id": "3a55dde909f5b9bf",
+        "created_at": "2026-02-24 08:55:33",
+        "updated_at": "2026-02-24 08:55:33"
+    },
+    {
+        "user_id": "b2f73ae7e70515dc",
+        "challenge_id": "php-c1",
+        "success": false,
+        "xp_earned": 0,
+        "time_taken": 98,
+        "code": "<?php\necho \"Hello, PHP!\";\n?>",
+        "attempted_at": "2026-02-24 08:56:16",
+        "id": "658a379b454da7e9",
+        "created_at": "2026-02-24 08:56:16",
+        "updated_at": "2026-02-24 08:56:16"
+    },
+    {
+        "user_id": "b2f73ae7e70515dc",
+        "challenge_id": "php-c1",
+        "success": false,
+        "xp_earned": 0,
+        "time_taken": 129,
+        "code": "<?php\necho \"Hello, PHP!\", Got: \";\n?>",
+        "attempted_at": "2026-02-24 08:56:46",
+        "id": "3c1bbdbf321d43e1",
+        "created_at": "2026-02-24 08:56:46",
+        "updated_at": "2026-02-24 08:56:46"
     }
 ]
