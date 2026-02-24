@@ -1,0 +1,390 @@
+/* ============================================
+   E-SIP Custom Styles
+   Supplements Tailwind CSS
+   ============================================ */
+
+/* Light Theme Overrides */
+body {
+    background-color: #ffffff !important;
+    color: #000000 !important;
+}
+.bg-black, .bg-surface, .bg-surface-light, .bg-gray-800, .bg-gray-900 {
+    background-color: #ffffff !important;
+}
+.hover\:bg-black:hover, .hover\:bg-gray-800:hover {
+    background-color: #f3f4f6 !important;
+}
+.text-white, .text-gray-300, .text-gray-400, .text-black, .text-gray-500, .text-gray-600, .text-gray-700, .text-gray-800, .text-gray-900, .text-gray-200, .text-gray-100 {
+    color: #000000 !important;
+    text-shadow: none !important;
+}
+.border-black, .border-gray-600, .border-white {
+    border-color: #000000 !important;
+}
+.hover\:border-white:hover {
+    border-color: #000000 !important;
+}
+.hover\:text-white:hover {
+    color: #000000 !important;
+}
+
+/* Remove text shadows globally for light theme */
+* {
+    text-shadow: none !important;
+}
+
+/* Light theme overrides for game states */
+.bg-green-900\/60, .bg-green-900\/40, .bg-green-900 { background-color: #dcfce7 !important; }
+.text-green-400, .text-green-300 { color: #000000 !important; }
+.border-green-500, .border-green-800 { border-color: #166534 !important; }
+
+.bg-red-900\/60, .bg-red-900\/40, .bg-red-900 { background-color: #fee2e2 !important; }
+.text-red-400, .text-red-300 { color: #000000 !important; }
+.border-red-500, .border-red-800 { border-color: #991b1b !important; }
+
+.bg-yellow-900\/40, .bg-yellow-900 { background-color: #fef08a !important; }
+.text-yellow-400, .text-yellow-300 { color: #000000 !important; }
+.border-yellow-800 { border-color: #854d0e !important; }
+
+.bg-\[\#2a2a2a\] { background-color: #f3f4f6 !important; }
+.border-\[\#444\] { border-color: #d1d5db !important; }
+
+/* Scrollbar */
+::-webkit-scrollbar {
+    width: 12px;
+    height: 12px;
+}
+::-webkit-scrollbar-track {
+    background: #000;
+    border-left: 4px solid #555;
+}
+::-webkit-scrollbar-thumb {
+    background: #fff;
+    border: 4px solid #000;
+    box-shadow: inset 2px 2px 0px #ccc, inset -2px -2px 0px #555;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #ccc;
+}
+
+/* Selection */
+::selection {
+    background: rgba(255, 255, 255, 0.2);
+    color: #fff;
+}
+
+/* Focus Ring */
+*:focus {
+    outline: none;
+}
+*:focus-visible {
+    outline: 2px solid rgba(255, 255, 255, 0.4);
+    outline-offset: 2px;
+    border-radius: 4px;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(8px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+@keyframes fadeOut {
+    from { opacity: 1; transform: translateY(0); }
+    to   { opacity: 0; transform: translateY(-8px); }
+}
+@keyframes slideIn {
+    from { opacity: 0; transform: translateX(-12px); }
+    to   { opacity: 1; transform: translateX(0); }
+}
+@keyframes pulse-glow {
+    0%, 100% { box-shadow: 0 0 0 0 rgba(255,255,255,0.1); }
+    50%      { box-shadow: 0 0 16px 4px rgba(255,255,255,0.08); }
+}
+@keyframes confetti {
+    0%   { transform: translateY(0) rotate(0deg); opacity: 1; }
+    100% { transform: translateY(-120px) rotate(720deg); opacity: 0; }
+}
+
+.animate-fade-in    { animation: fadeIn 0.3s ease-out; }
+.animate-fade-out   { animation: fadeOut 0.3s ease-out forwards; }
+.animate-slide-in   { animation: slideIn 0.3s ease-out; }
+.animate-pulse-glow { animation: pulse-glow 2s infinite; }
+
+/* Stagger children */
+.stagger > *:nth-child(1) { animation-delay: 0ms; }
+.stagger > *:nth-child(2) { animation-delay: 60ms; }
+.stagger > *:nth-child(3) { animation-delay: 120ms; }
+.stagger > *:nth-child(4) { animation-delay: 180ms; }
+.stagger > *:nth-child(5) { animation-delay: 240ms; }
+.stagger > *:nth-child(6) { animation-delay: 300ms; }
+
+/* Code editor */
+.code-editor {
+    font-family: Consolas, 'Roboto Mono', monospace;
+    font-size: 14px;
+    line-height: 1.6;
+    tab-size: 4;
+    background: #000;
+    color: #fff;
+    border: 4px solid #000;
+    border-radius: 0;
+    padding: 1rem;
+    resize: vertical;
+    min-height: 200px;
+    caret-color: #fff;
+    box-shadow: inset 2px 2px 0px #000, inset -2px -2px 0px #333;
+    font-weight: bold;
+}
+.code-editor:focus {
+    border-color: #fff;
+}
+.code-editor::placeholder {
+    color: #555;
+}
+
+/* Code output console */
+.code-output {
+    font-family: Consolas, 'Roboto Mono', monospace;
+    font-size: 13px;
+    line-height: 1.5;
+    background: #000;
+    color: #fff;
+    border: 4px solid #000;
+    border-radius: 0;
+    padding: 0.75rem;
+    min-height: 60px;
+    white-space: pre-wrap;
+    overflow-x: auto;
+    box-shadow: inset 2px 2px 0px #000, inset -2px -2px 0px #333;
+    font-weight: bold;
+}
+
+/* Nav active indicator */
+.nav-link.active {
+    background: #fff;
+    color: #000;
+    border: 4px solid #000;
+    box-shadow: inset 2px 2px 0px #fff, inset -2px -2px 0px #ccc;
+}
+
+/* Card hover effects */
+.card-hover {
+    transition: transform 0.1s ease;
+}
+.card-hover:hover {
+    transform: translateY(-4px) translateX(-4px);
+    box-shadow: inset 4px 4px 0px #c6c6c6, inset -4px -4px 0px #555555, 4px 4px 0px #000 !important;
+}
+
+/* Progress bar transitions */
+.progress-bar {
+    transition: width 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+/* Badge earned glow */
+.badge-earned {
+    box-shadow: 0 0 12px rgba(255, 255, 255, 0.06);
+}
+
+/* Tooltip */
+.tooltip {
+    position: relative;
+}
+.tooltip::after {
+    content: attr(data-tip);
+    position: absolute;
+    bottom: calc(100% + 6px);
+    left: 50%;
+    transform: translateX(-50%) scale(0.95);
+    background: #222;
+    color: #ccc;
+    font-size: 12px;
+    padding: 4px 10px;
+    border-radius: 6px;
+    white-space: nowrap;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.15s ease;
+}
+.tooltip:hover::after {
+    opacity: 1;
+    transform: translateX(-50%) scale(1);
+}
+
+/* Modal overlay */
+.modal-overlay {
+    background: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(4px);
+}
+
+/* Timer warning */
+.timer-warning {
+    animation: pulse-glow 1s infinite;
+    color: #ff4444 !important;
+}
+
+/* Difficulty badge colors */
+.diff-beginner     { color: #4ade80; }
+.diff-intermediate { color: #facc15; }
+.diff-advanced     { color: #f87171; }
+
+/* Flash message */
+.flash-message {
+    animation: fadeIn 0.3s ease-out;
+}
+.flash-message.dismissing {
+    animation: fadeOut 0.3s ease-out forwards;
+}
+
+/* Stat number counter (visual) */
+.stat-number {
+    font-variant-numeric: tabular-nums;
+}
+
+/* Responsive sidebar */
+@media (max-width: 1023px) {
+    .sidebar {
+        transform: translateX(-100%);
+        transition: transform 0.25s ease;
+        position: fixed;
+        z-index: 50;
+    }
+    .sidebar.open {
+        transform: translateX(0);
+    }
+    .sidebar-backdrop {
+        display: none;
+    }
+    .sidebar-backdrop.open {
+        display: block;
+        position: fixed;
+        inset: 0;
+        background: rgba(0, 0, 0, 0.5);
+        z-index: 40;
+    }
+}
+
+/* ============================================
+   Minecraft UI Overhaul
+   ============================================ */
+
+/* Global Reset for Blocky Look */
+* {
+    border-radius: 0 !important;
+}
+
+body {
+    background-color: #1e1e1e !important;
+    /* Simple dirt/stone noise pattern */
+    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAACCAYAAABytg0kAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAABZJREFUeNpi2rV7928GBgYGBkAAgwAE0AMgA/0O6AAAAABJRU5ErkJggg==');
+    background-size: 64px 64px;
+    image-rendering: pixelated;
+    color: #ffffff;
+    font-size: 14px !important;
+}
+
+/* Panels / Cards / Sidebar */
+.bg-surface, .bg-surface-light, .bg-black, aside, header, .card {
+    background-color: #8b8b8b !important;
+    border: 4px solid #000 !important;
+    box-shadow: inset 4px 4px 0px #c6c6c6, inset -4px -4px 0px #555555 !important;
+    color: #ffffff !important;
+    text-shadow: 2px 2px 0px #3f3f3f;
+}
+
+/* Inputs / Textareas */
+input, textarea, select, .code-editor, .code-output {
+    background-color: #000 !important;
+    border: 4px solid #555 !important;
+    box-shadow: inset 4px 4px 0px #000, inset -4px -4px 0px #fff !important;
+    color: #fff !important;
+    text-shadow: none !important;
+}
+
+/* Buttons / Links that look like buttons */
+button, .btn, a.bg-white, a.bg-primary, a.bg-surface-light, .nav-link {
+    background-color: #c6c6c6 !important;
+    border: 4px solid #000 !important;
+    box-shadow: inset 4px 4px 0px #ffffff, inset -4px -4px 0px #555555 !important;
+    color: #3f3f3f !important;
+    text-shadow: 2px 2px 0px #ffffff !important;
+    transition: none !important;
+    transform: none !important;
+    margin-bottom: 4px;
+}
+
+button:hover, .btn:hover, a.bg-white:hover, a.bg-primary:hover, a.bg-surface-light:hover, .nav-link:hover, .nav-link.active {
+    background-color: #5a5ca8 !important;
+    box-shadow: inset 4px 4px 0px #8b8cf8, inset -4px -4px 0px #373768 !important;
+    color: #ffffff !important;
+    text-shadow: 2px 2px 0px #3f3f3f !important;
+}
+
+button:active, .btn:active, a.bg-white:active, a.bg-primary:active, a.bg-surface-light:active, .nav-link:active {
+    box-shadow: inset 4px 4px 0px #555555, inset -4px -4px 0px #ffffff !important;
+    padding-top: 2px;
+}
+
+/* Text colors */
+.text-muted {
+    color: #dddddd !important;
+}
+.text-white {
+    color: #ffffff !important;
+    text-shadow: 2px 2px 0px #3f3f3f;
+}
+.text-black {
+    color: #3f3f3f !important;
+    text-shadow: 2px 2px 0px #ffffff;
+}
+
+/* Borders */
+.border-border, .border-t, .border-b, .border-l, .border-r, .border {
+    border-color: #000 !important;
+    border-width: 4px !important;
+}
+
+/* Scrollbar Overhaul */
+::-webkit-scrollbar {
+    width: 16px;
+    height: 16px;
+}
+::-webkit-scrollbar-track {
+    background: #555;
+    border-left: 4px solid #000;
+}
+::-webkit-scrollbar-thumb {
+    background: #c6c6c6;
+    border: 4px solid #000;
+    box-shadow: inset 4px 4px 0px #fff, inset -4px -4px 0px #555;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #a0a0a0;
+}
+
+/* Progress Bars */
+.bg-primary {
+    background-color: #4ade80 !important; /* Minecraft XP Green */
+    border: 4px solid #000 !important;
+    box-shadow: inset 4px 4px 0px #86efac, inset -4px -4px 0px #166534 !important;
+}
+.bg-surface-light {
+    background-color: #555 !important;
+}
+
+/* Badges */
+.badge-earned {
+    background-color: #facc15 !important; /* Gold */
+    color: #000 !important;
+    text-shadow: none !important;
+    border: 4px solid #000 !important;
+    box-shadow: inset 4px 4px 0px #fef08a, inset -4px -4px 0px #a16207 !important;
+}
+
+/* Language label (programming language names) */
+.lang-label {
+    font-family: 'Press Start 2P', cursive !important;
+    font-size: 12px;
+    letter-spacing: 0.5px;
+    line-height: 1;
+}

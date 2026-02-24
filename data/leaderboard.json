@@ -1,0 +1,26 @@
+[
+    {
+        "user_id": "b2f73ae7e70515dc",
+        "username": "chairman",
+        "level": 2,
+        "xp": 10,
+        "challenges_completed": 3,
+        "streak": 3,
+        "score": 2190,
+        "id": "91dd669a386dde29",
+        "created_at": "2026-02-23 13:42:59",
+        "updated_at": "2026-02-24 05:48:33"
+    },
+    {
+        "user_id": "admin_001",
+        "username": "admin",
+        "level": 99,
+        "xp": 99999,
+        "challenges_completed": 0,
+        "streak": 999,
+        "score": 208989,
+        "id": "5fda2e50aaf8f4c3",
+        "created_at": "2026-02-23 14:16:04",
+        "updated_at": "2026-02-24 05:21:00"
+    }
+]

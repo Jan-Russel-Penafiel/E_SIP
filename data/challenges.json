@@ -1,0 +1,1818 @@
+[
+    {
+        "id": "html-c1",
+        "module_id": "html-basics",
+        "title": "Your First Web Page",
+        "description": "Create a basic HTML page with a heading and a paragraph.",
+        "language": "html",
+        "difficulty": "beginner",
+        "type": "code",
+        "instructions": "Write an HTML snippet that contains an <h1> heading with the text 'Hello, HTML!' and a <p> paragraph with the text 'Welcome to web development.'",
+        "starter_code": "<!-- Write your HTML here -->\n",
+        "expected_output": "<h1>Hello, HTML!<\/h1>\n<p>Welcome to web development.<\/p>",
+        "hints": [
+            "Use the <h1> tag for the heading",
+            "Use the <p> tag for the paragraph",
+            "Make sure the text matches exactly"
+        ],
+        "xp_reward": 50,
+        "time_limit": 0
+    },
+    {
+        "id": "html-c2",
+        "module_id": "html-basics",
+        "title": "Build a List",
+        "description": "Create an unordered list of your three favourite programming languages.",
+        "language": "html",
+        "difficulty": "beginner",
+        "type": "code",
+        "instructions": "Create an unordered list (<ul>) containing exactly three <li> items: HTML, CSS, JavaScript.",
+        "starter_code": "<!-- Create your list here -->\n",
+        "expected_output": "<ul>\n  <li>HTML<\/li>\n  <li>CSS<\/li>\n  <li>JavaScript<\/li>\n<\/ul>",
+        "hints": [
+            "Use <ul> to start the unordered list",
+            "Each item needs its own <li> tag",
+            "Close both <li> and <ul> tags"
+        ],
+        "xp_reward": 50,
+        "time_limit": 0
+    },
+    {
+        "id": "html-c3",
+        "module_id": "html-basics",
+        "title": "HTML Tags Quiz",
+        "description": "Identify the correct tag for displaying a paragraph of text.",
+        "language": "html",
+        "difficulty": "beginner",
+        "type": "multiple_choice",
+        "instructions": "Which HTML tag is used to define a paragraph?",
+        "options": [
+            "<p>",
+            "<para>",
+            "<text>",
+            "<div>"
+        ],
+        "correct_answer": "<p>",
+        "hints": [
+            "It is a single-letter tag",
+            "It stands for 'paragraph'"
+        ],
+        "xp_reward": 30,
+        "time_limit": 0
+    },
+    {
+        "id": "html-c1-int",
+        "module_id": "html-basics-intermediate",
+        "title": "Clickable Link",
+        "description": "Create a hyperlink that opens a website in a new tab.",
+        "language": "html",
+        "difficulty": "intermediate",
+        "type": "code",
+        "instructions": "Create an anchor tag that displays the text 'Visit Google', links to 'https:\/\/www.google.com', and opens in a new browser tab.",
+        "starter_code": "<!-- Write your anchor tag here -->\n",
+        "expected_output": "<a href=\"https:\/\/www.google.com\" target=\"_blank\">Visit Google<\/a>",
+        "hints": [
+            "Use the <a> tag",
+            "The href attribute holds the URL",
+            "Use target='_blank' to open in a new tab"
+        ],
+        "xp_reward": 60,
+        "time_limit": 0
+    },
+    {
+        "id": "html-c2-int",
+        "module_id": "html-basics-intermediate",
+        "title": "Simple Form",
+        "description": "Build a login form with email and password fields.",
+        "language": "html",
+        "difficulty": "intermediate",
+        "type": "code",
+        "instructions": "Create a <form> with two inputs: one text input with name='username' and placeholder 'Username', and one password input with name='password' and placeholder 'Password'. Add a submit button with the text 'Login'.",
+        "starter_code": "<!-- Build your form here -->\n<form>\n\n<\/form>",
+        "expected_output": "<form>\n  <input type=\"text\" name=\"username\" placeholder=\"Username\">\n  <input type=\"password\" name=\"password\" placeholder=\"Password\">\n  <button type=\"submit\">Login<\/button>\n<\/form>",
+        "hints": [
+            "Use <input type='text'> for the username",
+            "Use <input type='password'> for the password",
+            "Add a <button type='submit'> at the end"
+        ],
+        "xp_reward": 70,
+        "time_limit": 0
+    },
+    {
+        "id": "html-c3-int",
+        "module_id": "html-basics-intermediate",
+        "title": "Semantic Tags Quiz",
+        "description": "Choose the correct semantic tag for the main navigation menu.",
+        "language": "html",
+        "difficulty": "intermediate",
+        "type": "multiple_choice",
+        "instructions": "Which HTML5 semantic tag should wrap the main navigation links of a website?",
+        "options": [
+            "<nav>",
+            "<menu>",
+            "<links>",
+            "<header>"
+        ],
+        "correct_answer": "<nav>",
+        "hints": [
+            "It is a 3-letter semantic tag",
+            "Think 'navigation'"
+        ],
+        "xp_reward": 40,
+        "time_limit": 0
+    },
+    {
+        "id": "html-c1-adv",
+        "module_id": "html-basics-advanced",
+        "title": "Full Page Structure",
+        "description": "Build a complete semantic HTML5 document skeleton.",
+        "language": "html",
+        "difficulty": "advanced",
+        "type": "code",
+        "instructions": "Create a full HTML5 page structure with: <!DOCTYPE html>, <html lang='en'>, <head> containing <meta charset='UTF-8'> and <title>My Site<\/title>, and a <body> with a <header> containing an <h1>My Site<\/h1>, a <main> containing a <p>Hello World<\/p>, and a <footer> containing <p>Footer<\/p>.",
+        "starter_code": "<!-- Build the full HTML5 page structure -->\n",
+        "expected_output": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"UTF-8\">\n  <title>My Site<\/title>\n<\/head>\n<body>\n  <header>\n    <h1>My Site<\/h1>\n  <\/header>\n  <main>\n    <p>Hello World<\/p>\n  <\/main>\n  <footer>\n    <p>Footer<\/p>\n  <\/footer>\n<\/body>\n<\/html>",
+        "hints": [
+            "Start with <!DOCTYPE html>",
+            "Include <meta charset='UTF-8'> inside <head>",
+            "Use <header>, <main>, and <footer> inside <body>"
+        ],
+        "xp_reward": 80,
+        "time_limit": 0
+    },
+    {
+        "id": "html-c2-adv",
+        "module_id": "html-basics-advanced",
+        "title": "Data Table",
+        "description": "Create an HTML table displaying student grades.",
+        "language": "html",
+        "difficulty": "advanced",
+        "type": "code",
+        "instructions": "Create a <table> with a <thead> row containing headers: Name, Score. Add a <tbody> with two rows: Alice \/ 95 and Bob \/ 87.",
+        "starter_code": "<!-- Create your table here -->\n",
+        "expected_output": "<table>\n  <thead>\n    <tr><th>Name<\/th><th>Score<\/th><\/tr>\n  <\/thead>\n  <tbody>\n    <tr><td>Alice<\/td><td>95<\/td><\/tr>\n    <tr><td>Bob<\/td><td>87<\/td><\/tr>\n  <\/tbody>\n<\/table>",
+        "hints": [
+            "Use <thead> for the header row and <tbody> for data rows",
+            "Use <th> for header cells and <td> for data cells",
+            "Each row is a <tr> element"
+        ],
+        "xp_reward": 80,
+        "time_limit": 0
+    },
+    {
+        "id": "html-c3-adv",
+        "module_id": "html-basics-advanced",
+        "title": "Accessibility Quiz",
+        "description": "Identify the attribute that improves image accessibility.",
+        "language": "html",
+        "difficulty": "advanced",
+        "type": "multiple_choice",
+        "instructions": "Which attribute on an <img> tag provides a text description for screen readers and is required for accessibility?",
+        "options": [
+            "alt",
+            "title",
+            "aria-label",
+            "description"
+        ],
+        "correct_answer": "alt",
+        "hints": [
+            "It is a 3-letter attribute",
+            "It stands for 'alternative text'"
+        ],
+        "xp_reward": 40,
+        "time_limit": 0
+    },
+    {
+        "id": "js-c1",
+        "module_id": "javascript-fundamentals",
+        "title": "Console Greeting",
+        "description": "Log a greeting message to the console.",
+        "language": "javascript",
+        "difficulty": "beginner",
+        "type": "code",
+        "instructions": "Use console.log() to output exactly: Hello, JavaScript!",
+        "starter_code": "\/\/ Write your code here\n",
+        "expected_output": "Hello, JavaScript!",
+        "hints": [
+            "Use console.log()",
+            "Put the string inside quotes",
+            "Output must match exactly including the comma and exclamation mark"
+        ],
+        "xp_reward": 50,
+        "time_limit": 0
+    },
+    {
+        "id": "js-c2",
+        "module_id": "javascript-fundamentals",
+        "title": "Arrow Function Sum",
+        "description": "Use an arrow function to add two numbers and log the result.",
+        "language": "javascript",
+        "difficulty": "beginner",
+        "type": "code",
+        "instructions": "Create an arrow function called add that takes two parameters and returns their sum. Call it with 8 and 12, then log the result.",
+        "starter_code": "const add = (a, b) => ;\nconsole.log(add(8, 12));",
+        "expected_output": "20",
+        "hints": [
+            "Arrow function: const name = (params) => expression",
+            "The function should return a + b",
+            "add(8, 12) should produce 20"
+        ],
+        "xp_reward": 60,
+        "time_limit": 0
+    },
+    {
+        "id": "js-c3",
+        "module_id": "javascript-fundamentals",
+        "title": "JavaScript Variables Quiz",
+        "description": "Choose the correct variable declaration for a value that never changes.",
+        "language": "javascript",
+        "difficulty": "beginner",
+        "type": "multiple_choice",
+        "instructions": "Which keyword should you use to declare a variable whose value will NEVER change?",
+        "options": [
+            "const",
+            "let",
+            "var",
+            "fixed"
+        ],
+        "correct_answer": "const",
+        "hints": [
+            "'const' stands for constant",
+            "It prevents reassignment"
+        ],
+        "xp_reward": 30,
+        "time_limit": 0
+    },
+    {
+        "id": "php-c1",
+        "module_id": "php-development",
+        "title": "PHP Echo",
+        "description": "Output a greeting message using PHP.",
+        "language": "php",
+        "difficulty": "beginner",
+        "type": "code",
+        "instructions": "Use echo to output exactly: Hello, PHP!",
+        "starter_code": "<?php\n\/\/ Write your code here\n?>",
+        "expected_output": "Hello, PHP!",
+        "hints": [
+            "Use the echo keyword",
+            "Wrap the text in single or double quotes",
+            "Don't forget the semicolon"
+        ],
+        "xp_reward": 50,
+        "time_limit": 0
+    },
+    {
+        "id": "php-c2",
+        "module_id": "php-development",
+        "title": "PHP Variable Output",
+        "description": "Store a name in a variable and echo a greeting.",
+        "language": "php",
+        "difficulty": "beginner",
+        "type": "code",
+        "instructions": "Store 'World' in $name, then echo: Hello, World!",
+        "starter_code": "<?php\n$name = ;\necho ;\n?>",
+        "expected_output": "Hello, World!",
+        "hints": [
+            "PHP variables start with $",
+            "Assign: $name = 'World';",
+            "echo 'Hello, ' . $name . '!';"
+        ],
+        "xp_reward": 60,
+        "time_limit": 0
+    },
+    {
+        "id": "php-c3",
+        "module_id": "php-development",
+        "title": "PHP Syntax Quiz",
+        "description": "Test your knowledge of PHP variable syntax.",
+        "language": "php",
+        "difficulty": "beginner",
+        "type": "multiple_choice",
+        "instructions": "How do you correctly declare a variable called 'score' with value 100 in PHP?",
+        "options": [
+            "$score = 100;",
+            "score = 100;",
+            "var score = 100;",
+            "int score = 100;"
+        ],
+        "correct_answer": "$score = 100;",
+        "hints": [
+            "PHP variables always start with $",
+            "No type declaration needed"
+        ],
+        "xp_reward": 30,
+        "time_limit": 0
+    },
+    {
+        "id": "sql-c1",
+        "module_id": "sql-databases",
+        "title": "SQL SELECT Quiz",
+        "description": "Test your knowledge of SQL SELECT queries.",
+        "language": "sql",
+        "difficulty": "beginner",
+        "type": "multiple_choice",
+        "instructions": "Which SQL statement retrieves ALL columns from a table called 'employees'?",
+        "options": [
+            "SELECT * FROM employees;",
+            "GET ALL FROM employees;",
+            "FETCH employees;",
+            "SELECT employees.*;"
+        ],
+        "correct_answer": "SELECT * FROM employees;",
+        "hints": [
+            "* is the wildcard for all columns",
+            "Syntax: SELECT columns FROM table;"
+        ],
+        "xp_reward": 30,
+        "time_limit": 0
+    },
+    {
+        "id": "sql-c2",
+        "module_id": "sql-databases",
+        "title": "SQL UPDATE Quiz",
+        "description": "Test your knowledge of SQL UPDATE statements.",
+        "language": "sql",
+        "difficulty": "beginner",
+        "type": "multiple_choice",
+        "instructions": "Which SQL statement correctly updates the email of the user with id=3?",
+        "options": [
+            "UPDATE users SET email='new@mail.com' WHERE id=3;",
+            "MODIFY users SET email='new@mail.com' WHERE id=3;",
+            "INSERT INTO users email='new@mail.com' WHERE id=3;",
+            "SET email='new@mail.com' IN users WHERE id=3;"
+        ],
+        "correct_answer": "UPDATE users SET email='new@mail.com' WHERE id=3;",
+        "hints": [
+            "UPDATE is the DML command for modifying rows",
+            "Always use WHERE to target specific rows"
+        ],
+        "xp_reward": 30,
+        "time_limit": 0
+    },
+    {
+        "id": "sql-c3",
+        "module_id": "sql-databases",
+        "title": "SQL JOIN Quiz",
+        "description": "Test your knowledge of SQL JOIN types.",
+        "language": "sql",
+        "difficulty": "beginner",
+        "type": "multiple_choice",
+        "instructions": "Which type of JOIN returns only rows that have matching values in BOTH tables?",
+        "options": [
+            "INNER JOIN",
+            "LEFT JOIN",
+            "RIGHT JOIN",
+            "FULL JOIN"
+        ],
+        "correct_answer": "INNER JOIN",
+        "hints": [
+            "Think of it as the intersection of two sets",
+            "Rows with no match in either table are excluded"
+        ],
+        "xp_reward": 30,
+        "time_limit": 0
+    },
+    {
+        "id": "css-c1",
+        "module_id": "css-styling",
+        "title": "CSS Selector Quiz",
+        "description": "Test your knowledge of CSS selectors.",
+        "language": "css",
+        "difficulty": "beginner",
+        "type": "multiple_choice",
+        "instructions": "Which CSS selector targets elements with the class 'highlight'?",
+        "options": [
+            ".highlight",
+            "#highlight",
+            "highlight",
+            "*highlight"
+        ],
+        "correct_answer": ".highlight",
+        "hints": [
+            "Class selectors always start with a period\/dot (.)",
+            "ID selectors start with a hash (#)"
+        ],
+        "xp_reward": 30,
+        "time_limit": 0
+    },
+    {
+        "id": "css-c2",
+        "module_id": "css-styling",
+        "title": "CSS Flexbox Quiz",
+        "description": "Test your knowledge of CSS Flexbox.",
+        "language": "css",
+        "difficulty": "beginner",
+        "type": "multiple_choice",
+        "instructions": "Which CSS property activates Flexbox on a container?",
+        "options": [
+            "display: flex",
+            "flex: true",
+            "layout: flexbox",
+            "position: flex"
+        ],
+        "correct_answer": "display: flex",
+        "hints": [
+            "It's the display property, not the flex property",
+            "Set it on the parent\/container element"
+        ],
+        "xp_reward": 30,
+        "time_limit": 0
+    },
+    {
+        "id": "css-c3",
+        "module_id": "css-styling",
+        "title": "CSS Media Query Quiz",
+        "description": "Test your knowledge of CSS media queries.",
+        "language": "css",
+        "difficulty": "beginner",
+        "type": "multiple_choice",
+        "instructions": "Which media query applies styles ONLY on screens with width 600px or LESS?",
+        "options": [
+            "@media (max-width: 600px)",
+            "@media (min-width: 600px)",
+            "@media screen < 600px",
+            "@media (width: 600px)"
+        ],
+        "correct_answer": "@media (max-width: 600px)",
+        "hints": [
+            "max-width means 'up to and including this width'",
+            "min-width would target screens 600px and wider"
+        ],
+        "xp_reward": 30,
+        "time_limit": 0
+    },
+    {
+        "id": "js-c1-int",
+        "module_id": "javascript-fundamentals-intermediate",
+        "title": "Console Greeting",
+        "description": "Log a greeting message to the console.",
+        "language": "javascript",
+        "difficulty": "intermediate",
+        "type": "code",
+        "instructions": "Use console.log() to output exactly: Hello, JavaScript!",
+        "starter_code": "\/\/ Write your code here\n",
+        "expected_output": "Hello, JavaScript!",
+        "hints": [
+            "Use console.log()",
+            "Put the string inside quotes",
+            "Output must match exactly including the comma and exclamation mark"
+        ],
+        "xp_reward": 50,
+        "time_limit": 0
+    },
+    {
+        "id": "js-c2-int",
+        "module_id": "javascript-fundamentals-intermediate",
+        "title": "Arrow Function Sum",
+        "description": "Use an arrow function to add two numbers and log the result.",
+        "language": "javascript",
+        "difficulty": "intermediate",
+        "type": "code",
+        "instructions": "Create an arrow function called add that takes two parameters and returns their sum. Call it with 8 and 12, then log the result.",
+        "starter_code": "const add = (a, b) => ;\nconsole.log(add(8, 12));",
+        "expected_output": "20",
+        "hints": [
+            "Arrow function: const name = (params) => expression",
+            "The function should return a + b",
+            "add(8, 12) should produce 20"
+        ],
+        "xp_reward": 60,
+        "time_limit": 0
+    },
+    {
+        "id": "js-c3-int",
+        "module_id": "javascript-fundamentals-intermediate",
+        "title": "JavaScript Variables Quiz",
+        "description": "Choose the correct variable declaration for a value that never changes.",
+        "language": "javascript",
+        "difficulty": "intermediate",
+        "type": "multiple_choice",
+        "instructions": "Which keyword should you use to declare a variable whose value will NEVER change?",
+        "options": [
+            "const",
+            "let",
+            "var",
+            "fixed"
+        ],
+        "correct_answer": "const",
+        "hints": [
+            "'const' stands for constant",
+            "It prevents reassignment"
+        ],
+        "xp_reward": 30,
+        "time_limit": 0
+    },
+    {
+        "id": "js-c1-adv",
+        "module_id": "javascript-fundamentals-advanced",
+        "title": "Console Greeting",
+        "description": "Log a greeting message to the console.",
+        "language": "javascript",
+        "difficulty": "advanced",
+        "type": "code",
+        "instructions": "Use console.log() to output exactly: Hello, JavaScript!",
+        "starter_code": "\/\/ Write your code here\n",
+        "expected_output": "Hello, JavaScript!",
+        "hints": [
+            "Use console.log()",
+            "Put the string inside quotes",
+            "Output must match exactly including the comma and exclamation mark"
+        ],
+        "xp_reward": 50,
+        "time_limit": 0
+    },
+    {
+        "id": "js-c2-adv",
+        "module_id": "javascript-fundamentals-advanced",
+        "title": "Arrow Function Sum",
+        "description": "Use an arrow function to add two numbers and log the result.",
+        "language": "javascript",
+        "difficulty": "advanced",
+        "type": "code",
+        "instructions": "Create an arrow function called add that takes two parameters and returns their sum. Call it with 8 and 12, then log the result.",
+        "starter_code": "const add = (a, b) => ;\nconsole.log(add(8, 12));",
+        "expected_output": "20",
+        "hints": [
+            "Arrow function: const name = (params) => expression",
+            "The function should return a + b",
+            "add(8, 12) should produce 20"
+        ],
+        "xp_reward": 60,
+        "time_limit": 0
+    },
+    {
+        "id": "js-c3-adv",
+        "module_id": "javascript-fundamentals-advanced",
+        "title": "JavaScript Variables Quiz",
+        "description": "Choose the correct variable declaration for a value that never changes.",
+        "language": "javascript",
+        "difficulty": "advanced",
+        "type": "multiple_choice",
+        "instructions": "Which keyword should you use to declare a variable whose value will NEVER change?",
+        "options": [
+            "const",
+            "let",
+            "var",
+            "fixed"
+        ],
+        "correct_answer": "const",
+        "hints": [
+            "'const' stands for constant",
+            "It prevents reassignment"
+        ],
+        "xp_reward": 30,
+        "time_limit": 0
+    },
+    {
+        "id": "php-c1-int",
+        "module_id": "php-development-intermediate",
+        "title": "PHP Echo",
+        "description": "Output a greeting message using PHP.",
+        "language": "php",
+        "difficulty": "intermediate",
+        "type": "code",
+        "instructions": "Use echo to output exactly: Hello, PHP!",
+        "starter_code": "<?php\n\/\/ Write your code here\n?>",
+        "expected_output": "Hello, PHP!",
+        "hints": [
+            "Use the echo keyword",
+            "Wrap the text in single or double quotes",
+            "Don't forget the semicolon"
+        ],
+        "xp_reward": 50,
+        "time_limit": 0
+    },
+    {
+        "id": "php-c2-int",
+        "module_id": "php-development-intermediate",
+        "title": "PHP Variable Output",
+        "description": "Store a name in a variable and echo a greeting.",
+        "language": "php",
+        "difficulty": "intermediate",
+        "type": "code",
+        "instructions": "Store 'World' in $name, then echo: Hello, World!",
+        "starter_code": "<?php\n$name = ;\necho ;\n?>",
+        "expected_output": "Hello, World!",
+        "hints": [
+            "PHP variables start with $",
+            "Assign: $name = 'World';",
+            "echo 'Hello, ' . $name . '!';"
+        ],
+        "xp_reward": 60,
+        "time_limit": 0
+    },
+    {
+        "id": "php-c3-int",
+        "module_id": "php-development-intermediate",
+        "title": "PHP Syntax Quiz",
+        "description": "Test your knowledge of PHP variable syntax.",
+        "language": "php",
+        "difficulty": "intermediate",
+        "type": "multiple_choice",
+        "instructions": "How do you correctly declare a variable called 'score' with value 100 in PHP?",
+        "options": [
+            "$score = 100;",
+            "score = 100;",
+            "var score = 100;",
+            "int score = 100;"
+        ],
+        "correct_answer": "$score = 100;",
+        "hints": [
+            "PHP variables always start with $",
+            "No type declaration needed"
+        ],
+        "xp_reward": 30,
+        "time_limit": 0
+    },
+    {
+        "id": "php-c1-adv",
+        "module_id": "php-development-advanced",
+        "title": "PHP Echo",
+        "description": "Output a greeting message using PHP.",
+        "language": "php",
+        "difficulty": "advanced",
+        "type": "code",
+        "instructions": "Use echo to output exactly: Hello, PHP!",
+        "starter_code": "<?php\n\/\/ Write your code here\n?>",
+        "expected_output": "Hello, PHP!",
+        "hints": [
+            "Use the echo keyword",
+            "Wrap the text in single or double quotes",
+            "Don't forget the semicolon"
+        ],
+        "xp_reward": 50,
+        "time_limit": 0
+    },
+    {
+        "id": "php-c2-adv",
+        "module_id": "php-development-advanced",
+        "title": "PHP Variable Output",
+        "description": "Store a name in a variable and echo a greeting.",
+        "language": "php",
+        "difficulty": "advanced",
+        "type": "code",
+        "instructions": "Store 'World' in $name, then echo: Hello, World!",
+        "starter_code": "<?php\n$name = ;\necho ;\n?>",
+        "expected_output": "Hello, World!",
+        "hints": [
+            "PHP variables start with $",
+            "Assign: $name = 'World';",
+            "echo 'Hello, ' . $name . '!';"
+        ],
+        "xp_reward": 60,
+        "time_limit": 0
+    },
+    {
+        "id": "php-c3-adv",
+        "module_id": "php-development-advanced",
+        "title": "PHP Syntax Quiz",
+        "description": "Test your knowledge of PHP variable syntax.",
+        "language": "php",
+        "difficulty": "advanced",
+        "type": "multiple_choice",
+        "instructions": "How do you correctly declare a variable called 'score' with value 100 in PHP?",
+        "options": [
+            "$score = 100;",
+            "score = 100;",
+            "var score = 100;",
+            "int score = 100;"
+        ],
+        "correct_answer": "$score = 100;",
+        "hints": [
+            "PHP variables always start with $",
+            "No type declaration needed"
+        ],
+        "xp_reward": 30,
+        "time_limit": 0
+    },
+    {
+        "id": "sql-c1-int",
+        "module_id": "sql-databases-intermediate",
+        "title": "SQL SELECT Quiz",
+        "description": "Test your knowledge of SQL SELECT queries.",
+        "language": "sql",
+        "difficulty": "intermediate",
+        "type": "multiple_choice",
+        "instructions": "Which SQL statement retrieves ALL columns from a table called 'employees'?",
+        "options": [
+            "SELECT * FROM employees;",
+            "GET ALL FROM employees;",
+            "FETCH employees;",
+            "SELECT employees.*;"
+        ],
+        "correct_answer": "SELECT * FROM employees;",
+        "hints": [
+            "* is the wildcard for all columns",
+            "Syntax: SELECT columns FROM table;"
+        ],
+        "xp_reward": 30,
+        "time_limit": 0
+    },
+    {
+        "id": "sql-c2-int",
+        "module_id": "sql-databases-intermediate",
+        "title": "SQL UPDATE Quiz",
+        "description": "Test your knowledge of SQL UPDATE statements.",
+        "language": "sql",
+        "difficulty": "intermediate",
+        "type": "multiple_choice",
+        "instructions": "Which SQL statement correctly updates the email of the user with id=3?",
+        "options": [
+            "UPDATE users SET email='new@mail.com' WHERE id=3;",
+            "MODIFY users SET email='new@mail.com' WHERE id=3;",
+            "INSERT INTO users email='new@mail.com' WHERE id=3;",
+            "SET email='new@mail.com' IN users WHERE id=3;"
+        ],
+        "correct_answer": "UPDATE users SET email='new@mail.com' WHERE id=3;",
+        "hints": [
+            "UPDATE is the DML command for modifying rows",
+            "Always use WHERE to target specific rows"
+        ],
+        "xp_reward": 30,
+        "time_limit": 0
+    },
+    {
+        "id": "sql-c3-int",
+        "module_id": "sql-databases-intermediate",
+        "title": "SQL JOIN Quiz",
+        "description": "Test your knowledge of SQL JOIN types.",
+        "language": "sql",
+        "difficulty": "intermediate",
+        "type": "multiple_choice",
+        "instructions": "Which type of JOIN returns only rows that have matching values in BOTH tables?",
+        "options": [
+            "INNER JOIN",
+            "LEFT JOIN",
+            "RIGHT JOIN",
+            "FULL JOIN"
+        ],
+        "correct_answer": "INNER JOIN",
+        "hints": [
+            "Think of it as the intersection of two sets",
+            "Rows with no match in either table are excluded"
+        ],
+        "xp_reward": 30,
+        "time_limit": 0
+    },
+    {
+        "id": "sql-c1-adv",
+        "module_id": "sql-databases-advanced",
+        "title": "SQL SELECT Quiz",
+        "description": "Test your knowledge of SQL SELECT queries.",
+        "language": "sql",
+        "difficulty": "advanced",
+        "type": "multiple_choice",
+        "instructions": "Which SQL statement retrieves ALL columns from a table called 'employees'?",
+        "options": [
+            "SELECT * FROM employees;",
+            "GET ALL FROM employees;",
+            "FETCH employees;",
+            "SELECT employees.*;"
+        ],
+        "correct_answer": "SELECT * FROM employees;",
+        "hints": [
+            "* is the wildcard for all columns",
+            "Syntax: SELECT columns FROM table;"
+        ],
+        "xp_reward": 30,
+        "time_limit": 0
+    },
+    {
+        "id": "sql-c2-adv",
+        "module_id": "sql-databases-advanced",
+        "title": "SQL UPDATE Quiz",
+        "description": "Test your knowledge of SQL UPDATE statements.",
+        "language": "sql",
+        "difficulty": "advanced",
+        "type": "multiple_choice",
+        "instructions": "Which SQL statement correctly updates the email of the user with id=3?",
+        "options": [
+            "UPDATE users SET email='new@mail.com' WHERE id=3;",
+            "MODIFY users SET email='new@mail.com' WHERE id=3;",
+            "INSERT INTO users email='new@mail.com' WHERE id=3;",
+            "SET email='new@mail.com' IN users WHERE id=3;"
+        ],
+        "correct_answer": "UPDATE users SET email='new@mail.com' WHERE id=3;",
+        "hints": [
+            "UPDATE is the DML command for modifying rows",
+            "Always use WHERE to target specific rows"
+        ],
+        "xp_reward": 30,
+        "time_limit": 0
+    },
+    {
+        "id": "sql-c3-adv",
+        "module_id": "sql-databases-advanced",
+        "title": "SQL JOIN Quiz",
+        "description": "Test your knowledge of SQL JOIN types.",
+        "language": "sql",
+        "difficulty": "advanced",
+        "type": "multiple_choice",
+        "instructions": "Which type of JOIN returns only rows that have matching values in BOTH tables?",
+        "options": [
+            "INNER JOIN",
+            "LEFT JOIN",
+            "RIGHT JOIN",
+            "FULL JOIN"
+        ],
+        "correct_answer": "INNER JOIN",
+        "hints": [
+            "Think of it as the intersection of two sets",
+            "Rows with no match in either table are excluded"
+        ],
+        "xp_reward": 30,
+        "time_limit": 0
+    },
+    {
+        "id": "css-c1-int",
+        "module_id": "css-styling-intermediate",
+        "title": "CSS Selector Quiz",
+        "description": "Test your knowledge of CSS selectors.",
+        "language": "css",
+        "difficulty": "intermediate",
+        "type": "multiple_choice",
+        "instructions": "Which CSS selector targets elements with the class 'highlight'?",
+        "options": [
+            ".highlight",
+            "#highlight",
+            "highlight",
+            "*highlight"
+        ],
+        "correct_answer": ".highlight",
+        "hints": [
+            "Class selectors always start with a period\/dot (.)",
+            "ID selectors start with a hash (#)"
+        ],
+        "xp_reward": 30,
+        "time_limit": 0
+    },
+    {
+        "id": "css-c2-int",
+        "module_id": "css-styling-intermediate",
+        "title": "CSS Flexbox Quiz",
+        "description": "Test your knowledge of CSS Flexbox.",
+        "language": "css",
+        "difficulty": "intermediate",
+        "type": "multiple_choice",
+        "instructions": "Which CSS property activates Flexbox on a container?",
+        "options": [
+            "display: flex",
+            "flex: true",
+            "layout: flexbox",
+            "position: flex"
+        ],
+        "correct_answer": "display: flex",
+        "hints": [
+            "It's the display property, not the flex property",
+            "Set it on the parent\/container element"
+        ],
+        "xp_reward": 30,
+        "time_limit": 0
+    },
+    {
+        "id": "css-c3-int",
+        "module_id": "css-styling-intermediate",
+        "title": "CSS Media Query Quiz",
+        "description": "Test your knowledge of CSS media queries.",
+        "language": "css",
+        "difficulty": "intermediate",
+        "type": "multiple_choice",
+        "instructions": "Which media query applies styles ONLY on screens with width 600px or LESS?",
+        "options": [
+            "@media (max-width: 600px)",
+            "@media (min-width: 600px)",
+            "@media screen < 600px",
+            "@media (width: 600px)"
+        ],
+        "correct_answer": "@media (max-width: 600px)",
+        "hints": [
+            "max-width means 'up to and including this width'",
+            "min-width would target screens 600px and wider"
+        ],
+        "xp_reward": 30,
+        "time_limit": 0
+    },
+    {
+        "id": "css-c1-adv",
+        "module_id": "css-styling-advanced",
+        "title": "CSS Selector Quiz",
+        "description": "Test your knowledge of CSS selectors.",
+        "language": "css",
+        "difficulty": "advanced",
+        "type": "multiple_choice",
+        "instructions": "Which CSS selector targets elements with the class 'highlight'?",
+        "options": [
+            ".highlight",
+            "#highlight",
+            "highlight",
+            "*highlight"
+        ],
+        "correct_answer": ".highlight",
+        "hints": [
+            "Class selectors always start with a period\/dot (.)",
+            "ID selectors start with a hash (#)"
+        ],
+        "xp_reward": 30,
+        "time_limit": 0
+    },
+    {
+        "id": "css-c2-adv",
+        "module_id": "css-styling-advanced",
+        "title": "CSS Flexbox Quiz",
+        "description": "Test your knowledge of CSS Flexbox.",
+        "language": "css",
+        "difficulty": "advanced",
+        "type": "multiple_choice",
+        "instructions": "Which CSS property activates Flexbox on a container?",
+        "options": [
+            "display: flex",
+            "flex: true",
+            "layout: flexbox",
+            "position: flex"
+        ],
+        "correct_answer": "display: flex",
+        "hints": [
+            "It's the display property, not the flex property",
+            "Set it on the parent\/container element"
+        ],
+        "xp_reward": 30,
+        "time_limit": 0
+    },
+    {
+        "id": "css-c3-adv",
+        "module_id": "css-styling-advanced",
+        "title": "CSS Media Query Quiz",
+        "description": "Test your knowledge of CSS media queries.",
+        "language": "css",
+        "difficulty": "advanced",
+        "type": "multiple_choice",
+        "instructions": "Which media query applies styles ONLY on screens with width 600px or LESS?",
+        "options": [
+            "@media (max-width: 600px)",
+            "@media (min-width: 600px)",
+            "@media screen < 600px",
+            "@media (width: 600px)"
+        ],
+        "correct_answer": "@media (max-width: 600px)",
+        "hints": [
+            "max-width means 'up to and including this width'",
+            "min-width would target screens 600px and wider"
+        ],
+        "xp_reward": 30,
+        "time_limit": 0
+    },
+    {
+        "id": "html-c4",
+        "module_id": "html-basics",
+        "title": "Image Tag",
+        "description": "Add an image with alt text.",
+        "language": "html",
+        "difficulty": "beginner",
+        "type": "code",
+        "instructions": "Create an <img> tag with src=\"logo.png\" and alt=\"Company Logo\".",
+        "starter_code": "<!-- Add image here -->",
+        "expected_output": "<img src=\"logo.png\" alt=\"Company Logo\">",
+        "hints": [
+            "Use <img>",
+            "Self-closing; add src and alt"
+        ],
+        "xp_reward": 50,
+        "time_limit": 0
+    },
+    {
+        "id": "html-c5",
+        "module_id": "html-basics",
+        "title": "Ordered List",
+        "description": "Create a numbered list.",
+        "language": "html",
+        "difficulty": "beginner",
+        "type": "code",
+        "instructions": "Create an ordered list <ol> with three <li> items: First, Second, Third.",
+        "starter_code": "<!-- Ordered list -->",
+        "expected_output": "<ol>\n  <li>First<\/li>\n  <li>Second<\/li>\n  <li>Third<\/li>\n<\/ol>",
+        "hints": [
+            "<ol> for ordered",
+            "<li> for each item"
+        ],
+        "xp_reward": 50,
+        "time_limit": 0
+    },
+    {
+        "id": "html-c6",
+        "module_id": "html-basics",
+        "title": "Link Tag Quiz",
+        "description": "Choose the correct attribute for link URL.",
+        "language": "html",
+        "difficulty": "beginner",
+        "type": "multiple_choice",
+        "instructions": "Which attribute of <a> specifies the URL?",
+        "options": [
+            "href",
+            "src",
+            "url",
+            "link"
+        ],
+        "correct_answer": "href",
+        "hints": [
+            "Hyperlink reference"
+        ],
+        "xp_reward": 30,
+        "time_limit": 0
+    },
+    {
+        "id": "html-c4-int",
+        "module_id": "html-basics-intermediate",
+        "title": "Semantic Section",
+        "description": "Use article and section.",
+        "language": "html",
+        "difficulty": "intermediate",
+        "type": "code",
+        "instructions": "Create an <article> containing an <h2>Title<\/h2> and a <section> with <p>Content here<\/p>.",
+        "starter_code": "<!-- Semantic structure -->",
+        "expected_output": "<article>\n  <h2>Title<\/h2>\n  <section>\n    <p>Content here<\/p>\n  <\/section>\n<\/article>",
+        "hints": [
+            "<article> wraps",
+            "<section> inside"
+        ],
+        "xp_reward": 70,
+        "time_limit": 0
+    },
+    {
+        "id": "html-c5-int",
+        "module_id": "html-basics-intermediate",
+        "title": "Input Types",
+        "description": "Use number and date inputs.",
+        "language": "html",
+        "difficulty": "intermediate",
+        "type": "code",
+        "instructions": "Create two inputs: type=\"number\" name=\"age\" placeholder=\"Age\", and type=\"date\" name=\"birthday\".",
+        "starter_code": "<!-- Inputs -->",
+        "expected_output": "<input type=\"number\" name=\"age\" placeholder=\"Age\"><input type=\"date\" name=\"birthday\">",
+        "hints": [
+            "type=\"number\"",
+            "type=\"date\""
+        ],
+        "xp_reward": 70,
+        "time_limit": 0
+    },
+    {
+        "id": "html-c6-int",
+        "module_id": "html-basics-intermediate",
+        "title": "Data Attribute Quiz",
+        "description": "Identify data attribute prefix.",
+        "language": "html",
+        "difficulty": "intermediate",
+        "type": "multiple_choice",
+        "instructions": "What prefix do custom data attributes use?",
+        "options": [
+            "data-",
+            "custom-",
+            "attr-",
+            "data"
+        ],
+        "correct_answer": "data-",
+        "hints": [
+            "HTML5 data-*"
+        ],
+        "xp_reward": 40,
+        "time_limit": 0
+    },
+    {
+        "id": "html-c4-adv",
+        "module_id": "html-basics-advanced",
+        "title": "Iframe Embed",
+        "description": "Embed content with iframe.",
+        "language": "html",
+        "difficulty": "advanced",
+        "type": "code",
+        "instructions": "Create an <iframe> with src=\"https:\/\/example.com\" title=\"Example\" and width=\"400\" height=\"300\".",
+        "starter_code": "<!-- iframe -->",
+        "expected_output": "<iframe src=\"https:\/\/example.com\" title=\"Example\" width=\"400\" height=\"300\"><\/iframe>",
+        "hints": [
+            "iframe src, title",
+            "width and height"
+        ],
+        "xp_reward": 80,
+        "time_limit": 0
+    },
+    {
+        "id": "html-c5-adv",
+        "module_id": "html-basics-advanced",
+        "title": "Meta Viewport",
+        "description": "Add responsive viewport meta.",
+        "language": "html",
+        "difficulty": "advanced",
+        "type": "code",
+        "instructions": "Add the standard viewport meta tag for responsive design: width=device-width, initial-scale=1.",
+        "starter_code": "<head>",
+        "expected_output": "<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">",
+        "hints": [
+            "meta name=\"viewport\"",
+            "content=\"width=device-width, initial-scale=1\""
+        ],
+        "xp_reward": 80,
+        "time_limit": 0
+    },
+    {
+        "id": "html-c6-adv",
+        "module_id": "html-basics-advanced",
+        "title": "SRI Quiz",
+        "description": "Purpose of integrity attribute.",
+        "language": "html",
+        "difficulty": "advanced",
+        "type": "multiple_choice",
+        "instructions": "What does the integrity attribute on <script> do?",
+        "options": [
+            "Verify resource hash",
+            "Load script",
+            "Cache script",
+            "Encrypt script"
+        ],
+        "correct_answer": "Verify resource hash",
+        "hints": [
+            "Subresource Integrity"
+        ],
+        "xp_reward": 40,
+        "time_limit": 0
+    },
+    {
+        "id": "js-c4",
+        "module_id": "javascript-fundamentals",
+        "title": "Variable and Log",
+        "description": "Declare a variable and log it.",
+        "language": "javascript",
+        "difficulty": "beginner",
+        "type": "code",
+        "instructions": "Declare const message = \"Hello\" and log it with console.log(message).",
+        "starter_code": "\/\/ Your code",
+        "expected_output": "Hello",
+        "hints": [
+            "const message = \"Hello\"",
+            "console.log(message)"
+        ],
+        "xp_reward": 50,
+        "time_limit": 0
+    },
+    {
+        "id": "js-c5",
+        "module_id": "javascript-fundamentals",
+        "title": "Array Length",
+        "description": "Log the length of an array.",
+        "language": "javascript",
+        "difficulty": "beginner",
+        "type": "code",
+        "instructions": "Create const arr = [10, 20, 30] and log arr.length.",
+        "starter_code": "\/\/ Your code",
+        "expected_output": "3",
+        "hints": [
+            "arr.length"
+        ],
+        "xp_reward": 50,
+        "time_limit": 0
+    },
+    {
+        "id": "js-c6",
+        "module_id": "javascript-fundamentals",
+        "title": "Arrow Function Quiz",
+        "description": "Identify arrow function syntax.",
+        "language": "javascript",
+        "difficulty": "beginner",
+        "type": "multiple_choice",
+        "instructions": "Which is valid arrow function syntax?",
+        "options": [
+            "x => x * 2",
+            "x -> x * 2",
+            "function x => x*2",
+            "arrow x => x*2"
+        ],
+        "correct_answer": "x => x * 2",
+        "hints": [
+            "=> arrow"
+        ],
+        "xp_reward": 30,
+        "time_limit": 0
+    },
+    {
+        "id": "js-c4-int",
+        "module_id": "javascript-fundamentals-intermediate",
+        "title": "Map Array",
+        "description": "Double each element with map.",
+        "language": "javascript",
+        "difficulty": "intermediate",
+        "type": "code",
+        "instructions": "Given const nums = [1,2,3], create a new array with each number doubled using .map(), then log it.",
+        "starter_code": "const nums = [1,2,3];",
+        "expected_output": "2,4,6",
+        "hints": [
+            "nums.map(n => n * 2)",
+            "console.log result"
+        ],
+        "xp_reward": 70,
+        "time_limit": 0
+    },
+    {
+        "id": "js-c5-int",
+        "module_id": "javascript-fundamentals-intermediate",
+        "title": "Filter Array",
+        "description": "Filter even numbers.",
+        "language": "javascript",
+        "difficulty": "intermediate",
+        "type": "code",
+        "instructions": "From const a = [1,2,3,4,5] create array of even numbers using .filter(), then log it.",
+        "starter_code": "const a = [1,2,3,4,5];",
+        "expected_output": "2,4",
+        "hints": [
+            ".filter(n => n % 2 === 0)"
+        ],
+        "xp_reward": 70,
+        "time_limit": 0
+    },
+    {
+        "id": "js-c6-int",
+        "module_id": "javascript-fundamentals-intermediate",
+        "title": "Async Await Quiz",
+        "description": "Keyword for waiting on Promise.",
+        "language": "javascript",
+        "difficulty": "intermediate",
+        "type": "multiple_choice",
+        "instructions": "Inside an async function, which keyword waits for a Promise?",
+        "options": [
+            "await",
+            "async",
+            "wait",
+            "then"
+        ],
+        "correct_answer": "await",
+        "hints": [
+            "await"
+        ],
+        "xp_reward": 40,
+        "time_limit": 0
+    },
+    {
+        "id": "js-c4-adv",
+        "module_id": "javascript-fundamentals-advanced",
+        "title": "Promise All",
+        "description": "Run promises and log results.",
+        "language": "javascript",
+        "difficulty": "advanced",
+        "type": "code",
+        "instructions": "Use Promise.all with two promises that resolve to 1 and 2, then log the result array.",
+        "starter_code": "\/\/ Promise.all",
+        "expected_output": "1,2",
+        "hints": [
+            "Promise.all([Promise.resolve(1), Promise.resolve(2)]).then(arr => console.log(arr.join(\",\")))"
+        ],
+        "xp_reward": 80,
+        "time_limit": 0
+    },
+    {
+        "id": "js-c5-adv",
+        "module_id": "javascript-fundamentals-advanced",
+        "title": "Destructure Object",
+        "description": "Destructure and log.",
+        "language": "javascript",
+        "difficulty": "advanced",
+        "type": "code",
+        "instructions": "Const obj = {a:1,b:2}. Destructure a and b then log a + b.",
+        "starter_code": "const obj = {a:1,b:2};",
+        "expected_output": "3",
+        "hints": [
+            "const {a,b} = obj",
+            "console.log(a+b)"
+        ],
+        "xp_reward": 80,
+        "time_limit": 0
+    },
+    {
+        "id": "js-c6-adv",
+        "module_id": "javascript-fundamentals-advanced",
+        "title": "Symbol Quiz",
+        "description": "What Symbol() creates.",
+        "language": "javascript",
+        "difficulty": "advanced",
+        "type": "multiple_choice",
+        "instructions": "What does Symbol() create?",
+        "options": [
+            "A unique value",
+            "A string",
+            "A number",
+            "An object"
+        ],
+        "correct_answer": "A unique value",
+        "hints": [
+            "Unique primitive"
+        ],
+        "xp_reward": 40,
+        "time_limit": 0
+    },
+    {
+        "id": "php-c4",
+        "module_id": "php-development",
+        "title": "Concatenate Strings",
+        "description": "Echo two strings concatenated.",
+        "language": "php",
+        "difficulty": "beginner",
+        "type": "code",
+        "instructions": "Echo the concatenation of \"Hello \" and \"World\" using the . operator.",
+        "starter_code": "<?php ?>",
+        "expected_output": "Hello World",
+        "hints": [
+            "echo \"Hello \" . \"World\";"
+        ],
+        "xp_reward": 50,
+        "time_limit": 0
+    },
+    {
+        "id": "php-c5",
+        "module_id": "php-development",
+        "title": "Array and Count",
+        "description": "Create array and output count.",
+        "language": "php",
+        "difficulty": "beginner",
+        "type": "code",
+        "instructions": "Create $arr = [1,2,3,4] and echo count($arr).",
+        "starter_code": "<?php ?>",
+        "expected_output": "4",
+        "hints": [
+            "count($arr)"
+        ],
+        "xp_reward": 50,
+        "time_limit": 0
+    },
+    {
+        "id": "php-c6",
+        "module_id": "php-development",
+        "title": "PHP Tags Quiz",
+        "description": "Correct PHP opening tag.",
+        "language": "php",
+        "difficulty": "beginner",
+        "type": "multiple_choice",
+        "instructions": "What is the correct PHP opening tag?",
+        "options": [
+            "<?php",
+            "<?",
+            "<php",
+            "<%"
+        ],
+        "correct_answer": "<?php",
+        "hints": [
+            "Standard opening tag"
+        ],
+        "xp_reward": 30,
+        "time_limit": 0
+    },
+    {
+        "id": "php-c4-int",
+        "module_id": "php-development-intermediate",
+        "title": "Associative Array",
+        "description": "Create and access associative array.",
+        "language": "php",
+        "difficulty": "intermediate",
+        "type": "code",
+        "instructions": "Create $u = [\"name\"=>\"Alice\",\"age\"=>25] and echo $u[\"name\"].",
+        "starter_code": "<?php ?>",
+        "expected_output": "Alice",
+        "hints": [
+            "$u[\"name\"]"
+        ],
+        "xp_reward": 70,
+        "time_limit": 0
+    },
+    {
+        "id": "php-c5-int",
+        "module_id": "php-development-intermediate",
+        "title": "Function Return",
+        "description": "Function that returns sum.",
+        "language": "php",
+        "difficulty": "intermediate",
+        "type": "code",
+        "instructions": "Define function sum($a,$b) that returns $a+$b. Then echo sum(3,5).",
+        "starter_code": "<?php ?>",
+        "expected_output": "8",
+        "hints": [
+            "return $a+$b;"
+        ],
+        "xp_reward": 70,
+        "time_limit": 0
+    },
+    {
+        "id": "php-c6-int",
+        "module_id": "php-development-intermediate",
+        "title": "Session Quiz",
+        "description": "Superglobal for session data.",
+        "language": "php",
+        "difficulty": "intermediate",
+        "type": "multiple_choice",
+        "instructions": "Which superglobal holds session data?",
+        "options": [
+            "$_SESSION",
+            "$_COOKIE",
+            "$_GET",
+            "$session"
+        ],
+        "correct_answer": "$_SESSION",
+        "hints": [
+            "Session"
+        ],
+        "xp_reward": 40,
+        "time_limit": 0
+    },
+    {
+        "id": "php-c4-adv",
+        "module_id": "php-development-advanced",
+        "title": "Class and Method",
+        "description": "Simple class with method.",
+        "language": "php",
+        "difficulty": "advanced",
+        "type": "code",
+        "instructions": "Create class Greet with public function say() { return \"Hi\"; }. Instantiate and echo $g->say().",
+        "starter_code": "<?php ?>",
+        "expected_output": "Hi",
+        "hints": [
+            "class Greet",
+            "public function say()"
+        ],
+        "xp_reward": 80,
+        "time_limit": 0
+    },
+    {
+        "id": "php-c5-adv",
+        "module_id": "php-development-advanced",
+        "title": "Try Catch",
+        "description": "Catch exception and echo message.",
+        "language": "php",
+        "difficulty": "advanced",
+        "type": "code",
+        "instructions": "In try block throw new Exception(\"oops\"). In catch echo $e->getMessage().",
+        "starter_code": "<?php try { } catch (Exception $e) { } ?>",
+        "expected_output": "oops",
+        "hints": [
+            "getMessage()"
+        ],
+        "xp_reward": 80,
+        "time_limit": 0
+    },
+    {
+        "id": "php-c6-adv",
+        "module_id": "php-development-advanced",
+        "title": "Composer Quiz",
+        "description": "Command to add package.",
+        "language": "php",
+        "difficulty": "advanced",
+        "type": "multiple_choice",
+        "instructions": "Which Composer command adds a package?",
+        "options": [
+            "composer require",
+            "composer add",
+            "composer install",
+            "composer get"
+        ],
+        "correct_answer": "composer require",
+        "hints": [
+            "require"
+        ],
+        "xp_reward": 40,
+        "time_limit": 0
+    },
+    {
+        "id": "sql-c4",
+        "module_id": "sql-databases",
+        "title": "SELECT Specific Columns",
+        "description": "Select name and email from users.",
+        "language": "sql",
+        "difficulty": "beginner",
+        "type": "code",
+        "instructions": "Write a query to select name and email from the users table.",
+        "starter_code": "-- Your query",
+        "expected_output": "name | email\n----------------------------------------\nAlice | alice@example.com\nBob | bob@example.com\nCarol | carol@example.com",
+        "hints": [
+            "SELECT name, email FROM users"
+        ],
+        "xp_reward": 50,
+        "time_limit": 0
+    },
+    {
+        "id": "sql-c5",
+        "module_id": "sql-databases",
+        "title": "WHERE Filter",
+        "description": "Select active users.",
+        "language": "sql",
+        "difficulty": "beginner",
+        "type": "code",
+        "instructions": "Select all columns from users where is_active = 1.",
+        "starter_code": "-- Your query",
+        "expected_output": "id | name | email | age | is_active\n----------------------------------------\n1 | Alice | alice@example.com | 25 | 1\n2 | Bob | bob@example.com | 30 | 1",
+        "hints": [
+            "WHERE is_active = 1"
+        ],
+        "xp_reward": 50,
+        "time_limit": 0
+    },
+    {
+        "id": "sql-c6",
+        "module_id": "sql-databases",
+        "title": "INSERT Quiz",
+        "description": "Correct INSERT syntax.",
+        "language": "sql",
+        "difficulty": "beginner",
+        "type": "multiple_choice",
+        "instructions": "Which is valid INSERT syntax?",
+        "options": [
+            "INSERT INTO t (a,b) VALUES (1,2);",
+            "INSERT t VALUES (1,2);",
+            "ADD INTO t (1,2);",
+            "INSERT t (a,b) (1,2);"
+        ],
+        "correct_answer": "INSERT INTO t (a,b) VALUES (1,2);",
+        "hints": [
+            "INSERT INTO ... VALUES"
+        ],
+        "xp_reward": 30,
+        "time_limit": 0
+    },
+    {
+        "id": "sql-c4-int",
+        "module_id": "sql-databases-intermediate",
+        "title": "ORDER BY",
+        "description": "Select users ordered by name.",
+        "language": "sql",
+        "difficulty": "intermediate",
+        "type": "code",
+        "instructions": "Select name, email from users ORDER BY name ASC.",
+        "starter_code": "-- Your query",
+        "expected_output": "name | email\n----------------------------------------\nAlice | alice@example.com\nBob | bob@example.com\nCarol | carol@example.com",
+        "hints": [
+            "ORDER BY name ASC"
+        ],
+        "xp_reward": 70,
+        "time_limit": 0
+    },
+    {
+        "id": "sql-c5-int",
+        "module_id": "sql-databases-intermediate",
+        "title": "JOIN Orders and Customers",
+        "description": "Select order id with customer name.",
+        "language": "sql",
+        "difficulty": "intermediate",
+        "type": "code",
+        "instructions": "Select orders.id and customers.name from orders INNER JOIN customers ON orders.customer_id = customers.id.",
+        "starter_code": "-- Your query",
+        "expected_output": "id | name\n----------------------------------------\n1 | Alice\n2 | Bob\n3 | Alice",
+        "hints": [
+            "INNER JOIN ... ON"
+        ],
+        "xp_reward": 70,
+        "time_limit": 0
+    },
+    {
+        "id": "sql-c6-int",
+        "module_id": "sql-databases-intermediate",
+        "title": "GROUP BY Quiz",
+        "description": "Purpose of GROUP BY.",
+        "language": "sql",
+        "difficulty": "intermediate",
+        "type": "multiple_choice",
+        "instructions": "What does GROUP BY do?",
+        "options": [
+            "Groups rows for aggregation",
+            "Sorts rows",
+            "Filters rows",
+            "Joins tables"
+        ],
+        "correct_answer": "Groups rows for aggregation",
+        "hints": [
+            "Aggregation"
+        ],
+        "xp_reward": 40,
+        "time_limit": 0
+    },
+    {
+        "id": "sql-c4-adv",
+        "module_id": "sql-databases-advanced",
+        "title": "COUNT and GROUP",
+        "description": "Count products per category.",
+        "language": "sql",
+        "difficulty": "advanced",
+        "type": "code",
+        "instructions": "Select category and COUNT(*) from products GROUP BY category.",
+        "starter_code": "-- Your query",
+        "expected_output": "category | COUNT(*)\n----------------------------------------\nElectronics | 2\nEducation | 1",
+        "hints": [
+            "GROUP BY category"
+        ],
+        "xp_reward": 80,
+        "time_limit": 0
+    },
+    {
+        "id": "sql-c5-adv",
+        "module_id": "sql-databases-advanced",
+        "title": "Subquery",
+        "description": "Select users with orders.",
+        "language": "sql",
+        "difficulty": "advanced",
+        "type": "code",
+        "instructions": "Select * from users where id IN (SELECT customer_id FROM orders).",
+        "starter_code": "-- Your query",
+        "expected_output": "id | name | email | age | is_active\n----------------------------------------\n1 | Alice | alice@example.com | 25 | 1\n2 | Bob | bob@example.com | 30 | 1",
+        "hints": [
+            "IN (SELECT ...)"
+        ],
+        "xp_reward": 80,
+        "time_limit": 0
+    },
+    {
+        "id": "sql-c6-adv",
+        "module_id": "sql-databases-advanced",
+        "title": "Index Quiz",
+        "description": "What indexes improve.",
+        "language": "sql",
+        "difficulty": "advanced",
+        "type": "multiple_choice",
+        "instructions": "What do database indexes primarily improve?",
+        "options": [
+            "Query speed",
+            "Storage size",
+            "Security",
+            "Backup speed"
+        ],
+        "correct_answer": "Query speed",
+        "hints": [
+            "Performance"
+        ],
+        "xp_reward": 40,
+        "time_limit": 0
+    },
+    {
+        "id": "css-c4",
+        "module_id": "css-styling",
+        "title": "Set Color",
+        "description": "Make paragraph text red.",
+        "language": "css",
+        "difficulty": "beginner",
+        "type": "code",
+        "instructions": "Write a rule that makes all p elements have color red.",
+        "starter_code": "\/* Your CSS *\/",
+        "expected_output": "p { color: red; }",
+        "hints": [
+            "p { color: red; }"
+        ],
+        "xp_reward": 50,
+        "time_limit": 0
+    },
+    {
+        "id": "css-c5",
+        "module_id": "css-styling",
+        "title": "Center Text",
+        "description": "Center align paragraph text.",
+        "language": "css",
+        "difficulty": "beginner",
+        "type": "code",
+        "instructions": "Write a rule for p with text-align center.",
+        "starter_code": "\/* Your CSS *\/",
+        "expected_output": "p { text-align: center; }",
+        "hints": [
+            "text-align: center"
+        ],
+        "xp_reward": 50,
+        "time_limit": 0
+    },
+    {
+        "id": "css-c6",
+        "module_id": "css-styling",
+        "title": "ID Selector Quiz",
+        "description": "Selector for ID.",
+        "language": "css",
+        "difficulty": "beginner",
+        "type": "multiple_choice",
+        "instructions": "How do you select an element with id \"main\"?",
+        "options": [
+            "#main",
+            ".main",
+            "main",
+            "id(main)"
+        ],
+        "correct_answer": "#main",
+        "hints": [
+            "# for id"
+        ],
+        "xp_reward": 30,
+        "time_limit": 0
+    },
+    {
+        "id": "css-c4-int",
+        "module_id": "css-styling-intermediate",
+        "title": "Flexbox Center",
+        "description": "Center item with flexbox.",
+        "language": "css",
+        "difficulty": "intermediate",
+        "type": "code",
+        "instructions": "Write .box { display: flex; justify-content: center; align-items: center; }.",
+        "starter_code": "\/* Your CSS *\/",
+        "expected_output": ".box { display: flex; justify-content: center; align-items: center; }",
+        "hints": [
+            "display: flex",
+            "justify-content, align-items"
+        ],
+        "xp_reward": 70,
+        "time_limit": 0
+    },
+    {
+        "id": "css-c5-int",
+        "module_id": "css-styling-intermediate",
+        "title": "Media Query",
+        "description": "Change font at 768px.",
+        "language": "css",
+        "difficulty": "intermediate",
+        "type": "code",
+        "instructions": "Write a media query for max-width 768px that sets body font-size to 14px.",
+        "starter_code": "\/* Your CSS *\/",
+        "expected_output": "@media (max-width: 768px) { body { font-size: 14px; } }",
+        "hints": [
+            "@media (max-width: 768px)"
+        ],
+        "xp_reward": 70,
+        "time_limit": 0
+    },
+    {
+        "id": "css-c6-int",
+        "module_id": "css-styling-intermediate",
+        "title": "Transition Quiz",
+        "description": "Property for smooth change.",
+        "language": "css",
+        "difficulty": "intermediate",
+        "type": "multiple_choice",
+        "instructions": "Which property creates smooth transition between values?",
+        "options": [
+            "transition",
+            "animation",
+            "transform",
+            "smooth"
+        ],
+        "correct_answer": "transition",
+        "hints": [
+            "transition"
+        ],
+        "xp_reward": 40,
+        "time_limit": 0
+    },
+    {
+        "id": "css-c4-adv",
+        "module_id": "css-styling-advanced",
+        "title": "Grid Two Columns",
+        "description": "Simple grid layout.",
+        "language": "css",
+        "difficulty": "advanced",
+        "type": "code",
+        "instructions": "Write .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }.",
+        "starter_code": "\/* Your CSS *\/",
+        "expected_output": ".grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }",
+        "hints": [
+            "grid-template-columns",
+            "1fr 1fr"
+        ],
+        "xp_reward": 80,
+        "time_limit": 0
+    },
+    {
+        "id": "css-c5-adv",
+        "module_id": "css-styling-advanced",
+        "title": "Custom Property",
+        "description": "Define and use CSS variable.",
+        "language": "css",
+        "difficulty": "advanced",
+        "type": "code",
+        "instructions": "In :root set --primary: #3498db; then .btn { background: var(--primary); }.",
+        "starter_code": "\/* Your CSS *\/",
+        "expected_output": ":root { --primary: #3498db; }\\n.btn { background: var(--primary); }",
+        "hints": [
+            "--primary",
+            "var(--primary)"
+        ],
+        "xp_reward": 80,
+        "time_limit": 0
+    },
+    {
+        "id": "css-c6-adv",
+        "module_id": "css-styling-advanced",
+        "title": "Keyframes Quiz",
+        "description": "At-rule for animation.",
+        "language": "css",
+        "difficulty": "advanced",
+        "type": "multiple_choice",
+        "instructions": "Which at-rule defines keyframe animation?",
+        "options": [
+            "@keyframes",
+            "@animation",
+            "@frames",
+            "@keyframe"
+        ],
+        "correct_answer": "@keyframes",
+        "hints": [
+            "keyframes"
+        ],
+        "xp_reward": 40,
+        "time_limit": 0
+    }
+]

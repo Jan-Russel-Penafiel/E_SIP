@@ -1,0 +1,98 @@
+[
+    {
+        "user_id": "b2f73ae7e70515dc",
+        "challenge_id": "ch_py_001",
+        "success": true,
+        "xp_earned": 50,
+        "time_taken": 5,
+        "code": "# Write your code below\nprint()",
+        "attempted_at": "2026-02-23 13:43:42",
+        "id": "55d7600b8deb9eab",
+        "created_at": "2026-02-23 13:43:42",
+        "updated_at": "2026-02-23 13:43:42"
+    },
+    {
+        "user_id": "b2f73ae7e70515dc",
+        "challenge_id": "ch_py_001",
+        "success": false,
+        "xp_earned": 0,
+        "time_taken": 2,
+        "code": "# Write your code below\nprint()",
+        "attempted_at": "2026-02-23 14:14:27",
+        "id": "e449fb963beb2009",
+        "created_at": "2026-02-23 14:14:27",
+        "updated_at": "2026-02-23 14:14:27"
+    },
+    {
+        "user_id": "b2f73ae7e70515dc",
+        "challenge_id": "ch_py_001",
+        "success": false,
+        "xp_earned": 0,
+        "time_taken": 4,
+        "code": "# Write your code below\nprint()",
+        "attempted_at": "2026-02-23 14:15:12",
+        "id": "39cc75a37c5aa50d",
+        "created_at": "2026-02-23 14:15:12",
+        "updated_at": "2026-02-23 14:15:12"
+    },
+    {
+        "user_id": "b2f73ae7e70515dc",
+        "challenge_id": "ch_py_001",
+        "success": false,
+        "xp_earned": 0,
+        "time_taken": 13,
+        "code": "# Write your code below\nprint(Jan Russel)",
+        "attempted_at": "2026-02-23 14:15:21",
+        "id": "3531e2ac482aa459",
+        "created_at": "2026-02-23 14:15:21",
+        "updated_at": "2026-02-23 14:15:21"
+    },
+    {
+        "user_id": "b2f73ae7e70515dc",
+        "challenge_id": "ch_py_003",
+        "success": false,
+        "xp_earned": 0,
+        "time_taken": 3,
+        "code": "def fizzbuzz(n):\n    # Your code here\n    pass",
+        "attempted_at": "2026-02-23 15:18:32",
+        "id": "3f5955a3b5ac361f",
+        "created_at": "2026-02-23 15:18:32",
+        "updated_at": "2026-02-23 15:18:32"
+    },
+    {
+        "user_id": "b2f73ae7e70515dc",
+        "challenge_id": "php-c3-adv",
+        "success": true,
+        "xp_earned": 30,
+        "time_taken": 9,
+        "code": "",
+        "attempted_at": "2026-02-23 17:49:24",
+        "id": "49af38e90615bae1",
+        "created_at": "2026-02-23 17:49:24",
+        "updated_at": "2026-02-23 17:49:24"
+    },
+    {
+        "user_id": "b2f73ae7e70515dc",
+        "challenge_id": "py-c3",
+        "success": true,
+        "xp_earned": 30,
+        "time_taken": 5,
+        "code": "",
+        "attempted_at": "2026-02-23 17:52:27",
+        "id": "e6a05939808325cb",
+        "created_at": "2026-02-23 17:52:27",
+        "updated_at": "2026-02-23 17:52:27"
+    },
+    {
+        "user_id": "b2f73ae7e70515dc",
+        "challenge_id": "html-c1",
+        "success": false,
+        "xp_earned": 0,
+        "time_taken": 25,
+        "code": "<!-- Write your HTML here -->\nasda",
+        "attempted_at": "2026-02-23 18:25:41",
+        "id": "5f806780a0ba97a5",
+        "created_at": "2026-02-23 18:25:41",
+        "updated_at": "2026-02-23 18:25:41"
+    }
+]
