@@ -9,7 +9,7 @@
     <!-- Language Filter -->
     <div class="relative">
         <select onchange="window.location.href=this.value"
-                class="appearance-none bg-black border-4 border-black rounded-none px-4 py-2 pr-10 text-sm text-white font-bold focus:outline-none cursor-pointer" style="box-shadow: inset 4px 4px 0px #555, inset -4px -4px 0px #fff;">
+                class="appearance-none bg-surface border-4 border-black rounded-none px-4 py-2 pr-10 text-sm text-white font-bold focus:outline-none cursor-pointer" style="box-shadow: inset 4px 4px 0px #555, inset -4px -4px 0px #fff;">
             <option value="<?= $baseUrl ?>/modules" <?= !$filterLang ? 'selected' : '' ?>>All Languages</option>
             <?php foreach ($langConfig as $key => $lang): ?>
             <option class="lang-label" value="<?= $baseUrl ?>/modules?language=<?= $key ?><?= $filterDiff ? '&difficulty=' . $filterDiff : '' ?>"
@@ -26,7 +26,7 @@
     <!-- Difficulty Filter -->
     <div class="relative">
         <select onchange="window.location.href=this.value"
-                class="appearance-none bg-black border-4 border-black rounded-none px-4 py-2 pr-10 text-sm text-white font-bold focus:outline-none cursor-pointer" style="box-shadow: inset 4px 4px 0px #555, inset -4px -4px 0px #fff;">
+                class="appearance-none bg-surface border-4 border-black rounded-none px-4 py-2 pr-10 text-sm text-white font-bold focus:outline-none cursor-pointer" style="box-shadow: inset 4px 4px 0px #555, inset -4px -4px 0px #fff;">
             <option value="<?= $baseUrl ?>/modules<?= $filterLang ? '?language=' . $filterLang : '' ?>" <?= !$filterDiff ? 'selected' : '' ?>>All Levels</option>
             <?php foreach (['beginner', 'intermediate', 'advanced'] as $diff): ?>
             <option class="lang-label" value="<?= $baseUrl ?>/modules?<?= $filterLang ? 'language=' . $filterLang . '&' : '' ?>difficulty=<?= $diff ?>"
@@ -66,7 +66,7 @@
         <div class="flex items-start justify-between mb-4">
             <span class="text-3xl" style="filter: drop-shadow(2px 2px 0px #000);"><?= $module['icon'] ?></span>
             <div class="flex gap-2">
-                <span class="px-2 py-1 text-xs font-bold bg-black text-gray-300 border-2 border-gray-600" style="box-shadow: inset 2px 2px 0px #000, inset -2px -2px 0px #fff;">
+                <span class="px-2 py-1 text-xs font-bold bg-surface text-gray-300 border-2 border-gray-600" style="box-shadow: inset 2px 2px 0px #000, inset -2px -2px 0px #fff;">
                     <?= ucfirst($module['difficulty']) ?>
                 </span>
             </div>
@@ -94,7 +94,7 @@
                 <span>Progress</span>
                 <span><?= round($moduleProgress[$module['id']] ?? 0) ?>%</span>
             </div>
-            <div class="h-3 bg-black border-2 border-gray-600 overflow-hidden" style="box-shadow: inset 2px 2px 0px #000, inset -2px -2px 0px #fff;">
+            <div class="h-3 bg-surface border-2 border-gray-600 overflow-hidden" style="box-shadow: inset 2px 2px 0px #000, inset -2px -2px 0px #fff;">
                 <div class="h-full bg-primary transition-all duration-500" style="width: <?= $moduleProgress[$module['id']] ?? 0 ?>%; box-shadow: inset 2px 2px 0px #86efac, inset -2px -2px 0px #166534;"></div>
             </div>
         </div>

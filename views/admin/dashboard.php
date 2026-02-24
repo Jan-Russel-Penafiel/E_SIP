@@ -96,7 +96,7 @@ if (!$auth->isAdmin()) {
             <div class="flex items-center justify-between">
                 <span class="text-sm font-bold text-white" style="text-shadow: 1px 1px 0px #000;"><?= ucfirst($role) ?></span>
                 <div class="flex items-center gap-2">
-                    <div class="h-4 bg-black border-2 border-black rounded-none w-32 overflow-hidden" style="box-shadow: inset 2px 2px 0px #000;">
+                    <div class="h-4 bg-surface border-2 border-black rounded-none w-32 overflow-hidden" style="box-shadow: inset 2px 2px 0px #000;">
                         <div class="h-full bg-white" style="width: <?= ($count / max(count($users), 1)) * 100 ?>%; box-shadow: inset 2px 2px 0px #fff, inset -2px -2px 0px #ccc;"></div>
                     </div>
                     <span class="text-xs text-gray-300 font-bold w-8 text-right" style="text-shadow: 1px 1px 0px #000;"><?= $count ?></span>
@@ -117,7 +117,7 @@ if (!$auth->isAdmin()) {
             <div class="flex items-center justify-between">
                 <span class="text-sm font-bold text-white" style="text-shadow: 1px 1px 0px #000;"><?= ucfirst($diff) ?></span>
                 <div class="flex items-center gap-2">
-                    <div class="h-4 bg-black border-2 border-black rounded-none w-32 overflow-hidden" style="box-shadow: inset 2px 2px 0px #000;">
+                    <div class="h-4 bg-surface border-2 border-black rounded-none w-32 overflow-hidden" style="box-shadow: inset 2px 2px 0px #000;">
                         <div class="h-full <?= $diffColors[$diff] ?? 'bg-white' ?>" style="width: <?= ($count / max(count($modules), 1)) * 100 ?>%; box-shadow: inset 2px 2px 0px rgba(255,255,255,0.5), inset -2px -2px 0px rgba(0,0,0,0.2);"></div>
                     </div>
                     <span class="text-xs text-gray-300 font-bold w-8 text-right" style="text-shadow: 1px 1px 0px #000;"><?= $count ?></span>

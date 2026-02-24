@@ -9,7 +9,7 @@
     <!-- Language Filter -->
     <div class="relative">
         <select onchange="window.location.href=this.value"
-                class="appearance-none bg-black border-4 border-black rounded-none px-4 py-2 pr-10 text-sm text-white font-bold focus:outline-none cursor-pointer" style="box-shadow: inset 4px 4px 0px #555, inset -4px -4px 0px #fff;">
+                class="appearance-none bg-surface border-4 border-black rounded-none px-4 py-2 pr-10 text-sm text-white font-bold focus:outline-none cursor-pointer" style="box-shadow: inset 4px 4px 0px #555, inset -4px -4px 0px #fff;">
             <option value="<?= $baseUrl ?>/challenges" <?= !$filterLang ? 'selected' : '' ?>>All Languages</option>
             <?php foreach ($langConfig as $key => $lang): ?>
             <option class="lang-label" value="<?= $baseUrl ?>/challenges?language=<?= $key ?>"
@@ -24,7 +24,7 @@
     <!-- Difficulty Filter -->
     <div class="relative">
         <select onchange="window.location.href=this.value"
-                class="appearance-none bg-black border-4 border-black rounded-none px-4 py-2 pr-10 text-sm text-white font-bold focus:outline-none cursor-pointer" style="box-shadow: inset 4px 4px 0px #555, inset -4px -4px 0px #fff;">
+                class="appearance-none bg-surface border-4 border-black rounded-none px-4 py-2 pr-10 text-sm text-white font-bold focus:outline-none cursor-pointer" style="box-shadow: inset 4px 4px 0px #555, inset -4px -4px 0px #fff;">
             <option value="<?= $baseUrl ?>/challenges<?= $filterLang ? '?language=' . $filterLang : '' ?>" <?= !$filterDiff ? 'selected' : '' ?>>All Levels</option>
             <?php foreach (['beginner', 'intermediate', 'advanced'] as $diff): ?>
             <option class="lang-label" value="<?= $baseUrl ?>/challenges?<?= $filterLang ? 'language=' . $filterLang . '&' : '' ?>difficulty=<?= $diff ?>"
@@ -77,8 +77,8 @@
         <p class="text-sm text-gray-300 mb-3 line-clamp-2 font-bold" style="text-shadow: 1px 1px 0px #000;"><?= htmlspecialchars($challenge['description']) ?></p>
 
         <div class="flex items-center gap-2 text-xs font-bold" style="text-shadow: 1px 1px 0px #000;">
-            <span class="px-2 py-1 bg-black text-gray-300 border-2 border-gray-600" style="box-shadow: inset 2px 2px 0px #000, inset -2px -2px 0px #fff;"><?= ucfirst($challenge['difficulty']) ?></span>
-            <span class="px-2 py-1 bg-black text-gray-300 border-2 border-gray-600" style="box-shadow: inset 2px 2px 0px #000, inset -2px -2px 0px #fff;"><?= ucfirst($challenge['type']) ?></span>
+            <span class="px-2 py-1 bg-surface text-gray-300 border-2 border-gray-600" style="box-shadow: inset 2px 2px 0px #000, inset -2px -2px 0px #fff;"><?= ucfirst($challenge['difficulty']) ?></span>
+            <span class="px-2 py-1 bg-surface text-gray-300 border-2 border-gray-600" style="box-shadow: inset 2px 2px 0px #000, inset -2px -2px 0px #fff;"><?= ucfirst($challenge['type']) ?></span>
             <span class="ml-auto text-gray-300">+<?= $challenge['xp_reward'] ?> XP</span>
         </div>
     </a>

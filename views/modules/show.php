@@ -35,8 +35,8 @@ $prismLang = $prismLangMap[$module['language']] ?? 'clike';
 <!-- Module Header -->
 <div class="bg-surface border-4 border-black rounded-none p-8 mb-8" style="box-shadow: inset 4px 4px 0px #c6c6c6, inset -4px -4px 0px #555555;">
     <div class="flex flex-col md:flex-row md:items-start gap-6">
-        <div class="flex-shrink-0">
-            <div class="w-16 h-16 bg-black border-4 border-black rounded-none flex items-center justify-center text-3xl" style="box-shadow: inset 2px 2px 0px #555, inset -2px -2px 0px #000;">
+            <div class="flex-shrink-0">
+            <div class="w-16 h-16 bg-surface border-4 border-black rounded-none flex items-center justify-center text-3xl" style="box-shadow: inset 2px 2px 0px #555, inset -2px -2px 0px #000;">
                 <span style="filter: drop-shadow(2px 2px 0px #000);"><?= $module['icon'] ?></span>
             </div>
         </div>
@@ -53,7 +53,7 @@ $prismLang = $prismLangMap[$module['language']] ?? 'clike';
                 <span class="flex items-center gap-1.5 text-white lang-label">
                     <span style="filter: drop-shadow(1px 1px 0px #000);"><?= $langInfo['icon'] ?></span> <?= $langInfo['name'] ?>
                 </span>
-                <span class="px-2 py-0.5 text-xs rounded-none bg-black text-white border-2 border-gray-600" style="box-shadow: inset 2px 2px 0px #000, inset -2px -2px 0px #555;">
+                <span class="px-2 py-0.5 text-xs rounded-none bg-surface text-white border-2 border-gray-600" style="box-shadow: inset 2px 2px 0px #000, inset -2px -2px 0px #555;">
                     <?= ucfirst($module['difficulty']) ?>
                 </span>
                 <span class="text-gray-300"><?= count($module['lessons'] ?? []) ?> lessons</span>
@@ -61,12 +61,12 @@ $prismLang = $prismLangMap[$module['language']] ?? 'clike';
             </div>
 
             <!-- Progress -->
-            <div class="mt-4 max-w-md">
+                <div class="mt-4 max-w-md">
                 <div class="flex justify-between text-xs text-white font-bold mb-1" style="text-shadow: 1px 1px 0px #000;">
                     <span>Progress</span>
                     <span id="progressText"><?= round($progress) ?>%</span>
                 </div>
-                <div class="h-3 bg-black border-2 border-gray-600 overflow-hidden" style="box-shadow: inset 2px 2px 0px #000, inset -2px -2px 0px #fff;">
+                <div class="h-3 bg-surface border-2 border-gray-600 overflow-hidden" style="box-shadow: inset 2px 2px 0px #000, inset -2px -2px 0px #fff;">
                     <div id="progressBar" class="h-full bg-primary transition-all duration-500" style="width: <?= $progress ?>%; box-shadow: inset 2px 2px 0px #86efac, inset -2px -2px 0px #166534;"></div>
                 </div>
             </div>
@@ -87,7 +87,7 @@ $prismLang = $prismLangMap[$module['language']] ?? 'clike';
             <div class="bg-surface border-4 border-black rounded-none overflow-hidden transition lesson-card" id="lesson-<?= $index ?>" data-lesson-id="<?= htmlspecialchars($lesson['id']) ?>" style="box-shadow: inset 4px 4px 0px #c6c6c6, inset -4px -4px 0px #555555;">
                 <!-- Lesson Header (always visible) -->
                 <div class="flex items-center gap-4 p-5 cursor-pointer hover:bg-gray-800 transition-colors" onclick="toggleLesson(<?= $index ?>)">
-                    <div class="flex-shrink-0 w-8 h-8 rounded-none bg-black border-2 border-gray-600 flex items-center justify-center text-sm font-bold text-white" id="lessonNum-<?= $index ?>" style="box-shadow: inset 2px 2px 0px #000, inset -2px -2px 0px #555;">
+                    <div class="flex-shrink-0 w-8 h-8 rounded-none bg-surface border-2 border-gray-600 flex items-center justify-center text-sm font-bold text-white" id="lessonNum-<?= $index ?>" style="box-shadow: inset 2px 2px 0px #000, inset -2px -2px 0px #555;">
                         <?= $index + 1 ?>
                     </div>
                     <div class="flex-1 min-w-0">
@@ -107,7 +107,7 @@ $prismLang = $prismLangMap[$module['language']] ?? 'clike';
                 <div id="lessonBody-<?= $index ?>" class="hidden border-t-4 border-black">
                     <!-- Phase 1: Lesson Information -->
                     <div id="lessonInfo-<?= $index ?>" class="p-5">
-                        <div class="bg-black border-4 border-black rounded-none p-6 mb-4" style="box-shadow: inset 2px 2px 0px #555, inset -2px -2px 0px #000;">
+                            <div class="bg-surface border-4 border-black rounded-none p-6 mb-4" style="box-shadow: inset 2px 2px 0px #555, inset -2px -2px 0px #000;">
                             <div class="flex items-center gap-2 mb-3">
                                 <span class="text-lg" style="filter: drop-shadow(2px 2px 0px #000);">📖</span>
                                 <h4 class="font-bold text-white" style="text-shadow: 1px 1px 0px #000;">Lesson Content</h4>
@@ -124,7 +124,7 @@ $prismLang = $prismLangMap[$module['language']] ?? 'clike';
                             <?php if (!empty($lesson['example_code'])): ?>
                             <div class="mt-4">
                                 <p class="text-xs font-bold text-gray-400 uppercase tracking-wider mb-2" style="text-shadow: 1px 1px 0px #000;">Example</p>
-                                <pre class="bg-black p-3 border-4 border-black rounded-none text-sm overflow-x-auto" style="box-shadow: inset 2px 2px 0px #000, inset -2px -2px 0px #333; background-color: #000;"><code class="language-<?= $prismLang ?>"><?= htmlspecialchars($lesson['example_code']) ?></code></pre>
+                                <pre class="bg-surface p-3 border-4 border-black rounded-none text-sm overflow-x-auto" style="box-shadow: inset 2px 2px 0px #000, inset -2px -2px 0px #333; background-color: #2b2b2b;"><code class="language-<?= $prismLang ?>"><?= htmlspecialchars($lesson['example_code']) ?></code></pre>
                             </div>
                             <?php endif; ?>
                             <?php if (!empty($lesson['key_points'])): ?>
@@ -155,7 +155,7 @@ $prismLang = $prismLangMap[$module['language']] ?? 'clike';
                             Back to Lesson
                         </button>
 
-                        <div class="bg-black border-4 border-black rounded-none p-5 game-panel" style="box-shadow: inset 2px 2px 0px #555, inset -2px -2px 0px #000;">
+                        <div class="bg-surface border-4 border-black rounded-none p-5 game-panel" style="box-shadow: inset 2px 2px 0px #555, inset -2px -2px 0px #000;">
                             <div class="flex items-center gap-2 mb-3">
                                 <span class="text-lg" style="filter: drop-shadow(2px 2px 0px #000);">🎮</span>
                                 <p class="text-sm font-bold text-white" style="text-shadow: 1px 1px 0px #000;"><?= htmlspecialchars($game['question']) ?></p>
@@ -310,8 +310,8 @@ $prismLang = $prismLangMap[$module['language']] ?? 'clike';
                     <?php endif; ?>
                 </div>
                 <div class="flex items-center gap-2 text-xs text-white font-bold" style="text-shadow: 1px 1px 0px #000;">
-                    <span class="px-1.5 py-0.5 rounded-none bg-black border-2 border-gray-600 text-black" style="box-shadow: inset 2px 2px 0px #000, inset -2px -2px 0px #555;"><?= ucfirst($challenge['difficulty']) ?></span>
-                    <span class="px-1.5 py-0.5 rounded-none bg-black border-2 border-gray-600 text-black" style="box-shadow: inset 2px 2px 0px #000, inset -2px -2px 0px #555;"><?= ucfirst($challenge['type']) ?></span>
+                    <span class="px-1.5 py-0.5 rounded-none bg-surface border-2 border-gray-600 text-black" style="box-shadow: inset 2px 2px 0px #000, inset -2px -2px 0px #555;"><?= ucfirst($challenge['difficulty']) ?></span>
+                    <span class="px-1.5 py-0.5 rounded-none bg-surface border-2 border-gray-600 text-black" style="box-shadow: inset 2px 2px 0px #000, inset -2px -2px 0px #555;"><?= ucfirst($challenge['type']) ?></span>
                     <span class="text-yellow-400">+<?= $challenge['xp_reward'] ?> XP</span>
                 </div>
             </a>
@@ -784,9 +784,9 @@ function escapeHtml(text) {
 .lesson-content-text p:last-child { margin-bottom: 0; }
 .lesson-card.border-green-800\/50 { border-color: rgba(22, 101, 52, 0.5); }
 
-/* Ensure example code blocks on module pages use a black background */
-pre.bg-black, pre.bg-black code, pre[class*="language-"] {
-    background-color: #000 !important;
+/* Ensure example code blocks on module pages use a dark grey background */
+pre.bg-surface, pre.bg-surface code, pre[class*="language-"] {
+    background-color: #2b2b2b !important;
     color: #fff !important;
 }
 

@@ -24,22 +24,22 @@
                     <span class="text-gray-300">Level <?= $user['level'] ?></span>
                     <span class="text-gray-300"><?= $user['xp'] ?> / <?= $xpNeeded ?> XP</span>
                 </div>
-                <div class="h-3 bg-black border-2 border-gray-600 overflow-hidden" style="box-shadow: inset 2px 2px 0px #000, inset -2px -2px 0px #fff;">
+                <div class="h-3 bg-surface border-2 border-gray-600 overflow-hidden" style="box-shadow: inset 2px 2px 0px #000, inset -2px -2px 0px #fff;">
                     <div class="h-full bg-primary transition-all duration-500" style="width: <?= $xpPercent ?>%; box-shadow: inset 2px 2px 0px #86efac, inset -2px -2px 0px #166534;"></div>
                 </div>
             </div>
 
             <!-- Quick Stats -->
             <div class="grid grid-cols-3 gap-3 text-center">
-                <div class="bg-black border-4 border-black rounded-none p-3" style="box-shadow: inset 2px 2px 0px #555, inset -2px -2px 0px #000;">
+                <div class="bg-surface border-4 border-black rounded-none p-3" style="box-shadow: inset 2px 2px 0px #555, inset -2px -2px 0px #000;">
                     <p class="text-lg font-bold text-white" style="text-shadow: 2px 2px 0px #3f3f3f;"><?= count($user['completed_challenges'] ?? []) ?></p>
                     <p class="text-xs text-gray-300 font-bold" style="text-shadow: 1px 1px 0px #000;">Solved</p>
                 </div>
-                <div class="bg-black border-4 border-black rounded-none p-3" style="box-shadow: inset 2px 2px 0px #555, inset -2px -2px 0px #000;">
+                <div class="bg-surface border-4 border-black rounded-none p-3" style="box-shadow: inset 2px 2px 0px #555, inset -2px -2px 0px #000;">
                     <p class="text-lg font-bold text-white" style="text-shadow: 2px 2px 0px #3f3f3f;"><?= $user['streak'] ?? 0 ?></p>
                     <p class="text-xs text-gray-300 font-bold" style="text-shadow: 1px 1px 0px #000;">Streak</p>
                 </div>
-                <div class="bg-black border-4 border-black rounded-none p-3" style="box-shadow: inset 2px 2px 0px #555, inset -2px -2px 0px #000;">
+                <div class="bg-surface border-4 border-black rounded-none p-3" style="box-shadow: inset 2px 2px 0px #555, inset -2px -2px 0px #000;">
                     <p class="text-lg font-bold text-white" style="text-shadow: 2px 2px 0px #3f3f3f;"><?= count($user['badges'] ?? []) ?></p>
                     <p class="text-xs text-gray-300 font-bold" style="text-shadow: 1px 1px 0px #000;">Badges</p>
                 </div>
@@ -53,7 +53,7 @@
                 <label class="block text-sm text-gray-300 mb-2 font-bold" style="text-shadow: 1px 1px 0px #000;">Difficulty Preference</label>
                 <div class="space-y-2 mb-4">
                     <?php foreach (['beginner', 'intermediate', 'advanced'] as $diff): ?>
-                    <label class="flex items-center gap-3 px-3 py-2 bg-black border-4 border-black rounded-none cursor-pointer hover:bg-gray-800 transition" style="box-shadow: inset 2px 2px 0px #555, inset -2px -2px 0px #000;">
+                    <label class="flex items-center gap-3 px-3 py-2 bg-surface border-4 border-black rounded-none cursor-pointer hover:bg-gray-800 transition" style="box-shadow: inset 2px 2px 0px #555, inset -2px -2px 0px #000;">
                            <input type="radio" name="difficulty" value="<?= $diff ?>"
                                <?= ($user['difficulty'] ?? 'beginner') === $diff ? 'checked' : '' ?>
                                class="w-4 h-4" style="accent-color: #ffffff;">
@@ -75,19 +75,19 @@
         <div class="bg-surface border-4 border-black rounded-none p-6" style="box-shadow: inset 4px 4px 0px #c6c6c6, inset -4px -4px 0px #555555;">
             <h3 class="text-sm font-bold uppercase tracking-wider text-gray-300 mb-4" style="text-shadow: 1px 1px 0px #000;">Performance Analytics</h3>
             <div class="grid md:grid-cols-4 gap-4 mb-6">
-                <div class="bg-black border-4 border-black rounded-none p-4 text-center" style="box-shadow: inset 2px 2px 0px #555, inset -2px -2px 0px #000;">
+                <div class="bg-surface border-4 border-black rounded-none p-4 text-center" style="box-shadow: inset 2px 2px 0px #555, inset -2px -2px 0px #000;">
                     <p class="text-2xl font-bold text-white" style="text-shadow: 2px 2px 0px #3f3f3f;"><?= $analytics['total_attempts'] ?></p>
                     <p class="text-xs text-gray-300 mt-1 font-bold" style="text-shadow: 1px 1px 0px #000;">Total Attempts</p>
                 </div>
-                <div class="bg-black border-4 border-black rounded-none p-4 text-center" style="box-shadow: inset 2px 2px 0px #555, inset -2px -2px 0px #000;">
+                <div class="bg-surface border-4 border-black rounded-none p-4 text-center" style="box-shadow: inset 2px 2px 0px #555, inset -2px -2px 0px #000;">
                     <p class="text-2xl font-bold text-white" style="text-shadow: 2px 2px 0px #3f3f3f;"><?= $analytics['success_rate'] ?>%</p>
                     <p class="text-xs text-gray-300 mt-1 font-bold" style="text-shadow: 1px 1px 0px #000;">Success Rate</p>
                 </div>
-                <div class="bg-black border-4 border-black rounded-none p-4 text-center" style="box-shadow: inset 2px 2px 0px #555, inset -2px -2px 0px #000;">
+                <div class="bg-surface border-4 border-black rounded-none p-4 text-center" style="box-shadow: inset 2px 2px 0px #555, inset -2px -2px 0px #000;">
                     <p class="text-2xl font-bold text-white" style="text-shadow: 2px 2px 0px #3f3f3f;"><?= $analytics['total_xp'] ?></p>
                     <p class="text-xs text-gray-300 mt-1 font-bold" style="text-shadow: 1px 1px 0px #000;">Total XP</p>
                 </div>
-                <div class="bg-black border-4 border-black rounded-none p-4 text-center" style="box-shadow: inset 2px 2px 0px #555, inset -2px -2px 0px #000;">
+                <div class="bg-surface border-4 border-black rounded-none p-4 text-center" style="box-shadow: inset 2px 2px 0px #555, inset -2px -2px 0px #000;">
                     <p class="text-2xl font-bold text-white" style="text-shadow: 2px 2px 0px #3f3f3f;"><?= $analytics['average_time'] ?>s</p>
                     <p class="text-xs text-gray-300 mt-1 font-bold" style="text-shadow: 1px 1px 0px #000;">Avg. Time</p>
                 </div>
@@ -99,7 +99,7 @@
                     <span>Overall Success Rate</span>
                     <span><?= $analytics['success_rate'] ?>%</span>
                 </div>
-                <div class="h-3 bg-black border-2 border-gray-600 overflow-hidden" style="box-shadow: inset 2px 2px 0px #000, inset -2px -2px 0px #fff;">
+                <div class="h-3 bg-surface border-2 border-gray-600 overflow-hidden" style="box-shadow: inset 2px 2px 0px #000, inset -2px -2px 0px #fff;">
                     <div class="h-full bg-primary transition-all" style="width: <?= $analytics['success_rate'] ?>%; box-shadow: inset 2px 2px 0px #86efac, inset -2px -2px 0px #166534;"></div>
                 </div>
             </div>
@@ -112,7 +112,7 @@
                 <?php foreach ($badgeInfo as $badgeKey => $badge):
                     $earned = in_array($badgeKey, $user['badges'] ?? []);
                 ?>
-                <div class="p-4 bg-black border-4 border-black rounded-none text-center <?= $earned ? '' : 'opacity-40' ?> transition" style="box-shadow: inset 2px 2px 0px #555, inset -2px -2px 0px #000;">
+                <div class="p-4 bg-surface border-4 border-black rounded-none text-center <?= $earned ? '' : 'opacity-40' ?> transition" style="box-shadow: inset 2px 2px 0px #555, inset -2px -2px 0px #000;">
                     <span class="text-3xl block mb-2" style="filter: drop-shadow(2px 2px 0px #000);"><?= $badge['icon'] ?></span>
                     <p class="text-sm font-bold mb-1 text-white" style="text-shadow: 1px 1px 0px #000;"><?= $badge['label'] ?></p>
                     <p class="text-xs text-gray-400 font-bold" style="text-shadow: 1px 1px 0px #000;"><?= $badge['desc'] ?></p>
@@ -143,7 +143,7 @@
                         <span class="flex items-center gap-2 text-white"><span style="filter: drop-shadow(1px 1px 0px #000);"><?= $langIcon ?></span> <?= $langName ?></span>
                         <span class="text-gray-300"><?= $count ?> attempts (<?= $percent ?>%)</span>
                     </div>
-                    <div class="h-3 bg-black border-2 border-gray-600 overflow-hidden" style="box-shadow: inset 2px 2px 0px #000, inset -2px -2px 0px #fff;">
+                    <div class="h-3 bg-surface border-2 border-gray-600 overflow-hidden" style="box-shadow: inset 2px 2px 0px #000, inset -2px -2px 0px #fff;">
                         <div class="h-full bg-primary" style="width: <?= $percent ?>%; box-shadow: inset 2px 2px 0px #86efac, inset -2px -2px 0px #166534;"></div>
                     </div>
                 </div>

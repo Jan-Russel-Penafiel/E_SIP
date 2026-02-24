@@ -8,7 +8,7 @@ return [
     'name'    => 'E-SIP',
     'version' => '1.0.0',
     'tagline' => 'Learn Programming Through Play',
-    'base_url' => '/here',
+    'base_url' => '/e_sip',
 
     // Data directory for JSON storage
     'data_dir' => __DIR__ . '/../data',

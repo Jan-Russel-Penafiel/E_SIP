@@ -12,12 +12,12 @@
             theme: {
                 extend: {
                     colors: {
-                        primary: '#000000',
+                        primary: '#2b2b2b',
                         secondary: '#ffffff',
                         accent: '#333333',
                         muted: '#9ca3af',
-                        surface: '#111111',
-                        'surface-light': '#1a1a1a',
+                        surface: '#2b2b2b',
+                        'surface-light': '#3a3a3a',
                         border: '#2a2a2a',
                     }
                 }
@@ -47,7 +47,7 @@
         /* Code editor overlay */
         .prism-editor-wrap {
             position: relative;
-            background: #000;
+            background: #2b2b2b;
         }
         .prism-editor-wrap pre {
             position: absolute !important;
@@ -131,7 +131,7 @@
         
         /* Keep code editor dark and its original colors */
         .prism-editor-wrap {
-            background-color: #000000 !important;
+            background-color: #2b2b2b !important;
         }
         .prism-editor-wrap textarea, .prism-editor-wrap pre, .prism-editor-wrap code {
             background-color: transparent !important;
@@ -149,7 +149,7 @@
         }
     </style>
 </head>
-<body class="bg-black text-white min-h-screen flex">
+<body class="bg-surface text-white min-h-screen flex">
 
     <!-- Sidebar Navigation -->
     <aside id="sidebar" class="fixed inset-y-0 left-0 z-50 w-64 bg-surface border-r-4 border-black transform -translate-x-full lg:translate-x-0 transition-transform duration-300 flex flex-col" style="box-shadow: inset -4px 0px 0px #555555;">
@@ -182,7 +182,7 @@
                     $isActive = str_starts_with($currentPath, $item['path']);
                     $activeClass = $isActive
                         ? 'bg-white text-black border-4 border-black rounded-none'
-                        : 'text-gray-300 hover:text-white hover:bg-black border-4 border-transparent hover:border-black rounded-none';
+                        : 'text-gray-300 hover:text-white hover:bg-surface-light border-4 border-transparent hover:border-black rounded-none';
                     $activeStyle = $isActive
                         ? 'box-shadow: inset 2px 2px 0px #fff, inset -2px -2px 0px #ccc; text-shadow: 1px 1px 0px #fff;'
                         : 'text-shadow: 1px 1px 0px #000;';
@@ -200,7 +200,7 @@
             
                 <?php
                 $adminActive = str_starts_with($currentPath, '/admin');
-                $adminClass = $adminActive ? 'bg-white text-black border-4 border-black rounded-none' : 'text-gray-300 hover:text-white hover:bg-black border-4 border-transparent hover:border-black rounded-none';
+                $adminClass = $adminActive ? 'bg-white text-black border-4 border-black rounded-none' : 'text-gray-300 hover:text-white hover:bg-surface-light border-4 border-transparent hover:border-black rounded-none';
                 $adminStyle = $adminActive ? 'box-shadow: inset 2px 2px 0px #fff, inset -2px -2px 0px #ccc; text-shadow: 1px 1px 0px #fff;' : 'text-shadow: 1px 1px 0px #000;';
                 ?>
                 <a href="<?= $baseUrl ?>/admin"
@@ -209,15 +209,15 @@
                     <span class="font-bold text-sm">Admin Panel</span>
                 </a>
                 <div class="mt-3 space-y-2 px-1">
-                    <a href="<?= $baseUrl ?>/admin/users" class="flex items-center gap-3 px-3 py-2.5 transition-all duration-200 text-gray-300 hover:text-white hover:bg-black border-4 border-transparent hover:border-black rounded-none font-bold" style="text-shadow: 1px 1px 0px #000;">
+                    <a href="<?= $baseUrl ?>/admin/users" class="flex items-center gap-3 px-3 py-2.5 transition-all duration-200 text-gray-300 hover:text-white hover:bg-surface-light border-4 border-transparent hover:border-black rounded-none font-bold" style="text-shadow: 1px 1px 0px #000;">
                         <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM2 20c0-3.314 2.686-6 6-6h8c3.314 0 6 2.686 6 6"></path></svg>
                         <span class="text-sm font-bold">Manage Users</span>
                     </a>
-                    <a href="<?= $baseUrl ?>/admin/modules" class="flex items-center gap-3 px-3 py-2.5 transition-all duration-200 text-gray-300 hover:text-white hover:bg-black border-4 border-transparent hover:border-black rounded-none font-bold" style="text-shadow: 1px 1px 0px #000;">
+                    <a href="<?= $baseUrl ?>/admin/modules" class="flex items-center gap-3 px-3 py-2.5 transition-all duration-200 text-gray-300 hover:text-white hover:bg-surface-light border-4 border-transparent hover:border-black rounded-none font-bold" style="text-shadow: 1px 1px 0px #000;">
                         <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 7h18M3 12h18M3 17h18"></path></svg>
                         <span class="text-sm font-bold">Manage Modules</span>
                     </a>
-                    <a href="<?= $baseUrl ?>/admin/challenges" class="flex items-center gap-3 px-3 py-2.5 transition-all duration-200 text-gray-300 hover:text-white hover:bg-black border-4 border-transparent hover:border-black rounded-none font-bold" style="text-shadow: 1px 1px 0px #000;">
+                    <a href="<?= $baseUrl ?>/admin/challenges" class="flex items-center gap-3 px-3 py-2.5 transition-all duration-200 text-gray-300 hover:text-white hover:bg-surface-light border-4 border-transparent hover:border-black rounded-none font-bold" style="text-shadow: 1px 1px 0px #000;">
                         <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3"></path></svg>
                         <span class="text-sm font-bold">Manage Challenges</span>
                     </a>
@@ -236,8 +236,8 @@
                     <p class="text-xs text-gray-300 font-bold" style="text-shadow: 1px 1px 0px #000;">Level <?= $currentUser['level'] ?></p>
                 </div>
             </div>
-            <a href="<?= $baseUrl ?>/logout"
-               class="flex items-center gap-2 px-3 py-2 text-sm text-white bg-black border-4 border-black rounded-none hover:bg-gray-800 transition-all font-bold" style="box-shadow: inset 2px 2px 0px #555, inset -2px -2px 0px #000; text-shadow: 1px 1px 0px #000;">
+                <a href="<?= $baseUrl ?>/logout"
+                    class="flex items-center gap-2 px-3 py-2 text-sm text-white bg-surface border-4 border-black rounded-none hover:bg-gray-800 transition-all font-bold" style="box-shadow: inset 2px 2px 0px #555, inset -2px -2px 0px #000; text-shadow: 1px 1px 0px #000;">
                 <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1"></path>
                 </svg>
@@ -252,7 +252,7 @@
         <!-- Top Bar -->
         <header class="h-16 border-b-4 border-black bg-surface flex items-center justify-between px-6 sticky top-0 z-40" style="box-shadow: inset 0px -4px 0px #555555;">
             <!-- Mobile menu toggle -->
-            <button id="menuToggle" class="lg:hidden p-2 text-white bg-black border-4 border-black rounded-none hover:bg-gray-800" style="box-shadow: inset 2px 2px 0px #555, inset -2px -2px 0px #000;">
+            <button id="menuToggle" class="lg:hidden p-2 text-white bg-surface border-4 border-black rounded-none hover:bg-gray-800" style="box-shadow: inset 2px 2px 0px #555, inset -2px -2px 0px #000;">
                 <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
                 </svg>
@@ -263,17 +263,17 @@
             <?php if ($isLoggedIn && $currentUser): ?>
             <!-- XP Bar in header -->
             <div class="hidden md:flex items-center gap-4">
-                <div class="flex items-center gap-2 text-sm bg-black border-4 border-black rounded-none px-3 py-1" style="box-shadow: inset 2px 2px 0px #000;">
+                <div class="flex items-center gap-2 text-sm bg-surface border-4 border-black rounded-none px-3 py-1" style="box-shadow: inset 2px 2px 0px #000;">
                     <span class="text-yellow-400" style="text-shadow: 1px 1px 0px #000;">⚡</span>
                     <span class="text-gray-300 font-bold" style="text-shadow: 1px 1px 0px #000;">XP:</span>
                     <span class="font-bold text-white" style="text-shadow: 1px 1px 0px #000;"><?= $currentUser['xp'] ?></span>
                 </div>
-                <div class="flex items-center gap-2 text-sm bg-black border-4 border-black rounded-none px-3 py-1" style="box-shadow: inset 2px 2px 0px #000;">
+                <div class="flex items-center gap-2 text-sm bg-surface border-4 border-black rounded-none px-3 py-1" style="box-shadow: inset 2px 2px 0px #000;">
                     <span style="text-shadow: 1px 1px 0px #000;">🔥</span>
                     <span class="text-gray-300 font-bold" style="text-shadow: 1px 1px 0px #000;">Streak:</span>
                     <span class="font-bold text-white" style="text-shadow: 1px 1px 0px #000;"><?= $currentUser['streak'] ?? 0 ?></span>
                 </div>
-                <div class="flex items-center gap-2 text-sm bg-black border-4 border-black rounded-none px-3 py-1" style="box-shadow: inset 2px 2px 0px #000;">
+                <div class="flex items-center gap-2 text-sm bg-surface border-4 border-black rounded-none px-3 py-1" style="box-shadow: inset 2px 2px 0px #000;">
                     <span style="text-shadow: 1px 1px 0px #000;">🎯</span>
                     <span class="text-gray-300 font-bold" style="text-shadow: 1px 1px 0px #000;">Level:</span>
                     <span class="font-bold text-white" style="text-shadow: 1px 1px 0px #000;"><?= $currentUser['level'] ?></span>
@@ -310,7 +310,7 @@
     </div>
 
     <!-- Mobile overlay -->
-    <div id="sidebarOverlay" class="fixed inset-0 bg-black/50 z-40 hidden lg:hidden" onclick="toggleSidebar()"></div>
+    <div id="sidebarOverlay" class="fixed inset-0 bg-surface/50 z-40 hidden lg:hidden" onclick="toggleSidebar()"></div>
 
     <!-- Prism.js core + autoloader (loads language grammars on demand) -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>

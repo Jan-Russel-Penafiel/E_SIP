@@ -55,17 +55,17 @@ $prismLang = $prismLangMap[$challenge['language']] ?? 'clike';
             <p class="text-gray-300 mb-4 font-bold" style="text-shadow: 1px 1px 0px #000;"><?= htmlspecialchars($challenge['description']) ?></p>
 
             <div class="flex items-center gap-3 mb-4 text-xs font-bold" style="text-shadow: 1px 1px 0px #000;">
-                <span class="px-2 py-1 rounded-none bg-black text-white border-2 border-gray-600" style="box-shadow: inset 2px 2px 0px #000, inset -2px -2px 0px #555;"><?= ucfirst($challenge['difficulty']) ?></span>
-                <span class="px-2 py-1 rounded-none bg-black text-white border-2 border-gray-600 lang-label" style="box-shadow: inset 2px 2px 0px #000, inset -2px -2px 0px #555;"><?= $langInfo['name'] ?></span>
+                <span class="px-2 py-1 rounded-none bg-surface text-white border-2 border-gray-600" style="box-shadow: inset 2px 2px 0px #000, inset -2px -2px 0px #555;"><?= ucfirst($challenge['difficulty']) ?></span>
+                <span class="px-2 py-1 rounded-none bg-surface text-white border-2 border-gray-600 lang-label" style="box-shadow: inset 2px 2px 0px #000, inset -2px -2px 0px #555;"><?= $langInfo['name'] ?></span>
                 <?php if (!empty($challenge['time_limit'])): ?>
-                <span class="px-2 py-1 rounded-none bg-black text-white border-2 border-gray-600" id="timer" style="box-shadow: inset 2px 2px 0px #000, inset -2px -2px 0px #555;">
+                <span class="px-2 py-1 rounded-none bg-surface text-white border-2 border-gray-600" id="timer" style="box-shadow: inset 2px 2px 0px #000, inset -2px -2px 0px #555;">
                     ⏱ <?= gmdate('i:s', $challenge['time_limit']) ?>
                 </span>
                 <?php endif; ?>
             </div>
 
             <!-- Instructions -->
-            <div class="bg-black border-4 border-black rounded-none p-4" style="box-shadow: inset 2px 2px 0px #555, inset -2px -2px 0px #000;">
+            <div class="bg-surface border-4 border-black rounded-none p-4" style="box-shadow: inset 2px 2px 0px #555, inset -2px -2px 0px #000;">
                 <h3 class="text-xs font-bold uppercase tracking-wider text-gray-400 mb-2" style="text-shadow: 1px 1px 0px #000;">Instructions</h3>
                 <p class="text-sm text-white font-bold" style="text-shadow: 1px 1px 0px #000;"><?= htmlspecialchars($challenge['instructions']) ?></p>
             </div>
@@ -111,7 +111,7 @@ $prismLang = $prismLangMap[$challenge['language']] ?? 'clike';
         <!-- Code Editor -->
         <div class="bg-surface border-4 border-black rounded-none overflow-hidden" style="box-shadow: inset 4px 4px 0px #c6c6c6, inset -4px -4px 0px #555555;">
             <!-- Editor Header -->
-            <div class="flex items-center justify-between px-4 py-3 border-b-4 border-black bg-black" style="box-shadow: inset 2px 2px 0px #555, inset -2px -2px 0px #000;">
+            <div class="flex items-center justify-between px-4 py-3 border-b-4 border-black bg-surface" style="box-shadow: inset 2px 2px 0px #555, inset -2px -2px 0px #000;">
                 <div class="flex items-center gap-2">
                     <div class="w-3 h-3 rounded-none bg-red-500 border-2 border-black"></div>
                     <div class="w-3 h-3 rounded-none bg-yellow-500 border-2 border-black"></div>
@@ -135,7 +135,7 @@ $prismLang = $prismLangMap[$challenge['language']] ?? 'clike';
             </div>
 
             <!-- Editor Footer -->
-            <div class="flex items-center justify-between px-4 py-3 border-t-4 border-black bg-black" style="box-shadow: inset 2px 2px 0px #555, inset -2px -2px 0px #000;">
+            <div class="flex items-center justify-between px-4 py-3 border-t-4 border-black bg-surface" style="box-shadow: inset 2px 2px 0px #555, inset -2px -2px 0px #000;">
                 <span class="text-xs text-gray-400 font-bold" id="charCount" style="text-shadow: 1px 1px 0px #000;">0 chars</span>
                 <div class="flex gap-2">
                     <button onclick="runCode()"
@@ -155,7 +155,7 @@ $prismLang = $prismLangMap[$challenge['language']] ?? 'clike';
 
         <!-- Output Console -->
         <div class="mt-4 bg-surface border-4 border-black rounded-none overflow-hidden" style="box-shadow: inset 4px 4px 0px #c6c6c6, inset -4px -4px 0px #555555;">
-            <div class="px-4 py-2 border-b-4 border-black bg-black" style="box-shadow: inset 2px 2px 0px #555, inset -2px -2px 0px #000;">
+            <div class="px-4 py-2 border-b-4 border-black bg-surface" style="box-shadow: inset 2px 2px 0px #555, inset -2px -2px 0px #000;">
                 <span class="text-xs text-white font-mono font-bold" style="text-shadow: 1px 1px 0px #000;">Output</span>
             </div>
             <div id="outputConsole" class="h-32 p-4 font-mono text-sm overflow-y-auto text-gray-300 bg-gray-900 font-bold" style="box-shadow: inset 2px 2px 0px #000, inset -2px -2px 0px #333; text-shadow: 1px 1px 0px #000;">
@@ -171,7 +171,7 @@ $prismLang = $prismLangMap[$challenge['language']] ?? 'clike';
             <div class="space-y-3" id="mcOptions">
                 <?php foreach ($challenge['options'] as $i => $option): ?>
                 <button onclick="selectOption(this, '<?= htmlspecialchars(addslashes($option)) ?>')"
-                        class="mc-option w-full text-left px-4 py-3 bg-black border-4 border-black rounded-none text-sm hover:bg-gray-800 transition flex items-center gap-3 font-bold text-white" style="box-shadow: inset 2px 2px 0px #555, inset -2px -2px 0px #000; text-shadow: 1px 1px 0px #000;">
+                    class="mc-option w-full text-left px-4 py-3 bg-surface border-4 border-black rounded-none text-sm hover:bg-gray-800 transition flex items-center gap-3 font-bold text-white" style="box-shadow: inset 2px 2px 0px #555, inset -2px -2px 0px #000; text-shadow: 1px 1px 0px #000;">
                     <span class="w-6 h-6 rounded-none border-2 border-gray-600 flex items-center justify-center text-xs flex-shrink-0 bg-gray-900" style="box-shadow: inset 2px 2px 0px #000, inset -2px -2px 0px #333;">
                         <?= chr(65 + $i) ?>
                     </span>

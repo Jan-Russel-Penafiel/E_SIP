@@ -19,7 +19,7 @@
                 <span><?= $user['xp'] ?> XP</span>
                 <span><?= $xpNeeded ?> XP</span>
             </div>
-            <div class="h-3 bg-black border-2 border-gray-600 overflow-hidden" style="box-shadow: inset 2px 2px 0px #000, inset -2px -2px 0px #fff;">
+            <div class="h-3 bg-surface border-2 border-gray-600 overflow-hidden" style="box-shadow: inset 2px 2px 0px #000, inset -2px -2px 0px #fff;">
                 <div class="h-full bg-primary transition-all duration-500" style="width: <?= $xpPercent ?>%; box-shadow: inset 2px 2px 0px #86efac, inset -2px -2px 0px #166534;"></div>
             </div>
         </div>
@@ -69,7 +69,7 @@
             ?>
             <div class="flex-1 flex flex-col items-center gap-2">
                 <span class="text-xs text-gray-300 font-bold" style="text-shadow: 1px 1px 0px #000;"><?= $day['xp'] ?></span>
-                <div class="w-full bg-black border-2 border-gray-600 relative" style="height: 120px; box-shadow: inset 2px 2px 0px #000, inset -2px -2px 0px #fff;">
+                <div class="w-full bg-surface border-2 border-gray-600 relative" style="height: 120px; box-shadow: inset 2px 2px 0px #000, inset -2px -2px 0px #fff;">
                     <div class="absolute bottom-0 w-full bg-primary transition-all duration-700"
                          style="height: <?= $height ?>%; box-shadow: inset 2px 2px 0px #86efac, inset -2px -2px 0px #166534;"></div>
                 </div>
@@ -88,7 +88,7 @@
                     <span class="text-gray-300">Success Rate</span>
                     <span class="text-white"><?= $analytics['success_rate'] ?>%</span>
                 </div>
-                <div class="h-3 bg-black border-2 border-gray-600 overflow-hidden" style="box-shadow: inset 2px 2px 0px #000, inset -2px -2px 0px #fff;">
+                <div class="h-3 bg-surface border-2 border-gray-600 overflow-hidden" style="box-shadow: inset 2px 2px 0px #000, inset -2px -2px 0px #fff;">
                     <div class="h-full bg-primary" style="width: <?= $analytics['success_rate'] ?>%; box-shadow: inset 2px 2px 0px #86efac, inset -2px -2px 0px #166534;"></div>
                 </div>
             </div>
@@ -125,10 +125,10 @@
         <h4 class="text-lg font-bold mb-2 text-white" style="text-shadow: 2px 2px 0px #3f3f3f;"><?= htmlspecialchars($dailyChallenge['title']) ?></h4>
         <p class="text-gray-300 text-sm mb-4 font-bold" style="text-shadow: 1px 1px 0px #000;"><?= htmlspecialchars($dailyChallenge['description']) ?></p>
         <div class="flex items-center gap-3">
-            <span class="px-2 py-1 text-xs font-bold bg-black text-gray-300 border-2 border-gray-600" style="box-shadow: inset 2px 2px 0px #000, inset -2px -2px 0px #fff;">
+            <span class="px-2 py-1 text-xs font-bold bg-surface text-gray-300 border-2 border-gray-600" style="box-shadow: inset 2px 2px 0px #000, inset -2px -2px 0px #fff;">
                 <?= ucfirst($dailyChallenge['difficulty']) ?>
             </span>
-            <span class="px-2 py-1 text-xs font-bold bg-black text-gray-300 border-2 border-gray-600 lang-label" style="box-shadow: inset 2px 2px 0px #000, inset -2px -2px 0px #fff;">
+            <span class="px-2 py-1 text-xs font-bold bg-surface text-gray-300 border-2 border-gray-600 lang-label" style="box-shadow: inset 2px 2px 0px #000, inset -2px -2px 0px #fff;">
                 <?= ucfirst($dailyChallenge['language']) ?>
             </span>
         </div>
@@ -165,7 +165,7 @@
                         </span>
                         <span class="text-gray-300"><?= $count ?> (<?= $percent ?>%)</span>
                     </div>
-                    <div class="h-3 bg-black border-2 border-gray-600 overflow-hidden" style="box-shadow: inset 2px 2px 0px #000, inset -2px -2px 0px #fff;">
+                    <div class="h-3 bg-surface border-2 border-gray-600 overflow-hidden" style="box-shadow: inset 2px 2px 0px #000, inset -2px -2px 0px #fff;">
                         <div class="h-full bg-primary" style="width: <?= $percent ?>%; box-shadow: inset 2px 2px 0px #86efac, inset -2px -2px 0px #166534;"></div>
                     </div>
                 </div>
@@ -183,8 +183,8 @@
     </div>
     <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
         <?php foreach (array_slice($modules, 0, 4) as $module): ?>
-        <a href="<?= $baseUrl ?>/modules/<?= $module['id'] ?>"
-           class="block p-4 bg-black border-4 border-black hover:border-gray-600 transition group" style="box-shadow: inset 4px 4px 0px #000, inset -4px -4px 0px #fff;">
+          <a href="<?= $baseUrl ?>/modules/<?= $module['id'] ?>"
+              class="block p-4 bg-surface border-4 border-black hover:border-gray-600 transition group" style="box-shadow: inset 4px 4px 0px #000, inset -4px -4px 0px #fff;">
             <div class="flex items-center gap-2 mb-3">
                 <span class="text-xl" style="filter: drop-shadow(2px 2px 0px #000);"><?= $module['icon'] ?></span>
                 <span class="text-sm font-bold truncate text-gray-300 group-hover:text-white" style="text-shadow: 1px 1px 0px #000;"><?= htmlspecialchars($module['title']) ?></span>
@@ -193,7 +193,7 @@
                 <span><?= ucfirst($module['difficulty']) ?></span>
                 <span><?= round($moduleProgress[$module['id']] ?? 0) ?>%</span>
             </div>
-            <div class="h-3 bg-black border-2 border-gray-600 overflow-hidden" style="box-shadow: inset 2px 2px 0px #000, inset -2px -2px 0px #fff;">
+            <div class="h-3 bg-surface border-2 border-gray-600 overflow-hidden" style="box-shadow: inset 2px 2px 0px #000, inset -2px -2px 0px #fff;">
                 <div class="h-full bg-primary transition-all" style="width: <?= $moduleProgress[$module['id']] ?? 0 ?>%; box-shadow: inset 2px 2px 0px #86efac, inset -2px -2px 0px #166534;"></div>
             </div>
         </a>

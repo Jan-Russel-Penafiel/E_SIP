@@ -5,7 +5,7 @@
         <p class="text-gray-300 text-sm mt-1 font-bold" style="text-shadow: 1px 1px 0px #000;"><?= count($modules) ?> modules total</p>
     </div>
     <div class="flex gap-3">
-        <a href="<?= $baseUrl ?>/admin" class="px-4 py-2 text-sm bg-black text-white border-4 border-black rounded-none hover:bg-gray-800 transition font-bold" style="box-shadow: inset 2px 2px 0px #555, inset -2px -2px 0px #000; text-shadow: 1px 1px 0px #000;">← Admin</a>
+        <a href="<?= $baseUrl ?>/admin" class="px-4 py-2 text-sm bg-surface text-white border-4 border-black rounded-none hover:bg-gray-800 transition font-bold" style="box-shadow: inset 2px 2px 0px #555, inset -2px -2px 0px #000; text-shadow: 1px 1px 0px #000;">← Admin</a>
     </div>
 </div>
 
@@ -17,16 +17,16 @@
             <div>
                 <label class="block text-xs text-gray-300 mb-1 font-bold" style="text-shadow: 1px 1px 0px #000;">Title</label>
                 <input type="text" name="title" required placeholder="Module Title"
-                    class="w-full bg-black border-4 border-black rounded-none px-3 py-2 text-sm text-white focus:border-white focus:outline-none font-bold" style="box-shadow: inset 2px 2px 0px #000;">
+                    class="w-full bg-surface border-4 border-black rounded-none px-3 py-2 text-sm text-white focus:border-white focus:outline-none font-bold" style="box-shadow: inset 2px 2px 0px #000;">
             </div>
             <div>
                 <label class="block text-xs text-gray-300 mb-1 font-bold" style="text-shadow: 1px 1px 0px #000;">Language</label>
                 <input type="text" name="language" placeholder="python" required
-                    class="w-full bg-black border-4 border-black rounded-none px-3 py-2 text-sm text-white focus:border-white focus:outline-none font-bold" style="box-shadow: inset 2px 2px 0px #000;">
+                    class="w-full bg-surface border-4 border-black rounded-none px-3 py-2 text-sm text-white focus:border-white focus:outline-none font-bold" style="box-shadow: inset 2px 2px 0px #000;">
             </div>
             <div>
                 <label class="block text-xs text-gray-300 mb-1 font-bold" style="text-shadow: 1px 1px 0px #000;">Difficulty</label>
-                <select name="difficulty" class="w-full bg-black border-4 border-black rounded-none px-3 py-2 text-sm text-white focus:border-white focus:outline-none font-bold" style="box-shadow: inset 2px 2px 0px #000;">
+                <select name="difficulty" class="w-full bg-surface border-4 border-black rounded-none px-3 py-2 text-sm text-white focus:border-white focus:outline-none font-bold" style="box-shadow: inset 2px 2px 0px #000;">
                     <option value="beginner">Beginner</option>
                     <option value="intermediate">Intermediate</option>
                     <option value="advanced">Advanced</option>
@@ -37,23 +37,23 @@
             <div>
                 <label class="block text-xs text-gray-300 mb-1 font-bold" style="text-shadow: 1px 1px 0px #000;">Icon (emoji)</label>
                 <input type="text" name="icon" placeholder="🐍" maxlength="4"
-                    class="w-full bg-black border-4 border-black rounded-none px-3 py-2 text-sm text-white focus:border-white focus:outline-none font-bold" style="box-shadow: inset 2px 2px 0px #000;">
+                    class="w-full bg-surface border-4 border-black rounded-none px-3 py-2 text-sm text-white focus:border-white focus:outline-none font-bold" style="box-shadow: inset 2px 2px 0px #000;">
             </div>
             <div>
                 <label class="block text-xs text-gray-300 mb-1 font-bold" style="text-shadow: 1px 1px 0px #000;">Order</label>
                 <input type="number" name="order" value="<?= count($modules) + 1 ?>" min="1"
-                    class="w-full bg-black border-4 border-black rounded-none px-3 py-2 text-sm text-white focus:border-white focus:outline-none font-bold" style="box-shadow: inset 2px 2px 0px #000;">
+                    class="w-full bg-surface border-4 border-black rounded-none px-3 py-2 text-sm text-white focus:border-white focus:outline-none font-bold" style="box-shadow: inset 2px 2px 0px #000;">
             </div>
             <div>
                 <label class="block text-xs text-gray-300 mb-1 font-bold" style="text-shadow: 1px 1px 0px #000;">Description</label>
                 <input type="text" name="description" placeholder="Short description"
-                    class="w-full bg-black border-4 border-black rounded-none px-3 py-2 text-sm text-white focus:border-white focus:outline-none font-bold" style="box-shadow: inset 2px 2px 0px #000;">
+                    class="w-full bg-surface border-4 border-black rounded-none px-3 py-2 text-sm text-white focus:border-white focus:outline-none font-bold" style="box-shadow: inset 2px 2px 0px #000;">
             </div>
         </div>
         <div class="mb-4">
             <label class="block text-xs text-gray-300 mb-1 font-bold" style="text-shadow: 1px 1px 0px #000;">Lessons JSON (array)</label>
             <textarea name="lessons_json" rows="3" placeholder='[{"title":"Lesson 1","content":"Content here","xp":10}]'
-                class="w-full bg-black border-4 border-black rounded-none px-3 py-2 text-sm text-white font-mono focus:border-white focus:outline-none font-bold" style="box-shadow: inset 2px 2px 0px #000;"></textarea>
+                class="w-full bg-surface border-4 border-black rounded-none px-3 py-2 text-sm text-white font-mono focus:border-white focus:outline-none font-bold" style="box-shadow: inset 2px 2px 0px #000;"></textarea>
         </div>
         <button type="submit" class="px-5 py-2 bg-white text-black font-bold border-4 border-black rounded-none hover:bg-gray-200 transition text-sm" style="box-shadow: inset 2px 2px 0px #fff, inset -2px -2px 0px #ccc;">
             Create Module
@@ -65,7 +65,7 @@
 <div class="bg-surface border-4 border-black rounded-none overflow-hidden" style="box-shadow: inset 4px 4px 0px #c6c6c6, inset -4px -4px 0px #555555;">
     <div class="overflow-x-auto">
         <table class="w-full text-sm text-left">
-            <thead class="bg-black border-b-4 border-black">
+            <thead class="bg-surface border-b-4 border-black">
                 <tr>
                     <th class="px-4 py-3 text-xs text-gray-300 uppercase font-bold" style="text-shadow: 1px 1px 0px #000;">Order</th>
                     <th class="px-4 py-3 text-xs text-gray-300 uppercase font-bold" style="text-shadow: 1px 1px 0px #000;">Icon</th>

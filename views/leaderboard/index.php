@@ -34,7 +34,7 @@
 
 <!-- Leaderboard Table -->
 <div class="bg-surface border-4 border-black rounded-none overflow-hidden" style="box-shadow: inset 4px 4px 0px #c6c6c6, inset -4px -4px 0px #555555;">
-    <div class="px-6 py-4 border-b-4 border-black bg-black" style="box-shadow: inset 2px 2px 0px #555, inset -2px -2px 0px #000;">
+    <div class="px-6 py-4 border-b-4 border-black bg-surface" style="box-shadow: inset 2px 2px 0px #555, inset -2px -2px 0px #000;">
         <h3 class="text-sm font-bold uppercase tracking-wider text-gray-300" style="text-shadow: 1px 1px 0px #000;">Global Rankings</h3>
     </div>
 
@@ -47,7 +47,7 @@
     <div class="overflow-x-auto">
         <table class="w-full">
             <thead>
-                <tr class="border-b-4 border-black text-xs text-gray-300 uppercase tracking-wider font-bold bg-black" style="text-shadow: 1px 1px 0px #000;">
+                <tr class="border-b-4 border-black text-xs text-gray-300 uppercase tracking-wider font-bold bg-surface" style="text-shadow: 1px 1px 0px #000;">
                     <th class="text-left px-6 py-3 w-16">Rank</th>
                     <th class="text-left px-6 py-3">Player</th>
                     <th class="text-center px-6 py-3">Level</th>
