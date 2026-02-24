@@ -35,6 +35,12 @@ $prismLang = $prismLangMap[$module['language']] ?? 'clike';
     <span class="text-white"><?= htmlspecialchars($module['title']) ?></span>
 </nav>
 
+<!-- Small reminder for narrow viewports -->
+<div id="zoomReminder" class="mb-4 md:hidden p-3 rounded-lg text-sm font-semibold bg-yellow-900/40 text-yellow-400 border border-yellow-800 flex items-center justify-between" role="status" aria-live="polite">
+    <div>⚠️ This page is wide — you may need to <strong>zoom out</strong> (browser zoom) to view the full UI.</div>
+    <button class="ml-3 text-yellow-200 font-bold" onclick="document.getElementById('zoomReminder').style.display='none'" aria-label="Dismiss reminder">×</button>
+</div>
+
 <!-- Module Header -->
 <div class="bg-surface border-4 border-gray-600 rounded-none p-8 mb-8" style="box-shadow: inset 4px 4px 0px #c6c6c6, inset -4px -4px 0px #555555;">
     <div class="flex flex-col md:flex-row md:items-start gap-6">
@@ -74,13 +80,6 @@ $prismLang = $prismLangMap[$module['language']] ?? 'clike';
                 </div>
             </div>
         </div>
-    </div>
-</div>
-
-<!-- Reminder: lessons are expandable on tap/click -->
-<div class="mb-6">
-    <div class="p-4 rounded-none bg-yellow-900/40 text-yellow-400 border border-yellow-800 font-bold text-sm" style="box-shadow: inset 2px 2px 0px #333333;">
-        ⚠️ Tip: Tap a lesson to expand it — lessons must be expanded to access the interactive game and content.
     </div>
 </div>
 
