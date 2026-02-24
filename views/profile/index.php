@@ -10,9 +10,6 @@
         <!-- User Card -->
         <div class="bg-surface border-4 border-gray-600 rounded-none p-6 mb-4" style="box-shadow: inset 4px 4px 0px #c6c6c6, inset -4px -4px 0px #555555;">
             <div class="text-center mb-6">
-                <div class="w-20 h-20 mx-auto bg-white text-black flex items-center justify-center text-2xl font-bold mb-3 border-4 border-gray-600" style="box-shadow: inset 2px 2px 0px #fff, inset -2px -2px 0px #ccc;">
-                    <?= strtoupper(substr($user['username'], 0, 2)) ?>
-                </div>
                 <h2 class="text-xl font-bold text-white" style="text-shadow: 2px 2px 0px #3f3f3f;"><?= htmlspecialchars($user['username']) ?></h2>
                 <p class="text-sm text-gray-300 font-bold" style="text-shadow: 1px 1px 0px #333333;"><?= htmlspecialchars($user['email']) ?></p>
                 <p class="text-xs text-gray-400 mt-1 font-bold" style="text-shadow: 1px 1px 0px #333333;">Member since <?= date('M Y', strtotime($user['created_at'])) ?></p>
