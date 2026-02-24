@@ -23,6 +23,28 @@ class BaseController
     }
 
     /**
+     * Determine the application's base URL.
+     * Uses `config['base_url']` unless it is empty or set to 'auto',
+     * in which case it derives the path from the current script location.
+     * Returns a path (e.g. '/e_sip' or '' for document root) without trailing slash.
+     */
+    protected function getBaseUrl(): string
+    {
+        $cfg = $this->config['base_url'] ?? '';
+        if ($cfg === '' || $cfg === null || $cfg === 'auto') {
+            $script = $_SERVER['SCRIPT_NAME'] ?? ($_SERVER['PHP_SELF'] ?? '');
+            $dir = rtrim(str_replace('\\', '/', dirname($script)), '/');
+            if ($dir === '' || $dir === '.') {
+                return '';
+            }
+            return $dir;
+        }
+
+        // Normalize provided base_url: remove trailing slash if present
+        return rtrim($cfg, '/');
+    }
+
+    /**
      * Render a view within the main layout.
      * @param string $view   View path relative to views/ (e.g., 'dashboard/index')
      * @param array  $data   Variables to pass to the view
@@ -36,7 +58,7 @@ class BaseController
         $pageTitle   = $title ?: 'E-SIP';
         $currentUser = $this->auth->user();
         $isLoggedIn  = $this->auth->isLoggedIn();
-        $baseUrl     = $this->config['base_url'];
+        $baseUrl     = $this->getBaseUrl();
         $flash       = $this->session->getFlash('message');
         $flashType   = $this->session->getFlash('type', 'info');
 
@@ -56,7 +78,7 @@ class BaseController
     {
         extract($data);
         $pageTitle = $title ?: 'E-SIP';
-        $baseUrl   = $this->config['base_url'];
+        $baseUrl   = $this->getBaseUrl();
         $flash     = $this->session->getFlash('message');
         $flashType = $this->session->getFlash('type', 'info');
 
