@@ -64,7 +64,7 @@ $prismLang = $prismLangMap[$module['language']] ?? 'clike';
             </div>
 
             <!-- Progress -->
-            <div class="mt-4 max-w-md">
+            <div class="mt-4 w-full md:max-w-md">
                 <div class="flex justify-between text-xs text-white font-bold mb-1" style="text-shadow: 1px 1px 0px #000;">
                     <span>Progress</span>
                     <span id="progressText"><?= round($progress) ?>%</span>
@@ -89,7 +89,7 @@ $prismLang = $prismLangMap[$module['language']] ?? 'clike';
             ?>
             <div class="bg-surface border-4 border-black rounded-none overflow-hidden transition lesson-card" id="lesson-<?= $index ?>" data-lesson-id="<?= htmlspecialchars($lesson['id']) ?>" style="box-shadow: inset 4px 4px 0px #c6c6c6, inset -4px -4px 0px #555555;">
                 <!-- Lesson Header (always visible) -->
-                <div class="flex items-center gap-4 p-5 cursor-pointer hover:bg-gray-800 transition-colors" onclick="toggleLesson(<?= $index ?>)">
+                <div class="lesson-header flex items-center gap-4 p-4 sm:p-5 hover:bg-gray-800 transition-colors">
                     <div class="flex-shrink-0 w-8 h-8 rounded-none bg-surface border-2 border-gray-600 flex items-center justify-center text-sm font-bold text-white" id="lessonNum-<?= $index ?>" style="box-shadow: inset 2px 2px 0px #000, inset -2px -2px 0px #555;">
                         <?= $index + 1 ?>
                     </div>
@@ -107,13 +107,13 @@ $prismLang = $prismLangMap[$module['language']] ?? 'clike';
                 </div>
 
                 <!-- Lesson Body (expandable) -->
-                <div id="lessonBody-<?= $index ?>" class="hidden border-t-4 border-black">
+                <div id="lessonBody-<?= $index ?>" class="border-t-4 border-black">
                     <!-- Phase 1: Lesson Information -->
-                    <div id="lessonInfo-<?= $index ?>" class="p-5">
+                    <div id="lessonInfo-<?= $index ?>" class="p-4 sm:p-5">
                         <div class="bg-surface border-4 border-black rounded-none p-6 mb-4" style="box-shadow: inset 2px 2px 0px #555, inset -2px -2px 0px #000;">
                             <div class="flex items-center gap-2 mb-3">
                                 <span class="text-lg" style="filter: drop-shadow(2px 2px 0px #000);">📖</span>
-                                <h4 class="font-bold text-white" style="text-shadow: 1px 1px 0px #000;">Lesson Content</h4>
+                                 <h1 class="text-xl sm:text-2xl font-bold text-white" style="text-shadow: 2px 2px 0px #333333;"><?= htmlspecialchars($module['title']) ?></h1>
                             </div>
                             <div class="text-sm text-gray-300 leading-relaxed space-y-3 lesson-content-text font-bold" style="text-shadow: 1px 1px 0px #000;">
                                 <?php if (is_array($lessonDetails)): ?>
@@ -292,7 +292,7 @@ $prismLang = $prismLangMap[$module['language']] ?? 'clike';
     </div>
 
     <!-- Challenges Sidebar -->
-    <div>
+    <div class="mt-6 lg:mt-0">
         <h2 class="text-lg font-bold mb-4 text-white" style="text-shadow: 2px 2px 0px #333333;">Challenges</h2>
         <?php if (empty($challenges)): ?>
             <div class="bg-surface border-4 border-gray-600 rounded-none p-6 text-center" style="box-shadow: inset 4px 4px 0px #c6c6c6, inset -4px -4px 0px #555555;">
@@ -795,4 +795,26 @@ pre.bg-black, pre.bg-black code, pre[class*="language-"] {
 
 /* Make sure inline code inside pre doesn't override background */
 pre[class*="language-"] code { background: transparent !important; }
+
+/* Better mobile flexibility for lesson content */
+@media (max-width: 768px) {
+    .lesson-header { flex-wrap: wrap; align-items: flex-start; }
+    .lesson-header .flex-1 { width: 100%; order: 2; min-width: 0; }
+    .lesson-header .flex-shrink-0 { order: 1; margin-right: 0.5rem; }
+    .lesson-card .p-4, .lesson-card .p-5 { padding-left: 0.75rem; padding-right: 0.75rem; }
+    .lesson-card pre, .lesson-card code, .lesson-card .fix-bug-textarea { max-width: 100%; overflow: auto; white-space: pre-wrap; word-break: break-word; }
+    /* Make interactive controls stack and fill width on mobile */
+    .game-option, .lesson-card button, .lesson-card .btn { width: 100%; display: block; margin-bottom: 0.5rem; }
+    .reorder-line { display: block; }
+    /* Reduce visual density */
+    .lesson-card { padding-bottom: 0.5rem; }
+}
+
+/* Mobile-specific tweaks */
+@media (max-width: 768px) {
+    .lesson-header { padding-left: 0.75rem; padding-right: 0.75rem; }
+    h1 { font-size: 1.15rem; }
+    .pixel-font { font-size: 1rem; }
+    pre, code, .fix-bug-textarea { overflow: auto; }
+}
 </style>
